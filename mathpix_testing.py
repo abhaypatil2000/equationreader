@@ -1,12 +1,13 @@
 # the mathpix.py is the final production module
 # this is for testing purpose
 
-import os
 import base64
 import requests
 import json
-from pdf_to_image import *
 
+# input image path
+input_image = "./request1/images/page0.png"
+# output file path
 output_file = "./test.txt"
 
 
@@ -25,11 +26,9 @@ def convert_pdf_to_latex(input_image):
                       })
     output = json.dumps(json.loads(r.text), indent=4, sort_keys=True)
 
-    with open(output_file, 'w') as f:
+    with open(output_file, 'a') as f:
         f.write(output)
         f.close()
 
 
-# danger passed
-
-convert_pdf_to_latex("./request1/images/page0.png", "request1")
+convert_pdf_to_latex(input_image)
