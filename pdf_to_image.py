@@ -12,9 +12,8 @@ def convert_pdf_to_images(input_pdf, folder_name):
         for file in glob.glob(f"./{folder_name}/images/*"):
             os.remove(file)
 
-    # TODO reduce the image quality using size= arguemnt, read documentation, is used pillow size (whatever that means)
-    # TODO also try to snip off the margins a bit
-    images = convert_from_path(f'./{folder_name}/{input_pdf}')  # input pdf
+    images = convert_from_path(f'./{folder_name}/{input_pdf}',
+                               dpi=100)  # input pdf
     for i in range(len(images)):
 
         # Save pages as images in the pdf
