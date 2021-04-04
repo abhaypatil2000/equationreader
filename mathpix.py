@@ -19,16 +19,16 @@ def convert_pdf_to_latex(input_pdf, folder_name):
     page_count = convert_pdf_to_images(input_pdf, folder_name)
     with os.scandir(f'{os.curdir}/{folder_name}/images') as it:
         # TODO iterate in sorted order
+        try:  # if folder already exists then exception occurs
+            os.mkdir(f"./{folder_name}/tex")
+        except:  # else remove all the content in the folder
+            for file in glob.glob(f"./{folder_name}/tex/*"):
+                os.remove(file)
         for entry in it:
             if (entry.name.endswith(".png") and entry.is_file()):
                 # put desired file path here
                 input_image = f'./{folder_name}/images/{entry.name}'
 
-                try:  # if folder already exists then exception occurs
-                    os.mkdir(f"./{folder_name}/tex")
-                except:  # else remove all the content in the folder
-                    for file in glob.glob(f"./{folder_name}/tex/*"):
-                        os.remove(file)
                 output_file = f'./{folder_name}/tex/{entry.name}'
                 output_file = output_file.replace("png", "tex")
 
