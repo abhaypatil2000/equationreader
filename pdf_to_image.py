@@ -13,7 +13,7 @@ def convert_pdf_to_images(input_pdf, folder_name):
             os.remove(file)
 
     images = convert_from_path(f'./{folder_name}/{input_pdf}',
-                               dpi=100)  # input pdf
+                               dpi=150)  # input pdf
     for i in range(len(images)):
 
         # Save pages as images in the pdf
