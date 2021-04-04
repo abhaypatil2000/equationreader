@@ -6,7 +6,7 @@ import glob
 # folder_name/images is where all the converted images are saved
 def convert_pdf_to_images(input_pdf, folder_name):
     # EAFP based method
-    try:  # if folder already exists
+    try:  # if folder already exists then exception occurs
         os.mkdir(f"./{folder_name}/images")
     except:  # else remove all the content in the folder
         for file in glob.glob(f"./{folder_name}/images/*"):
