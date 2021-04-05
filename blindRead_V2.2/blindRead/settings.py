@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 PWA_APP_NAME = 'BlindRead'
 PWA_APP_SHORT_NAME = 'BlindRead'
 PWA_APP_DESCRIPTION = "BlindRead PWA"
@@ -113,9 +112,9 @@ WSGI_APPLICATION = 'blindRead.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-import pymysql  # noqa: 402
-pymysql.version_info = (1, 4, 6, 'final', 0)  # change mysqlclient version
-pymysql.install_as_MySQLdb()
+# import pymysql  # noqa: 402
+# pymysql.version_info = (1, 4, 6, 'final', 0)  # change mysqlclient version
+# pymysql.install_as_MySQLdb()
 
 # [START db_setup]
 # if os.getenv('GAE_APPLICATION', None):

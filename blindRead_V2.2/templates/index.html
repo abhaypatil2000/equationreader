@@ -12,7 +12,7 @@
     </div>  
     <div class="container" style="align-items: center; align-content: center; justify-content: center; display: flex;">
         {% if user.is_authenticated %}
-        {% if user.counter > 0 %}
+        {% if counter > 0 %}
         <form action="upload" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
                 <div class="jumbotron bg-dark text-white">
@@ -35,7 +35,7 @@
             <div class="jumbotron bg-danger text-white" style="opacity:90%;">
                 <div class="container" style="align-items: center;">
                     <h2> 
-                        <a href="{% url 'accounts:login' %}">Login</a> to be able to use this service. Click here to <a href="{% url 'accounts:signup' %}">Sign up </a> 
+                        <a href="{% url 'accounts:login' %}">Login</a> to be able to use this service. Click here to <a href="{% url 'accounts:register' %}">Sign up </a> 
                     </h2>
                 </div>
             </div>

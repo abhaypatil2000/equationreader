@@ -1,11 +1,16 @@
-from django.urls import path, re_path, include
-from django.contrib.auth import login, views as auth_views
-from accounts import views
-from accounts.forms import UserLoginForm
+
+
+from .views import *
+from django.urls import path,include
+from django.contrib.auth import views as auth_views
+
 app_name = 'accounts'
 
 urlpatterns = [
-    path('signup/', views.UserSignUpView.as_view(), name='signup'),
-    path('login/', auth_views.LoginView.as_view(template_name='accounts/login.html', authentication_form=UserLoginForm), name='login'),
-    re_path(r"logout/$", auth_views.LogoutView.as_view(), name="logout"),
+
+    path('' , login_attempt , name="login"),
+    path('register' , register , name="register"),
+    path('otp' , otp , name="otp"),
+    path('login-otp', login_otp , name="login_otp"),
+    path('logout', auth_views.LogoutView.as_view(), name="logout"),
 ]
