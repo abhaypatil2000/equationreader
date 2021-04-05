@@ -1,0 +1,29 @@
+Algebra Practice Problems for Precalculus and Calculus
+Solve the following equations for the unknown  open bracket  x  close bracket  :
+1.  open bracket  5=7 x-16  close bracket 
+2.  open bracket  2 x-3=5-x  close bracket 
+3.  open bracket  1 divided by 2(x-3)+x=17+3(4-x)  close bracket 
+4.  open bracket  5 divided by x=2 divided by x-3  close bracket 
+Multiply the indicuted polynomials and simplify. .. .
+5.  open bracket  (4 x-1)(-3 x+2)  close bracket 
+6.  open bracket  (x-1)(x to the power 2+x+1)  close bracket 
+7.  open bracket  (x+1)(x to the power 2-x+1)  close bracket 
+8.  open bracket  (x-2)(x+2)  close bracket 
+ open bracket  9 .(x-2)(x-2)  close bracket 
+10.  open bracket  (x to the power 3+2 x-1)(x to the power 3-5 x to the power 2+4)  close bracket 
+Find the domain of cach of the following functions in  open bracket  11-15 .  close bracket 
+11.  open bracket  f(x)= square root of 1+x  close bracket 
+12.  open bracket  f(x)=1 divided by t+x  close bracket 
+13.  open bracket  f(x)=1 divided by  square root of x  close bracket 
+14.  open bracket  f(x)=1 divided by  square root of 1+x  close bracket 
+15.  open bracket  f(x)=1 divided by 1+x to the power 2  close bracket 
+16. Given that  open bracket  f(x)=x to the power 2-3 x+4  close bracket , find and simplify  open bracket  f(3), f(a), f(-t)  close bracket , and  open bracket  f(x to the power 2+1)  close bracket 
+Factor the following quadratics
+17.  open bracket  x to the power 2-x-20  close bracket 
+18.  open bracket  x to the power 2-10 x+21  close bracket 
+19.  open bracket  x to the power 2+10 x+16  close bracket 
+20.  open bracket  x to the power 2+8 x-105  close bracket 
+21.  open bracket  4 x to the power 2+11 x-3  close bracket 
+22.  open bracket  -2 x to the power 2+7 x+15  close bracket 
+23.  open bracket  x to the power 2-2  close bracket 
+1
