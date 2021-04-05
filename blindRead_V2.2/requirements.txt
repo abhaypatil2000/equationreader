@@ -10,6 +10,9 @@ django-pwa==1.0.10
 django-sslserver==0.22
 gTTS==2.2.2
 idna==2.10
+pathlib==1.0.1
+pdf2image==1.14.0
+Pillow==8.2.0
 pycparser==2.20
 PyMySQL==1.0.2
 pyOpenSSL==20.0.1
