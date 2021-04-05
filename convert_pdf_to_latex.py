@@ -6,17 +6,17 @@ import requests
 import json
 from pdf_to_image import *
 import glob
-from time import sleep
-
-# to avoid precious requests to mathpix
-make_request = False
 
 
 # folder_name can be the request ID generated
-# pdf will be stored there, and so will be the latex files, extracted pages and audio file
-def convert_pdf_to_latex(input_pdf, folder_name):
+# pdf will be stored there and so will be extracted pages and audio file
+# page count is the limit on pages to be processed
+def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
     # first convert all pages in pdf to images
-    page_count = convert_pdf_to_images(input_pdf, folder_name)
+    # processed_pages is the actual number of pages processed
+    processed_pages = convert_pdf_to_images(input_pdf, folder_name, page_count)
+    content = ""
+
     with os.scandir(f'{os.curdir}/{folder_name}/images') as it:
         # TODO iterate in sorted order
         try:  # if folder already exists then exception occurs
@@ -38,7 +38,7 @@ def convert_pdf_to_latex(input_pdf, folder_name):
                 image_uri = "data:image/png;base64," + base64.b64encode(
                     open(input_image, "rb").read()).decode()
 
-                output = "123"
+                output = ""
 
                 # DANGER !! mathpix ahead
                 if make_request:
@@ -50,17 +50,22 @@ def convert_pdf_to_latex(input_pdf, folder_name):
                             "app_key": "06dcfdf863bb8d34f133",
                             "Content-type": "application/json"
                         })
-                    output = json.dumps(json.loads(r.text),
-                                        indent=4,
-                                        sort_keys=True)
+                    # TODO : SATHWIK CHECK THIS
+                    # TODO : check for successful_request or not depending on the request.status or from the output of the return request
+                    # TODO : if connection error then try to resend the request so that the user does not waste his money for connection error
+                    # TODO : else whatever you decide
+                    successful_request = True
+                    if (successful_request):
+                        output = json.dumps(json.loads(r.text),
+                                            indent=4,
+                                            sort_keys=True)
+                    else:
+                        output = "Page number {i} missing"
                 # danger passed
-
-                with open(output_file, 'w') as f:
-                    f.write(output)
-                    f.close()
-                sleep(1)
-
-                continue
+                content += output + " "
+    return (processed_pages, content)
 
 
-convert_pdf_to_latex("basic.pdf", "request1")
+# to avoid precious requests to mathpix
+# make make_request to False
+convert_pdf_to_latex("basic.pdf", "request1", False)
