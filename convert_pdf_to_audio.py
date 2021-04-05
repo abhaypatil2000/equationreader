@@ -10,7 +10,7 @@ from text_to_audio import *
 # will generate audio.mp3 in the folder_name folder
 def convert_pdf_to_audio(input_pdf, folder_name, page_limit):
     # convert pdf to latex
-    make_request = False  # make this true for testing
+    make_request = False  # make this true for testing #! TODO
     content = ""
 
     # this page_count will return actually how many pages are processed

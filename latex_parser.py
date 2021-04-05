@@ -1,31 +1,28 @@
 import json
 
-
 #str = open('./request1/tex/page0.tex', 'r').read()
 #print(str)
 #file = open('output.txt', 'w')
-out=""
-def latex_parser(str):
-    data = json.loads(str)
-    content = data["text"]
-    
+parsed_content = ""
+
+
+def latex_parser(input_content):
+    global parsed_content
+    # data = json.loads(str)
+    # content = data["text"]
+    content = input_content.replace("\\\\", "\\")
     util(content)
     #file.close()
     #file1=open('output.txt','r')
     #list=file1.readlines()
-    global out
     #print(list)
     #for string in list:
-        #out=out+string
-    return out
-
-    
+    #out=out+string
+    return parsed_content
 
 
-# TODO : Sathwik return only one string output when one content string is passed
-# TODO : just return one string called as parsed_string
 def util(content):
-    global out
+    global parsed_content
     flag = 0
     n = int(len(content))
     i = 0
@@ -42,8 +39,8 @@ def util(content):
             '''
             if (content[i] != '\\'
                     and content[i] != '^'):  #write all chars except \ and ^
-                
-                out=out+content[i]
+
+                parsed_content = parsed_content + content[i]
 
                 i = i + 1
                 #print(out)
@@ -55,7 +52,7 @@ def util(content):
             elif (content[i] == '^'):  #write to the power of instead of ^{}
 
                 #global out
-                out=out+" to the power "
+                parsed_content = parsed_content + " to the power "
                 i = i + 1
 
                 j = i + 1
@@ -68,10 +65,10 @@ def util(content):
                     if (content[j] == '}'): li.pop()
                     j = j + 1
                     temp = temp + 1
-                if (temp > 5): file.write("(")  # TODO:decide
-                util(content[i + 1:j - 1])
-                if (temp > 5): file.write(')')  #TODO:decide
-                i = j
+                # if (temp > 5): file.write("(")  # TODO:decide
+                # util(content[i + 1:j - 1])
+                # if (temp > 5): file.write(')')  #TODO:decide
+                # i = j
 
         if (flag == 1):
             if (content[i:i + 4] == "frac"):
@@ -86,7 +83,7 @@ def util(content):
                 util(content[i + 5:j - 1])
                 #file.write(" divided by ")
                 #global out
-                out=out+" divided by "
+                parsed_content = parsed_content + " divided by "
                 #print("i is ",i)
                 i = j
                 j = i + 1
@@ -102,8 +99,8 @@ def util(content):
             elif (content[i:i + 4] == "sqrt"):
 
                 #file.write(" square root of ")
-               # global out
-                out=out+" square root of "
+                # global out
+                parsed_content = parsed_content + " square root of "
 
                 j = i + 5
                 li = ['{']
@@ -124,14 +121,14 @@ def util(content):
             elif (content[i] == '('):
                 i = i + 1
                 #file.write(" equation start ")
-               # global out
-                out=out+" equation start"
+                # global out
+                parsed_content = parsed_content + " equation start"
 
                 flag = 0
             elif (content[i] == ')'):
                 i = i + 1
-               # global out
-                out=out+" equation end "
+                # global out
+                parsed_content = parsed_content + " equation end "
                 #file.write(" equation end ")
 
                 flag = 0
@@ -140,7 +137,7 @@ def util(content):
                 i = i + 4
                 flag = 0
 
-str=open('result.tex','r').read()
-out=latex_parser(str)
-print(out)
 
+# str = open('result.tex', 'r').read()
+# parsed_content = latex_parser(str)
+# print(parsed_content)
