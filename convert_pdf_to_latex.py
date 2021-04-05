@@ -38,7 +38,9 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
                 image_uri = "data:image/png;base64," + base64.b64encode(
                     open(input_image, "rb").read()).decode()
 
-                output = ""
+                # for unsuccessful requests
+                page_id = entry.name.replace(".png", "")
+                output = f" ,, {page_id} missing ,, "
 
                 # DANGER !! mathpix ahead
                 if make_request:
@@ -59,8 +61,6 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
                         output = json.dumps(json.loads(r.text),
                                             indent=4,
                                             sort_keys=True)
-                    else:
-                        output = "Page number {i} missing"
                 # danger passed
                 content += output + " "
     return (processed_pages, content)
@@ -68,4 +68,4 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
 
 # to avoid precious requests to mathpix
 # make make_request to False
-convert_pdf_to_latex("basic.pdf", "request1", False)
+# convert_pdf_to_latex("basic.pdf", "request1", False)
