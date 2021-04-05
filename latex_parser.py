@@ -20,6 +20,8 @@ content = data["text"]
 print(content)
 
 
+# TODO : Sathwik return only one string output when one content string is passed
+# TODO : just return one string called as parsed_string
 def latex_parser(content):
     flag = 0
     n = int(len(content))

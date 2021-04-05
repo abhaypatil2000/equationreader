@@ -1,7 +1,7 @@
 from gtts import gTTS
 
 
-def text_2_audio(parsed_content, folder_name):
+def text_to_audio(parsed_content, folder_name):
     parsed_content = parsed_content.replace("(", " open bracket ")
     parsed_content = parsed_content.replace(")", " close bracket ")
     parsed_content = parsed_content.replace("-", " minus ")
