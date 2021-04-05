@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class='container'>
+            <div class='jumbotron bg-dark text-white'  style="opacity: 90%;">
+            {% if user.is_authenticated %}
+                <h1>Hey, {{user.username}}</h1>
+            {% endif %}
+            <h1>
+            <h2>Math Reader for the Blind</h2>
+            <h4>Convert PDF files containing  mathematical equations into Audio</h4>
+            </div> 
+    </div>  
+    <div class="container" style="align-items: center; align-content: center; justify-content: center; display: flex;">
+        {% if user.is_authenticated %}
+        {% if user.counter > 0 %}
+        <form action="upload" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+                <div class="jumbotron bg-dark text-white">
+                    <input type="file" value="Upload PDF" id="upload" name="file_name" hidden/>
+                    <label for="upload"><h3><i class="fa fa-upload" style="font-size: 48px;"></i>Upload File</h3></label>
+                    <br>
+                    <button type="submit" for="upload" class="btn btn-danger">Convert to Audio</button>
+                </div>
+        </form>
+        {% else %}
+        <div class="jumbotron bg-danger text-white" style="opacity:90%;">
+                <div class="container" style="align-items: center;">
+                    <h2> 
+                        You have run out of number of attempts. Please subscribe or try again tomorrow. 
+                    </h2>
+                </div>
+            </div>
+        {% endif %}
+        {% else %}
+            <div class="jumbotron bg-danger text-white" style="opacity:90%;">
+                <div class="container" style="align-items: center;">
+                    <h2> 
+                        <a href="{% url 'accounts:login' %}">Login</a> to be able to use this service. Click here to <a href="{% url 'accounts:signup' %}">Sign up </a> 
+                    </h2>
+                </div>
+            </div>
+        {% endif %}    
+    </div>
+{% endblock content %}
+        

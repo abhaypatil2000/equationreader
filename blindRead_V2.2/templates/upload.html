@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron bg-dark text-white" style="opacity: 90%;">
+        <div class="container">
+            <h1>Uploaded file: <a href="{{url1}}" target="_blank">{{ file_name }}</a></h1>
+            <h1>Audio Output:
+                <audio controls>
+                    <source src="{{ url2 }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </h1>
+            <p>Click here to download the audio file:<a href="{{url2}}" target="_blank">{{ output_file }}</a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
