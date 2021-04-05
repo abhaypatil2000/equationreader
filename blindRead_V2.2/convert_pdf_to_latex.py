@@ -40,7 +40,7 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
             # for unsuccessful requests
             page_id = entry.replace(".png", "")
             output = f" ,, {page_id} missing ,, "
-            output = "\\( \\frac{5}{x}=\\frac{2}{x-3} \\)"  #! for testing
+            output = "\\( \\frac{5}{x}=\\frac{2}{x-3} \\) ,, "  #! for testing
 
             # DANGER !! mathpix ahead
             if make_request:
