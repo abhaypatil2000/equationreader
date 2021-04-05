@@ -3,7 +3,6 @@ import base64
 import requests
 import json
 from pdf_to_image import *
-import glob
 
 # filelist = glob.glob(os.path.join(path, 'FV/*.txt'))
 # for infile in sorted(filelist):
