@@ -40,7 +40,8 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
             # for unsuccessful requests
             page_id = entry.replace(".png", "")
             output = f" ,, {page_id} missing ,, "
-            output = "\\( \\frac{5}{x}=\\frac{2}{x-3} \\)"  #! for testing
+            output = "\\( \\frac{1}{2}(x-3)+x=17+3(4-x) \\) ,, "  #! for testing
+            print(f"{page_id} done")
 
             # DANGER !! mathpix ahead
             if make_request:
@@ -61,7 +62,9 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
                     output = json.dumps(json.loads(r.text),
                                         indent=4,
                                         sort_keys=True)
+                    output = json.loads(output)["text"]
             # danger passed
+            print(f"{page_id} done API request")
             content += output + " "
     return (processed_pages, content)
 
