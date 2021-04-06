@@ -12,13 +12,9 @@ import os
 def convert_pdf_to_audio(input_pdf, folder_name, page_limit):
     # convert pdf to latex
     try:
-        f = open(f"./{folder_name}/audio.mp3")
         os.remove(f"./{folder_name}/audio.mp3")
     except IOError:
         print("File not accessible")
-    finally:
-        f.close()
-
     print("page_limit ==============", page_limit)
     make_request = False  # make this true for testing #! TODO
     content = ""
@@ -36,5 +32,10 @@ def convert_pdf_to_audio(input_pdf, folder_name, page_limit):
     # generate audio.mp3 file
     print("step2")
     text_to_audio(parsed_content, folder_name)
+
+    # try:
+    #     os.remove(f"./{folder_name}/*.pdf")
+    # except IOError:
+    #     print("File not accessible")
 
     return processed_pages
