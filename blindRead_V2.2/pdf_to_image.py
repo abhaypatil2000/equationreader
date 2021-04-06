@@ -13,7 +13,8 @@ def convert_pdf_to_images(input_pdf, folder_name, page_limit):
             os.remove(file)
     print(folder_name)
     print("pdf name:", input_pdf)
-    images = convert_from_path(f'./{folder_name}/{input_pdf}', dpi=150)  # input pdf
+    images = convert_from_path(f'./{folder_name}/{input_pdf}',
+                               dpi=200)  # input pdf
     processed_pages = min(len(images), page_limit)
     for i in range(processed_pages):
 

@@ -8,6 +8,9 @@ parsed_content = ""
 
 def latex_parser(input_content):
     global parsed_content
+    print("==============================###################################")
+    print(input_content)
+    print("==============================###################################")
     # data = json.loads(str)
     # content = data["text"]
     content = input_content.replace("\\\\", "\\")
@@ -58,9 +61,8 @@ def util(content):
                 j = i + 1
                 temp = 0
                 li = ['{']
-                while (
-                        len(li) > 0
-                ):  #getting contents inside {} to call the function recursively
+                #getting contents inside {} to call the function recursively
+                while (len(li) > 0):
                     if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
                     j = j + 1
@@ -136,11 +138,13 @@ def util(content):
                 #file.write(".")
                 i = i + 4
                 flag = 0
-            elif(content[i:i+3]=="geq"):
-                parsed_content=parsed_content+" greater than or equal to "
-                i=i+3
-                flag=0
-            else:i=i+1
+            elif (content[i:i + 3] == "geq"):
+                parsed_content = parsed_content + " greater than or equal to "
+                i = i + 3
+                flag = 0
+            else:
+                i = i + 1
+
 
 #str="Algebra Practice Problems for Precalculus and Calculus\nSolve the following equations for the unknown \\( x \\) :\n1. \\( 5=7 x-16 \\)\n2. \\( 2 x-3=5-x \\)\n3. \\( \\frac{1}{2}(x-3)+x=17+3(4-x) \\)\n4. \\( \\frac{5}{x}=\\frac{2}{x-3} \\)\nMultiply the indicated polynomials and simplif.......\n5. \\( (4 x-1)(-3 x+2) \\)\n6. \\( (x-1)\\left(x^{2}+x+1\\right) \\)\n7. \\( (x+1)\\left(x^{2}-x+1\\right) \\)\n8. \\( (x-2)(x+2) \\)\n9. \\( (x-2)(x-2) \\)\n10. \\( \\left(x^{3}+2 x-1\\right)\\left(x^{3}-5 x^{2}+4\\right) \\)\nFind the domain of each of the following functions in \\( 11-15 . \\)\n11. \\( f(x)=\\sqrt{1+x} \\)\n12. \\( f(x)=\\frac{1}{1+x} \\)\n13. \\( f(x)=\\frac{1}{\\sqrt{x}} \\)\n14. \\( f(x)=\\frac{1}{\\sqrt{1+x}} \\)\n15. \\( f(x)=\\frac{1}{1+x^{2}} \\)\n16. Given that \\( f(x)=x^{2}-3 x+4 \\), find and simplify \\( f(3), f(a), f(-t) \\), and \\( f\\left(x^{2}+1\\right) \\)\n17. \\( x^{2}-x-20 \\)\n18. \\( x^{2}-10 x+21 \\)\n19. \\( x^{2}+10 x+16 \\)\n20. \\( x^{2}+8 x-105 \\)\n21. \\( 4 x^{2}+11 x-3 \\)\n22. \\( -2 x^{2}+7 x+15 \\)\n23. \\( x^{2}-2 \\)\n1"
 # str = open('result.tex', 'r').read()
