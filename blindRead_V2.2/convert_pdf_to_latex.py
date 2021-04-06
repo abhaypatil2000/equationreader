@@ -61,6 +61,7 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
                     output = json.dumps(json.loads(r.text),
                                         indent=4,
                                         sort_keys=True)
+                    output = json.loads(output)["text"]
             # danger passed
             content += output + " "
     return (processed_pages, content)
