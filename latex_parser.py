@@ -11,6 +11,10 @@ def latex_parser(input_content):
     # data = json.loads(str)
     # content = data["text"]
     content = input_content.replace("\\\\", "\\")
+    f = open('output.txt', 'w')
+    f.write(content)
+    f.close()
+
     util(content)
     #file.close()
     #file1=open('output.txt','r')
