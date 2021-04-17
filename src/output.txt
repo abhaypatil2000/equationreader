@@ -1,0 +1,23 @@
+1.2 Properties of Rational Numbers
+\( \begin{array}{ll}\mathbf{1 . 2 . 1} & \text { Closure }\end{array} \)
+(i) Whole numbers
+Let us revisit the closure property for all the operations on whole numbers in brief.
+\begin{tabular}{|l|l|l|}
+\hline Operation & \multicolumn{1}{|c|} { Numbers } & \multicolumn{1}{|c|} { Remarks } \\
+\hline Addition & \( 0+5=5, \) a whole number \( 4+7=\ldots . \) Is it a whole number? In general, \( a+b \) is a whole number for any two whole numbers \( a \) and \( b . \) & Whole numbers are closed under addition. \\
+\hline Subtraction & \( 5-7=-2, \) which is not a whole number. & Whole numbers are not closed under subtraction. \\
+\hline Multiplication & \( 0 \times 3=0, \) a whole number \( 3 \times 7=\ldots . \) Is it a whole number? In general, if \( a \) and \( b \) are any two whole numbers, their product ab is a whole number. & Whole numbers are closed under multiplication. \\
+\hline Division & \( 5 \div 8=\frac{5}{8}, \) which is not a whole number. & Whole numbers are not closed under division. \\
+\hline
+\end{tabular}
+Check for closure property under all the four operations for natural numbers.
+(ii) Integers
+Let us now recall the operations under which integers are closed. \begin{tabular}{|l|l|l|}
+\hline Operation & \multicolumn{1}{|c|} { Numbers } & \multicolumn{1}{|c|} { Remarks } \\
+\hline Addition & \( -6+5=-1, \) an integer Is \( -7+(-5) \) an integer? Is \( 8+5 \) an integer? & Integers are closed under addition. \\
+& In general, \( a+b \) is an integer for any two integers \( a \) and \( b . \) & \\
+\hline Subtraction & \( 7-5=2 \) an integer & Integers are closed under \\
+& Is \( 5-7 \) an integer? & subtraction. \\
+& \( -6-8=-14, \) an integer & \\
+\hline
+\end{tabular}

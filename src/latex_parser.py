@@ -38,14 +38,8 @@ def util(content):
         #print(i)
         #flag=0 implies no special functions like frac and sqrt
         if (flag == 0):
-            #i=i+1
-            '''
-            if(content[i:i+2]==" \\n"):
-                file.write(" \n")
-                i=i+1 # check for i++
-            '''
-            if (content[i] != '\\'
-                    and content[i] != '^'):  #write all chars except \ and ^
+            if (content[i] != '\\' and content[i] != '^'
+                    and content[i] != '&'):  #write all chars except \ and ^
 
                 parsed_content = parsed_content + content[i]
 
@@ -55,6 +49,25 @@ def util(content):
             elif (content[i] == '\\'):  #flag when you see \
                 flag = 1
                 i = i + 1
+
+            elif (content[i:i + 16] == "& \multicolumn{1"):
+                print("ok tested")
+                parsed_content += " next column "
+                i += 24
+                li = ['{']
+                j = i
+                #getting contents inside {} to call the function recursively
+                while (len(li) > 0):
+                    if (content[j] == '{'): li.append('{')
+                    if (content[j] == '}'): li.pop()
+                    j = j + 1
+                util(content[i + 1:j - 1])
+                i = j
+
+            elif (content[i] == '&'):
+                i = i + 1
+
+                parsed_content += " next column "
 
             elif (content[i] == '^'):  #write to the power of instead of ^{}
 
@@ -89,7 +102,7 @@ def util(content):
                 util(content[i + 5:j - 1])
                 #file.write(" divided by ")
                 #global out
-                parsed_content = parsed_content + " divided by "
+                parsed_content = parsed_content + " by "
                 #print("i is ",i)
                 i = j
                 j = i + 1
@@ -152,6 +165,7 @@ def util(content):
                 if table == 0:
                     table = 1
                     parsed_content = parsed_content + "table begins"
+                    parsed_content=parsed_content+" first row "
                     print(1)
                     i = i + 14
                     li = ['{']
@@ -163,8 +177,12 @@ def util(content):
                         if (content[j] == 'l'): columns += 1
                         j = j + 1
                     i = j
-                    parsed_content = parsed_content + "first row"
-                if (content[i:i + 5] == "hline" and content[i+7:i+10]!="end"):
+                   
+
+                if (content[i:i + 5] == "hline"
+                        and content[i + 7:i + 10] != "end"):
+                    
+                    parsed_content += " next row "
                     i += 5
                     j = i
                     while (content[j:j + 5] != "hline"):
@@ -173,6 +191,7 @@ def util(content):
                     util(content[i:j - 3])
                     i = j
                 elif (content[i:i + 11] == "end{tabular"):
+                    parsed_content+=" table ended "
                     table = 0
                     flag = 0
                     i += 12
