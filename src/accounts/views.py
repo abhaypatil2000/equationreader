@@ -1,3 +1,4 @@
+from django.contrib import auth
 from django.shortcuts import render , redirect
 
 import ssl
@@ -5,7 +6,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 from .models import Profile, User
 import random
-
+from django.core.exceptions import ValidationError
 import http.client
 import requests
 
@@ -32,21 +33,23 @@ def send_otp(mobile , otp):
 
 def login_attempt(request):
     if request.method == 'POST':
-        mobile = request.POST.get('mobile')
-        
-        user = Profile.objects.filter(mobile = mobile).first()
-        
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        print("email id is: ", email)
+        print("password is: ", password)
+        user = User.objects.filter(email=email).first()
         if user is None:
+            print("User is none")
             context = {'message' : 'User not found' , 'class' : 'danger' }
             return render(request,'accounts/login.html' , context)
-        
-        otp = str(random.randint(1000 , 9999))
-        user.otp = otp
-        print(otp)
-        user.save()
-        send_otp(mobile , otp)
-        request.session['mobile'] = mobile
-        return redirect('accounts:login_otp')        
+        else:
+            if password == user.password:
+                login(request, user)
+                print("User logged in")
+                return redirect('home')
+            else:
+                return render(request,'accounts/login.html')
+
     return render(request,'accounts/login.html')
 
 
@@ -74,18 +77,28 @@ def register(request):
         email = request.POST.get('email')
         name = request.POST.get('name')
         mobile = request.POST.get('mobile')
+        password1 = request.POST.get('password1')
+        password2 = request.POST.get('password2')
         
+        if password1 and password2 and password1 != password2:
+            raise ValidationError("Passwords don't match")
+        else:
+            password = password2
+        
+
         check_user = User.objects.filter(email = email).first()
         check_profile = Profile.objects.filter(mobile = mobile).first()
         
         if check_user or check_profile:
             context = {'message' : 'User already exists' , 'class' : 'danger' }
             return render(request,'accounts/register.html' , context)
-            
-        user = User(email = email , first_name = name)
+        
+        # print(email, name, password)
+        user = User(email = email , first_name = name, password = password)
+        # user = User(email = email , first_name = name)
         user.save()
         otp = str(random.randint(1000 , 9999))
-        profile = Profile(user = user , mobile=mobile , otp = otp) 
+        profile = Profile(user = user , mobile = mobile , otp = otp) 
         profile.save()
         send_otp(mobile, otp)
         print(otp)
