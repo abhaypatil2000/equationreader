@@ -71,4 +71,4 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
 
 # to avoid precious requests to mathpix
 # make make_request to False
-# convert_pdf_to_latex("basic.pdf", "request1", False)
+# convert_pdf_to_latex("basic.pdf", "request1", False, some integer(upper bound for the number of pages to convert))
