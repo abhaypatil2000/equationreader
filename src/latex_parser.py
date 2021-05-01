@@ -33,10 +33,9 @@ def util(content):
     n = int(len(content))
     is_array = 0
     ignore_eqn_end = 0
-    print("n is ", n)
+    #print("n is ", n)
     if(n==0): return 0
-    if(n==10):
-        print(content)
+    
     i = 0
     while i < n:
         #i=i+1
@@ -154,7 +153,7 @@ def util(content):
                 i = i + 5
             elif (content[i] == '('):
                 i = i + 1
-                print(i)
+               
                 parsed_content = parsed_content + " equation start"
 
                 flag = 0
