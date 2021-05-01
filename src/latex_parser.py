@@ -1,10 +1,7 @@
 import json
 
-#str = open('./request1/tex/page0.tex', 'r').read()
-#print(str)
-#file = open('output.txt', 'w')
 parsed_content = ""
-content = open('output.txt', 'r').read()
+
 
 
 def latex_parser(input_content):
@@ -22,16 +19,21 @@ def latex_parser(input_content):
     #print(list)
     #for string in list:
     #out=out+string
-    print(parsed_content)
+    file1 = open('temp.txt', 'w')
+    file1.write(parsed_content)
+    file1.close()
     return parsed_content
 
 
 def util(content):
     global parsed_content
     flag = 0
+    is_firstrow = 0
     table = 0
     n = int(len(content))
-    print("n is ", n)
+    is_array=0
+    ignore_eqn_end = 0
+    # print("n is ", n)
     i = 0
     while i < n:
         #i=i+1
@@ -51,7 +53,7 @@ def util(content):
                 i = i + 1
 
             elif (content[i:i + 16] == "& \multicolumn{1"):
-                print("ok tested")
+                #print("ok tested")
                 parsed_content += " next column "
                 i += 24
                 li = ['{']
@@ -64,10 +66,12 @@ def util(content):
                 util(content[i + 1:j - 1])
                 i = j
 
-            elif (content[i] == '&'):
+            elif (content[i] == '&' and is_array==0):
                 i = i + 1
 
                 parsed_content += " next column "
+            elif(content[i] == '&' and is_array==1):
+                i=i+1
 
             elif (content[i] == '^'):  #write to the power of instead of ^{}
 
@@ -143,11 +147,21 @@ def util(content):
                 parsed_content = parsed_content + " equation start"
 
                 flag = 0
-            elif (content[i] == ')'):
+            elif (content[i] == ')' and ignore_eqn_end==0):
                 i = i + 1
 
                 parsed_content = parsed_content + " equation end "
 
+                flag = 0
+            elif (content[i] == ')' and ignore_eqn_end == 1):
+                i = i + 1
+                flag = 0
+            elif (content[i] == '['):
+                i = i + 1
+                parsed_content = parsed_content + "new row"
+                flag = 0
+            elif (content[i] == ']'):
+                i = i + 1
                 flag = 0
             elif (content[i:i + 4] == "cdot"):
 
@@ -165,8 +179,8 @@ def util(content):
                 if table == 0:
                     table = 1
                     parsed_content = parsed_content + "table begins"
-                    parsed_content=parsed_content+" first row "
-                    print(1)
+                    parsed_content = parsed_content + " first row "
+                    #print(1)
                     i = i + 14
                     li = ['{']
                     columns = 0
@@ -177,12 +191,15 @@ def util(content):
                         if (content[j] == 'l'): columns += 1
                         j = j + 1
                     i = j
-                   
+                    is_firstrow = 1
 
                 if (content[i:i + 5] == "hline"
                         and content[i + 7:i + 10] != "end"):
-                    
-                    parsed_content += " next row "
+
+                    if (is_firstrow == 1):
+                        is_firstrow = 0
+                    else:
+                        parsed_content += " next row "
                     i += 5
                     j = i
                     while (content[j:j + 5] != "hline"):
@@ -191,20 +208,65 @@ def util(content):
                     util(content[i:j - 3])
                     i = j
                 elif (content[i:i + 11] == "end{tabular"):
-                    parsed_content+=" table ended "
+                    parsed_content += " table ended "
                     table = 0
                     flag = 0
                     i += 12
                 else:
                     i += 1
 
+
+            elif(content[i:i+11]=='begin{array'):
+                str_remove = " equation start"
+                parsed_content=parsed_content[:-(len(str_remove))]
+                is_array=1
+                #   print("array begin")
+                i=i+13
+                while(content[i]!='}'):
+                    i=i+1
+                i=i+1
+                flag=0
+            elif(content[i:i+9]=='end{array'):
+                #str_remove = "equation end"
+                #parsed_content = parsed_content[:-(len(str_remove))]
+                is_array=0
+                ignore_eqn_end=1
+                # print("array end")
+                i=i+10
+                flag=0
+            elif(content[i:i+4]=='text'):
+                # print("text")
+                i=i+6
+                j=i
+                li = ['{']
+                columns=0
+                while (li):
+                    #if (content[j] == '{'): li.append('{')
+                    if (content[j] == '}'): li.pop()
+                    if (content[j] == 'l'): columns += 1
+                    j = j + 1
+                util(content[i :j - 1])
+                i=j
+                flag=0
+            elif(content[i:i+6]=='mathbf'):
+                i=i+7
+                j = i
+                li = ['{']
+                columns = 0
+                while (li):
+                    #if (content[j] == '{'): li.append('{')
+                    if (content[j] == '}'): li.pop()
+                    if (content[j] == 'l'): columns += 1
+                    j = j + 1
+                util(content[i:j - 1])
+                i = j
+                flag = 0
             else:
                 i = i + 1
 
 
-latex_parser(content)
-#print(latex_parser(content))
-#str="Algebra Practice Problems for Precalculus and Calculus\nSolve the following equations for the unknown \\( x \\) :\n1. \\( 5=7 x-16 \\)\n2. \\( 2 x-3=5-x \\)\n3. \\( \\frac{1}{2}(x-3)+x=17+3(4-x) \\)\n4. \\( \\frac{5}{x}=\\frac{2}{x-3} \\)\nMultiply the indicated polynomials and simplif.......\n5. \\( (4 x-1)(-3 x+2) \\)\n6. \\( (x-1)\\left(x^{2}+x+1\\right) \\)\n7. \\( (x+1)\\left(x^{2}-x+1\\right) \\)\n8. \\( (x-2)(x+2) \\)\n9. \\( (x-2)(x-2) \\)\n10. \\( \\left(x^{3}+2 x-1\\right)\\left(x^{3}-5 x^{2}+4\\right) \\)\nFind the domain of each of the following functions in \\( 11-15 . \\)\n11. \\( f(x)=\\sqrt{1+x} \\)\n12. \\( f(x)=\\frac{1}{1+x} \\)\n13. \\( f(x)=\\frac{1}{\\sqrt{x}} \\)\n14. \\( f(x)=\\frac{1}{\\sqrt{1+x}} \\)\n15. \\( f(x)=\\frac{1}{1+x^{2}} \\)\n16. Given that \\( f(x)=x^{2}-3 x+4 \\), find and simplify \\( f(3), f(a), f(-t) \\), and \\( f\\left(x^{2}+1\\right) \\)\n17. \\( x^{2}-x-20 \\)\n18. \\( x^{2}-10 x+21 \\)\n19. \\( x^{2}+10 x+16 \\)\n20. \\( x^{2}+8 x-105 \\)\n21. \\( 4 x^{2}+11 x-3 \\)\n22. \\( -2 x^{2}+7 x+15 \\)\n23. \\( x^{2}-2 \\)\n1"
-# str = open('result.tex', 'r').read()
-#parsed_content = latex_parser(str)
-#print(parsed_content)
+if __name__ == "__main__":
+   
+    content = open('output.txt', 'r').read()
+    latex_parser(content)
+    print(latex_parser(content))
