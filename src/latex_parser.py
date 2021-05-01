@@ -1,7 +1,7 @@
 import json
 
 parsed_content = ""
-
+content = open('output.txt', 'r').read()
 
 
 def latex_parser(input_content):
@@ -31,9 +31,12 @@ def util(content):
     is_firstrow = 0
     table = 0
     n = int(len(content))
-    is_array=0
+    is_array = 0
     ignore_eqn_end = 0
-    # print("n is ", n)
+    print("n is ", n)
+    if(n==0): return 0
+    if(n==10):
+        print(content)
     i = 0
     while i < n:
         #i=i+1
@@ -49,8 +52,11 @@ def util(content):
                 #print(out)
 
             elif (content[i] == '\\'):  #flag when you see \
+            
                 flag = 1
                 i = i + 1
+                if(i==n):
+                    return 0
 
             elif (content[i:i + 16] == "& \multicolumn{1"):
                 #print("ok tested")
@@ -66,12 +72,12 @@ def util(content):
                 util(content[i + 1:j - 1])
                 i = j
 
-            elif (content[i] == '&' and is_array==0):
+            elif (content[i] == '&' and is_array == 0):
                 i = i + 1
 
                 parsed_content += " next column "
-            elif(content[i] == '&' and is_array==1):
-                i=i+1
+            elif (content[i] == '&' and is_array == 1):
+                i = i + 1
 
             elif (content[i] == '^'):  #write to the power of instead of ^{}
 
@@ -118,7 +124,12 @@ def util(content):
                 util(content[i + 1:j - 1])
                 i = j
                 flag = 0
-
+                
+            elif(content[i:i+5]=="times"):
+                i=i+5
+                flag=0
+                parsed_content+=" times "
+                
             elif (content[i:i + 4] == "sqrt"):
 
                 #file.write(" square root of ")
@@ -143,11 +154,11 @@ def util(content):
                 i = i + 5
             elif (content[i] == '('):
                 i = i + 1
-
+                print(i)
                 parsed_content = parsed_content + " equation start"
 
                 flag = 0
-            elif (content[i] == ')' and ignore_eqn_end==0):
+            elif (content[i] == ')' and ignore_eqn_end == 0):
                 i = i + 1
 
                 parsed_content = parsed_content + " equation end "
@@ -155,6 +166,7 @@ def util(content):
                 flag = 0
             elif (content[i] == ')' and ignore_eqn_end == 1):
                 i = i + 1
+                ignore_eqn_end = 0
                 flag = 0
             elif (content[i] == '['):
                 i = i + 1
@@ -215,41 +227,41 @@ def util(content):
                 else:
                     i += 1
 
-
-            elif(content[i:i+11]=='begin{array'):
-                str_remove = " equation start"
-                parsed_content=parsed_content[:-(len(str_remove))]
-                is_array=1
+            elif (content[i:i + 11] == 'begin{array'):
+                
+                #str_remove = " equation start"
+                #parsed_content = parsed_content[:-(len(str_remove))]
+                is_array = 1
                 #   print("array begin")
-                i=i+13
-                while(content[i]!='}'):
-                    i=i+1
-                i=i+1
-                flag=0
-            elif(content[i:i+9]=='end{array'):
+                i = i + 13
+                while (content[i] != '}'):
+                    i = i + 1
+                i = i + 1
+                flag = 0
+            elif (content[i:i + 9] == 'end{array'):
                 #str_remove = "equation end"
                 #parsed_content = parsed_content[:-(len(str_remove))]
-                is_array=0
-                ignore_eqn_end=1
+                is_array = 0
+                ignore_eqn_end = 1
                 # print("array end")
-                i=i+10
-                flag=0
-            elif(content[i:i+4]=='text'):
+                i = i + 10
+                flag = 0
+            elif (content[i:i + 4] == 'text'):
                 # print("text")
-                i=i+6
-                j=i
+                i = i + 6
+                j = i
                 li = ['{']
-                columns=0
+                columns = 0
                 while (li):
                     #if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
                     if (content[j] == 'l'): columns += 1
                     j = j + 1
-                util(content[i :j - 1])
-                i=j
-                flag=0
-            elif(content[i:i+6]=='mathbf'):
-                i=i+7
+                util(content[i:j - 1])
+                i = j
+                flag = 0
+            elif (content[i:i + 6] == 'mathbf'):
+                i = i + 7
                 j = i
                 li = ['{']
                 columns = 0
@@ -263,10 +275,8 @@ def util(content):
                 flag = 0
             else:
                 i = i + 1
+    return 0
 
+#if __name__ == "__main__":
 
-if __name__ == "__main__":
-   
-    content = open('output.txt', 'r').read()
-    latex_parser(content)
-    print(latex_parser(content))
+print(latex_parser(content))
