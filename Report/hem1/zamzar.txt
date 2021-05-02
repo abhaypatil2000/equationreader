@@ -1,0 +1,37 @@
+                                                                                    RATIONAL NUMBERS   1
+
+
+                                                                                            CHAPTER
+
+             Rational Numbers
+                                                                                            1
+1.1 Introduction
+In Mathematics, we frequently come across simple equations to be solved. For example,
+the equation                      x + 2 = 13                                     (1)
+is solved when x = 11, because this value of x satisfies the given equation. The solution
+11 is a natural number. On the other hand, for the equation
+                                        x+5=5                                        (2)
+the solution gives the whole number 0 (zero). If we consider only natural numbers,
+equation (2) cannot be solved. To solve equations like (2), we added the number zero to
+the collection of natural numbers and obtained the whole numbers. Even whole numbers
+will not be sufficient to solve equations of type
+                                      x + 18 = 5                                     (3)
+    Do you see ‘why’? We require the number –13 which is not a whole number. This
+led us to think of integers, (positive and negative). Note that the positive integers
+correspond to natural numbers. One may think that we have enough numbers to solve all
+simple equations with the available list of integers. Now consider the equations
+                                          2x = 3                                     (4)
+                                      5x + 7 = 0                                     (5)
+for which we cannot find a solution from the integers. (Check this)
+                        3                           −7
+We need the numbers       to solve equation (4) and    to solve
+                        2                           5
+equation (5). This leads us to the collection of rational numbers.
+    We have already seen basic operations on rational
+numbers. We now try to explore some properties of operations
+on the different types of numbers seen so far.
+
+
+
+                                                      2019-20
+
