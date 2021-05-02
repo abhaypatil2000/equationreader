@@ -6,7 +6,7 @@ from datetime import datetime
 class User(AbstractUser):
 
     def __str__(self):
-        return self.username
+        return self.first_name
 
 class Profile(models.Model):
     user = models.OneToOneField(User ,on_delete=models.CASCADE)
