@@ -4,6 +4,62 @@ parsed_content = ""
 content = open('output.txt', 'r').read()
 
 
+def text_checking(inp):
+    """
+    given a string input, check its properties
+
+    returns a tuple of two bools
+
+    first bool tells whether that equation is valid or not
+    second bool tells whether start equation and end equation are to be read or not
+
+    """
+
+    first = True
+    second = False
+
+    special_counter = 0  # number of special characters in the input
+    inp = str(inp)
+    special_counter += inp.count("frac")
+    special_counter += inp.count("div")
+    special_counter += inp.count("sqrt")
+
+    second = (special_counter >= 2)
+
+    left_counter_1 = 0  # for (
+    right_counter_1 = 0
+    left_counter_2 = 0  # for [
+    right_counter_2 = 0
+    left_counter_3 = 0  # for {
+    right_counter_3 = 0
+
+    for x in inp:
+        if x == '(':
+            left_counter_1
+        elif x == ')':
+            right_counter_1
+        elif x == '{':
+            left_counter_2
+        elif x == '}':
+            right_counter_2
+        elif x == '[':
+            left_counter_3
+        elif x == ']':
+            right_counter_3
+
+        if left_counter_1 < right_counter_1:
+            first = False
+        elif left_counter_2 < right_counter_2:
+            first = False
+        elif left_counter_3 < right_counter_3:
+            first = False
+
+    if left_counter_1 != right_counter_1 or left_counter_2 != right_counter_2 or left_counter_3 != right_counter_3:
+        first = False
+
+    return (first, second)
+
+
 def latex_parser(input_content):
     global parsed_content
     print("==============================###################################")
