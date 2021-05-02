@@ -1,0 +1,32 @@
+4 C MATHEMATICS
+\[
+\frac{5}{8}-\frac{4}{5}=\frac{25-32}{40}=\ldots
+\]
+Is it a rational number?
+\[
+\frac{3}{7}-\left(\frac{-8}{5}\right)=\ldots
+\]
+Is it a rational number?
+Try this for some more pairs of rational numbers. We find that rational numbers are closed under subtraction. That is, for any two rational numbers a and b, \( a-b \) is also a rational number.
+(c) Let us now see the product of two rational numbers.
+\( \frac{-2}{3} \times \frac{4}{5}=\frac{-8}{15} ; \frac{3}{7} \times \frac{2}{5}=\frac{6}{35} \quad \) (both the products are rational numbers)
+\[
+-\frac{4}{5} \times \frac{-6}{11}=\ldots
+\]
+Is it a rational number?
+Take some more pairs of rational numbers and check that their product is again a rational number.
+
+We say that rational numbers are closed under multiplication. That is, for any two rational numbers a and b, \( a \times b \) is also a rational number. (d) We note that \( \frac{-5}{3} \div \frac{2}{5}=\frac{-25}{6} \quad \) (a rational number)
+\( \frac{2}{7} \div \frac{5}{3}=\ldots \). Is it a rational number? \( \frac{-3}{8} \div \frac{-2}{9}=\ldots . \) Is it a rational number?
+Can you say that rational numbers are closed under division? We find that for any rational number \( a, a \div 0 \) is not defined. So rational numbers are not closed under division. However, if we exclude zero then the collection of, all other rational numbers is closed under division.
+TRY THESE
+Fill in the blanks in the following table. \begin{tabular}{|l|c|c|c|c|}
+\hline Numbers & \multicolumn{4}{|c|} { Closed under } \\
+\hline & addition & subtraction & multiplication & division \\
+\hline Rational numbers & Yes & Yes & \( \ldots \) & No \\
+Integers & \( \ldots \) & Yes & \( \ldots \) & No \\
+Whole numbers & \( \ldots \) & \( \ldots \) & Yes & \( \ldots \) \\
+Natural numbers & \( \ldots \) & No & \( \ldots \) & \( \ldots \) \\
+\hline
+\end{tabular}
+2019-20

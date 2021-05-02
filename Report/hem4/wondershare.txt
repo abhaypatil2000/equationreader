@@ -1,0 +1,50 @@
+﻿----------------------------------------------------- Page 1 -----------------------------------------------------
+4 M ATHEMATICS 
+5 4 
+8 5 
+= 
+25 − 32 
+40 
+= ... Is it a rational number? 
+3  − 8  
+  = ... Is it a rational number? 7 5 
+Try this for some more pairs of rational numbers. We find that rational numbers are closed under subtraction. That is, for any two rational numbers a and b, a – b is also a rational number . 
+(c) Let us now see the product of two rational numbers. 
+− 2 4 
+× 
+3 5 
+= 
+− 8 3 2 6 ; × = 
+15 7 5 35 
+(both the products are rational numbers) 
+4 − 6 
+− × 
+5 11 
+= ... Is it a rational number? 
+Take some more pairs of rational numbers and check that their product is again a rational number. 
+We say that rational numbers are closed under multiplication. That is, for any two rational numbers a and b, a × b is also a rational number . 
+− 5 2 − 25 
+(d) We note that ÷ = 
+3 5 6 
+÷ = ... . Is it a rational number? 7 3 
+− 3 − 2 
+÷ = ... 
+8 9 
+(a rational number) 
+. Is it a rational number? 
+Can you say that rational numbers are closed under division? 
+We find that for any rational number a , a ÷ 0 is not defined . 
+So rational numbers are not closed under division. 
+However, if we exclude zero then the collection of, all other rational numbers is closed under division. 
+TRY THESE 
+Fill in the blanks in the following table. 
+Numbers Closed under 
+addition subtraction multiplication division 
+Rational numbers Yes Yes ... No Integers ... Yes ... No 
+Whole numbers ... ... Yes ... 
+Natural numbers ... No ... ... 
+2019-20 
+− 
+− 
+  
+2 5 
