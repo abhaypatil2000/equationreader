@@ -116,6 +116,8 @@ def util(content):
                 j = i
                 #getting contents inside {} to call the function recursively
                 while (len(li) > 0):
+                    if (j >= n):
+                        return 0
                     if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
                     j = j + 1
@@ -140,6 +142,8 @@ def util(content):
                 li = ['{']
                 #getting contents inside {} to call the function recursively
                 while (len(li) > 0):
+                    if (j >= n):
+                        return 0
                     if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
                     j = j + 1
@@ -155,6 +159,8 @@ def util(content):
                 j = i + 5
                 li = ['{']
                 while (li):
+                    if (j >= n):
+                        return 0
                     if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
                     j = j + 1
@@ -168,6 +174,8 @@ def util(content):
                 j = i + 1
                 li = ['{']
                 while (li):
+                    if (j >= n):
+                        return 0
                     if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
                     j = j + 1
@@ -189,6 +197,8 @@ def util(content):
                 j = i + 5
                 li = ['{']
                 while (li):
+                    if (j >= n):
+                        return 0
                     if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
                     j = j + 1
@@ -205,8 +215,28 @@ def util(content):
             elif (content[i] == '('):
                 i = i + 1
                 len_parsed = len(parsed_content)
-                parsed_content = parsed_content + " equation start"
 
+                li = ['(']
+                j = i
+                while (len(li) > 0):
+                    if (j >= n):
+                        return 0
+                    if (content[j] == '('):
+                        li.append('(')
+                    if (content[j] == ')'):
+                        li.pop()
+                    j = j + 1
+                ret = text_checking(content[i:j - 1])
+                if (ret[0] is False):
+                    i = j
+                else:
+                    if (ret[1]):
+                        ignore_eqn_end = 0
+                        parsed_content = parsed_content + " equation start"
+                    else:
+                        ignore_eqn_end = 1
+                    util(content[i:j - 2])
+                    i = j - 2
                 flag = 0
             elif (content[i] == ')' and ignore_eqn_end == 0):
                 i = i + 1
@@ -248,6 +278,8 @@ def util(content):
                     columns = 0
                     j = i + 1
                     while (li):
+                        if(j>=n):
+                            return 0
                         #if (content[j] == '{'): li.append('{')
                         if (content[j] == '}'): li.pop()
                         if (content[j] == 'l'): columns += 1
@@ -303,6 +335,8 @@ def util(content):
                 li = ['{']
                 columns = 0
                 while (li):
+                    if (j >= n):
+                        return 0
                     #if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
                     if (content[j] == 'l'): columns += 1
@@ -316,6 +350,8 @@ def util(content):
                 li = ['{']
                 columns = 0
                 while (li):
+                    if (j >= n):
+                        return 0
                     #if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
                     if (content[j] == 'l'): columns += 1
@@ -356,6 +392,8 @@ def util(content):
                 li = ['{']
                 j = i
                 while (li):
+                    if(j>=n):
+                        return 0
                     if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
 
