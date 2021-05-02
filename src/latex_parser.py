@@ -9,16 +9,10 @@ def latex_parser(input_content):
     print("==============================###################################")
     print(input_content)
     print("==============================###################################")
-    # data = json.loads(str)
-    # content = data["text"]
+
     content = input_content.replace("\\\\", "\\")
     util(content)
-    #file.close()
-    #file1=open('output.txt','r')
-    #list=file1.readlines()
-    #print(list)
-    #for string in list:
-    #out=out+string
+
     file1 = open('temp.txt', 'w')
     file1.write(parsed_content)
     file1.close()
@@ -32,6 +26,7 @@ def util(content):
     table = 0
     n = int(len(content))
     is_array = 0
+    len_parsed = 0
     ignore_eqn_end = 0
     #print("n is ", n)
     if (n == 0): return 0
@@ -153,7 +148,7 @@ def util(content):
                 i = i + 5
             elif (content[i] == '('):
                 i = i + 1
-
+                len_parsed = len(parsed_content)
                 parsed_content = parsed_content + " equation start"
 
                 flag = 0
@@ -291,26 +286,34 @@ def util(content):
                 flag = 0
                 i = i + 10
                 parsed_content += " right arrow "
-            elif(content[i:i+5]=="angle"):
-                flag=0
-                i=i+5
-                parsed_content+=" angle "
-            elif(content[i:i+8]=="overline"):
-                flag=0
-                i=i+8
-                parsed_content+=" line segment "
-            elif(content[i:i+6]=="mathrm"):
-                i=i+7
-                flag=0
+            elif (content[i:i + 5] == "angle"):
+                flag = 0
+                i = i + 5
+                parsed_content += " angle "
+            elif (content[i:i + 8] == "overline"):
+                flag = 0
+                i = i + 8
+                parsed_content += " line segment "
+            elif (content[i:i + 6] == "mathrm"):
+                i = i + 7
+                flag = 0
                 li = ['{']
-                j=i
+                j = i
                 while (li):
                     if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
-                   
+
                     j = j + 1
                 util(content[i:j - 1])
                 i = j
+            elif (content[i:i + 5] == "Delta"):
+                i = i + 5
+                flag = 0
+                parsed_content += " triangle "
+            elif (content[i:i + 4] == "cong"):
+                i = i + 4
+                flag = 0
+                parsed_content += " congruent to "
 
             else:
                 i = i + 1
