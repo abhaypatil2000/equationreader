@@ -34,8 +34,8 @@ def util(content):
     is_array = 0
     ignore_eqn_end = 0
     #print("n is ", n)
-    if(n==0): return 0
-    
+    if (n == 0): return 0
+
     i = 0
     while i < n:
         #i=i+1
@@ -51,10 +51,10 @@ def util(content):
                 #print(out)
 
             elif (content[i] == '\\'):  #flag when you see \
-            
+
                 flag = 1
                 i = i + 1
-                if(i==n):
+                if (i == n):
                     return 0
 
             elif (content[i:i + 16] == "& \multicolumn{1"):
@@ -123,12 +123,12 @@ def util(content):
                 util(content[i + 1:j - 1])
                 i = j
                 flag = 0
-                
-            elif(content[i:i+5]=="times"):
-                i=i+5
-                flag=0
-                parsed_content+=" times "
-                
+
+            elif (content[i:i + 5] == "times"):
+                i = i + 5
+                flag = 0
+                parsed_content += " times "
+
             elif (content[i:i + 4] == "sqrt"):
 
                 #file.write(" square root of ")
@@ -153,7 +153,7 @@ def util(content):
                 i = i + 5
             elif (content[i] == '('):
                 i = i + 1
-               
+
                 parsed_content = parsed_content + " equation start"
 
                 flag = 0
@@ -227,7 +227,7 @@ def util(content):
                     i += 1
 
             elif (content[i:i + 11] == 'begin{array'):
-                
+
                 #str_remove = " equation start"
                 #parsed_content = parsed_content[:-(len(str_remove))]
                 is_array = 1
@@ -272,9 +272,50 @@ def util(content):
                 util(content[i:j - 1])
                 i = j
                 flag = 0
+            elif (content[i:i + 2] == "pi"):
+                flag = 0
+                i = i + 2
+                parsed_content += " pi "
+            elif (content[i:i + 14] == "leftrightarrow"
+                  or content[i:i + 14] == "Leftrightarrow"):
+                flag = 0
+                i = i + 14
+                parsed_content += " if and only if "
+            elif (content[i:i + 9] == "leftarrow"
+                  or content[i:i + 9] == "Leftarrow"):
+                flag = 0
+                i = i + 9
+                parsed_content += " left arrow "
+            elif (content[i:i + 10] == "rightarrow"
+                  or content[i:i + 9] == "Rightarrow"):
+                flag = 0
+                i = i + 10
+                parsed_content += " right arrow "
+            elif(content[i:i+5]=="angle"):
+                flag=0
+                i=i+5
+                parsed_content+=" angle "
+            elif(content[i:i+8]=="overline"):
+                flag=0
+                i=i+8
+                parsed_content+=" line segment "
+            elif(content[i:i+6]=="mathrm"):
+                i=i+7
+                flag=0
+                li = ['{']
+                j=i
+                while (li):
+                    if (content[j] == '{'): li.append('{')
+                    if (content[j] == '}'): li.pop()
+                   
+                    j = j + 1
+                util(content[i:j - 1])
+                i = j
+
             else:
                 i = i + 1
     return 0
+
 
 #if __name__ == "__main__":
 
