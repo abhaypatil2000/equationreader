@@ -418,5 +418,4 @@ def util(content):
 
 
 #if __name__ == "__main__":
-
-print(latex_parser(content))
+# print(latex_parser(content))

@@ -43,32 +43,38 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
             # for unsuccessful requests
             page_id = entry.replace(".png", "")
             output = f" ,, {page_id} missing ,, "
-            output = "\\( \\frac{1}{2}(x-3)+x=17+3(4-x) \\) ,, "  #! for testing
+            # output = "\\( \\frac{1}{2}(x-3)+x=17+3(4-x) \\) ,, "  #! for testing
             print(f"{page_id} done")
 
             # DANGER !! mathpix ahead
-            if make_request:
-                r = requests.post("https://api.mathpix.com/v3/text",
-                                  data=json.dumps({'src': image_uri}),
-                                  headers={
-                                      "app_id":
-                                      "2018csb1063_iitrpr_ac_in_3b2e55_7b249e",
-                                      "app_key": "06dcfdf863bb8d34f133",
-                                      "Content-type": "application/json"
-                                  })
-                # TODO : SATHWIK CHECK THIS
-                # TODO : check for successful_request or not depending on the request.status or from the output of the return request
-                # TODO : if connection error then try to resend the request so that the user does not waste his money for connection error
-                # TODO : else whatever you decide
-                successful_request = True
-                if (successful_request):
-                    output = json.dumps(json.loads(r.text),
-                                        indent=4,
-                                        sort_keys=True)
-                    output = json.loads(output)["text"]
+            try:
+                if make_request:
+                    r = requests.post(
+                        "https://api.mathpix.com/v3/text",
+                        data=json.dumps({'src': image_uri}),
+                        headers={
+                            "app_id": "2018csb1063_iitrpr_ac_in_3b2e55_7b249e",
+                            "app_key": "06dcfdf863bb8d34f133",
+                            "Content-type": "application/json"
+                        })
+                    # TODO : SATHWIK CHECK THIS
+                    # TODO : check for successful_request or not depending on the request.status or from the output of the return request
+                    # TODO : if connection error then try to resend the request so that the user does not waste his money for connection error
+                    # TODO : else whatever you decide
+                    successful_request = True
+                    if (successful_request):
+                        parsed_output = json.dumps(json.loads(r.text),
+                                                   indent=4,
+                                                   sort_keys=True)
+                        parsed_output = json.loads(parsed_output)["text"]
+                    output = parsed_output
+            except:
+                pass
             # danger passed
             print(f"{page_id} done API request")
             content += output + " "
+    f = open(f"./{folder_name}/mathpix.txt", "w")
+    f.write(content)
     return (processed_pages, content)
 
 
