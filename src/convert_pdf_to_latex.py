@@ -19,7 +19,10 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
     processed_pages = convert_pdf_to_images(input_pdf, folder_name, page_count)
     content = ""  # to be given further to latex_parser
     directory = f"./{folder_name}/images"
-    for entry in sorted(os.listdir(directory)):
+    for iter in range(len(os.listdir(directory))):
+        # for entry in sorted(os.listdir(directory)):
+        entry = f"page{iter}.png"
+
         # try:  # if folder already exists then exception occurs
         #     os.mkdir(f"./{folder_name}/tex")
         # except:  # else remove all the content in the folder
