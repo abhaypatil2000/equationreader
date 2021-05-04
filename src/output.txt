@@ -1,23 +1,463 @@
-1.2 Properties of Rational Numbers
-\( \begin{array}{ll}\mathbf{1 . 2 . 1} & \text { Closure }\end{array} \)
-(i) Whole numbers
-Let us revisit the closure property for all the operations on whole numbers in brief.
-\begin{tabular}{|l|l|l|}
-\hline Operation & \multicolumn{1}{|c|} { Numbers } & \multicolumn{1}{|c|} { Remarks } \\
-\hline Addition & \( 0+5=5, \) a whole number \( 4+7=\ldots . \) Is it a whole number? In general, \( a+b \) is a whole number for any two whole numbers \( a \) and \( b . \) & Whole numbers are closed under addition. \\
-\hline Subtraction & \( 5-7=-2, \) which is not a whole number. & Whole numbers are not closed under subtraction. \\
-\hline Multiplication & \( 0 \times 3=0, \) a whole number \( 3 \times 7=\ldots . \) Is it a whole number? In general, if \( a \) and \( b \) are any two whole numbers, their product ab is a whole number. & Whole numbers are closed under multiplication. \\
-\hline Division & \( 5 \div 8=\frac{5}{8}, \) which is not a whole number. & Whole numbers are not closed under division. \\
-\hline
-\end{tabular}
-Check for closure property under all the four operations for natural numbers.
-(ii) Integers
-Let us now recall the operations under which integers are closed. \begin{tabular}{|l|l|l|}
-\hline Operation & \multicolumn{1}{|c|} { Numbers } & \multicolumn{1}{|c|} { Remarks } \\
-\hline Addition & \( -6+5=-1, \) an integer Is \( -7+(-5) \) an integer? Is \( 8+5 \) an integer? & Integers are closed under addition. \\
-& In general, \( a+b \) is an integer for any two integers \( a \) and \( b . \) & \\
-\hline Subtraction & \( 7-5=2 \) an integer & Integers are closed under \\
-& Is \( 5-7 \) an integer? & subtraction. \\
-& \( -6-8=-14, \) an integer & \\
-\hline
-\end{tabular}
+
+CHAPTER 7
+TRIANGLES
+7.1 Introduction
+You have studied about triangles and their various properties in your earlier classes. You know that a closed figure formed by three intersecting lines is called a triangle. ('Tri' means 'three'). A triangle has three sides, three angles and three vertices. For example, in triangle ABC, denoted as \( \triangle \mathrm{ABC} \) (see Fig. 7.1); AB, BC, CA are the three sides, \( \angle \mathrm{A}, \angle \mathrm{B}, \angle \mathrm{C} \) are the three angles and \( \mathrm{A}, \mathrm{B}, \mathrm{C} \) are three vertices. In Chapter 6, you have also studied some properties of triangles. In this chapter, you will study in details about the congruence of triangles, rules of congruence, some more properties of triangles and inequalities in a triangle. You have already verified most of these properties in earlier classes. We will now prove some of them.
+\( 7.2 \) Congruence of Triangles
+You must have observed that two copies of your photographs of the same size are identical. Similarly, two bangles of the same size, two ATM cards issued by the same bank are identical. You may recall that on placing a one rupee coin on another minted in the same year, they cover each other completely.
+
+Do you remember what such figures are called? Indeed they are called congruent figures ('congruent' means equal in all respects or figures whose shapes and sizes are both the same).
+
+Now, draw two circles of the same radius and place one on the other. What do you observe? They cover each other completely and we call them as congruent circles.
+\( 2020-21 \) 110
+MATHEMATICS
+Repeat this activity by placing square on the other with sides of the measure (see Fig. 7.2) or by placing equilateral triangles of equal sides on other. You will observe that the squares congruent to each other and so are the equilateral triangles. Fig. \( 7.2 \)
+You may wonder why we are studying congruence. You all must have seen the ice tray in your refrigerator. Observe that the moulds for making ice are all congruent. The cast used for moulding in the tray also has congruent depressions (may be all are rectangular or all circular or all triangular). So, whenever identical objects have to be produced, the concept of congruence is used in making the cast.
+
+Sometimes, you may find it difficult to replace the refill in your pen by a new one and this is so when the new refill is not of the same size as the one you want to remove. Obviously, if the two refills are identical or congruent, the new refill fits.
+So, you can find numerous examples where congruence of objects is applied in daily life situations.
+Can you think of some more examples of congruent figures?
+Now, which of the following figures are not congruent to the square in Fig \( 7.3(\mathrm{i}): \)
+(i)
+(ii)
+(iii)
+(iv)
+Fig. \( 7.3 \)
+The large squares in Fig. \( 7.3 \) (ii) and (iii) are obviously not congruent to the one in Fig \( 7.3 \) (i), but the square in Fig \( 7.3 \) (iv) is congruent to the one given in Fig \( 7.3 \) (i).
+Let us now discuss the congruence of two triangles.
+
+You already know that two triangles are congruent if the sides and angles of one triangle are equal to the corresponding sides and angles of the other triangle.
+\[
+2020-21
+\] TRIANGLES
+2. \( \mathrm{ABCD} \) is a quadrilateral in which \( \mathrm{AD}=\mathrm{BC} \) \( \angle \mathrm{DAB}=\angle \mathrm{CBA} \) (see Fig. 7.17). Prove
+(i) \( \quad \Delta \mathrm{ABD} \cong \Delta \mathrm{BAC} \)
+(ii) \( \mathrm{BD}=\mathrm{AC} \)
+(iii) \( \angle \mathrm{ABD}=\angle \mathrm{BAC} \).
+3. \( \mathrm{AD} \) and \( \mathrm{BC} \) are equal perpendiculars segment AB (see Fig. 7.18). Show \( \mathrm{AB} \)
+Fig. 7.18
+4. \( l \) and \( m \) are two parallel lines intersected another pair of parallel lines \( p \) and CDA. (see Fig. 7.19). Show that
+Fig. 7.19
+5. Line \( l \) is the bisector of an angle \( \angle \mathrm{A} \) and \( \mathrm{B} \) is any point on \( l \). BP and BQ are perpendiculars from B to the arms of \( \angle \mathrm{A} \) (see Fig. 7.20). Show that:
+(i) \( \triangle \mathrm{APB} \cong \Delta \mathrm{AQB} \)
+(ii) \( \mathrm{BP}=\mathrm{BQ} \) or \( \mathrm{B} \) is equidistant from the arms
+of \( \angle \mathrm{A} \)
+Fig. 7.20
+2020-21 6. In Fig. \( 7.21, \mathrm{AC}=\mathrm{AE}, \mathrm{AB}=\mathrm{AD} \) and
+\( \angle \mathrm{BAD}=\angle \mathrm{EAC} \). Show that \( \mathrm{BC}=\mathrm{DE} \).
+Fig. \( 7.21 \)
+7. \( \mathrm{AB} \) is a line segment and \( \mathrm{P} \) is its mid-point. \( \mathrm{D} \) and \( \mathrm{E} \) are points on the same side of AB such that \( \angle \mathrm{BAD}=\angle \mathrm{ABE} \) and
+DPB (see Fig. 7.22). Show that
+(i) \( \quad \Delta \mathrm{DAP} \cong \Delta \mathrm{EBP} \)
+(ii) \( \mathrm{AD}=\mathrm{BE} \)
+Fig. \( 7.22 \)
+8. In right triangle \( \mathrm{ABC} \), right angled at \( \mathrm{C}, \mathrm{M} \) is the mid-point of hypotenuse AB. C is joined to \( \mathrm{M} \) and produced to a point \( \mathrm{D} \) such that \( \mathrm{DM}=\mathrm{CM} \). Point \( \mathrm{D} \) is joined to point \( \mathrm{B} \) (see Fig. 7.23). Show that:
+(i) \( \Delta \mathrm{AMC} \cong \Delta \mathrm{BMD} \)
+(ii) \( \angle \mathrm{DBC} \) is a right angle.
+(iii) \( \Delta \mathrm{DBC} \cong \triangle \mathrm{ACB} \)
+Fig. \( 7.23 \)
+(iv) \( \mathrm{CM}=\frac{1}{2} \mathrm{AB} \)
+7.4 Some Properties of a Triangle
+In the above section you have studied two criteria for congruence of triangles. Let us now apply these results to study some properties related to a triangle whose two sides are equal.
+2020-2 Perform the activity given below:
+triangle in which two sides equal and the third Fig. 7.24). You have done constructions in earlier classes.
+Do you remember what is such a triangle called? Fig. \( 7.24 \) A triangle in which two sides are equal is called an isosceles triangle. So, \( \Delta \mathrm{ABC} \) of Fig. \( 7.24 \) is an isosceles triangle with \( \mathrm{AB}=\mathrm{AC} \)
+Now, measure \( \angle \mathrm{B} \) and \( \angle \mathrm{C} \). What do you observe?
+Repeat this activity with other isosceles triangles with different sides. You may observe that in each such triangle, the angles opposite to the equal sides are equal.
+
+This is a very important result and is indeed true for any isosceles triangle. It can be proved as shown below.
+
+Theorem \( 7.2 \) : Angles opposite to equal sides of an isosceles triangle are equal.
+This result can be proved in many ways. One of the proofs is given here. Proof: We are given an isosceles triangle ABC
+\( \angle B=\angle C . \)
+in which \( \mathrm{AB}=\mathrm{AC} \). We need to prove that
+Let us draw the bisector of \( \angle \mathrm{A} \) and let \( \mathrm{D} \) be the point of intersection of this bisector of \( \quad \) Fig. \( 7.25 \) \( \angle \mathrm{A} \) and \( \mathrm{BC} \) (see Fig. \( 7.25) \).
+In \( \Delta \) BAD and \( \Delta \) CAD,
+\( \mathrm{AB}=\mathrm{AC} \quad \) (Given)
+\( \angle \mathrm{BAD}=\angle \mathrm{CAD} \quad \) (By construction)
+\( \begin{array}{ll}A D=A D & (\text { Common })\end{array} \)
+So, \( \quad \Delta \mathrm{BAD} \cong \Delta \mathrm{CAD} \quad \) (By SAS rule)
+So, \( \angle \mathrm{ABD}=\angle \mathrm{ACD} \), since they are corresponding angles of congruent triangles.
+So, \( \angle B=\angle C \)
+2020-21 122
+МАТнЕмАт
+Is the converse also true? That is:
+
+If two angles of any triangle are equal, can we conclude that the sides opposite to them are also equal?
+Perform the following activity. Construct a triangle \( \mathrm{ABC} \) with \( \mathrm{BC} \) of any length and \( \angle \mathrm{B}=\angle \mathrm{C}=50^{\circ} . \) Draw the bisector of \( \angle \mathrm{A} \) and let it intersect \( \mathrm{BC} \) at \( \mathrm{D} \) (see Fig. 7.26).
+
+Cut out the triangle from the sheet of paper and fold it along AD so that vertex \( \mathrm{C} \) falls on vertex B.
+What can you say about sides AC and AB?
+Observe that AC covers AB completely
+So, \( \mathrm{AC}=\mathrm{AB} \)
+Repeat this activity with some more triangles. Each time you will observe that the sides opposite to equal angles are equal. So we have the \( \quad \) Fig. \( 7.26 \) following:
+Theorem 7.3 : The sides opposite to equal angles of a triangle are equal.
+This is the converse of Theorem \( 7.2 \).
+You can prove this theorem by ASA congruence rule.
+Let us take some examples to apply these results.
+Example \( 4: \) In \( \Delta \mathrm{ABC} \), the bisector \( \mathrm{AD} \) of \( \angle \mathrm{A} \) is perpendicular to side \( \mathrm{BC} \) (see Fig. 7.27). Show that \( \mathrm{AB}=\mathrm{AC} \) and \( \triangle \mathrm{ABC} \) is isosceles.
+Solution : In \( \triangle \mathrm{ABD} \) and \( \triangle \mathrm{ACD} \),
+\( \angle \mathrm{BAD}=\angle \mathrm{CAD} \)
+\( \mathrm{AD}=\mathrm{AD} \)
+\( \angle \mathrm{ADB}=\angle \mathrm{ADC}=90^{\circ} \)
+So, \( \quad \Delta \mathrm{ABD} \cong \Delta \mathrm{ACD} \)
+So, \( \mathrm{AB}=\mathrm{AC} \)
+or, \( \Delta \mathrm{ABC} \) is an isosceles triangle.
+Fig. \( 7.27 \)
+\( 2020-21 \) TRIANG
+Example \( 5: \mathrm{E} \) and \( \mathrm{F} \) are respectively the mid-points of equal sides \( \mathrm{AB} \) and \( \mathrm{AC} \) of \( \triangle \mathrm{ABC} \) (see Fig. \( 7.28 \) ). Show that \( \mathrm{BF}=\mathrm{CE} \)
+Solution : In \( \Delta \mathrm{ABF} \) and \( \triangle \mathrm{ACE} \).
+\( \mathrm{AB}=\mathrm{AC} \)
+\( \begin{array}{ll}\text { C } \mathrm{A}=\angle \mathrm{A} & (\text { Common })\end{array} \)
+\( \mathrm{AF}=\mathrm{AE} \quad \) (Halves of equal sides)
+So \( \begin{array}{ll}\mathrm{ABF} \cong \Delta \mathrm{ACE} & \text { (SAS rule) }\end{array} \)
+Fig. 7.28
+Therefore, \( \quad \mathrm{BF}=\mathrm{CF} \)
+Example 6 : In an isosceles triangle \( \mathrm{ABC} \) with \( \mathrm{AB}=\mathrm{AC}, \mathrm{D} \) and \( \mathrm{E} \) are points on \( \mathrm{BC} \) such that \( \mathrm{BE}=\mathrm{CD} \) (see Fig. 7.29). Show that \( \mathrm{AD}=\mathrm{AE} \).
+Solution : In \( \Delta \mathrm{ABD} \) and \( \triangle \mathrm{ACE} \),
+Given
+\( \angle \mathrm{B}=\angle \)
+(Angles opposite to equal sides) (2)
+Also, \( \mathrm{BE}=\mathrm{CD} \)
+So, \( \quad B E-D E=C D-D E \)
+That is, \( \quad \mathrm{BD}=\mathrm{CE} \quad \) (3) \( \quad \) Fig. 7.29
+So, \( \Delta \) \( \mathrm{ACF} \)
+(Using (1), (2),
+(3) and SAS rule).
+This gives \( \quad \mathrm{AD}=\mathrm{AE} \)
+(CPCT)
+EXERCISE
+1. In an isosceles triangle \( \mathrm{ABC} \), with \( \mathrm{AB}=\mathrm{AC} \), the bisectors of \( \angle \mathrm{B} \) and \( \angle \mathrm{C} \) intersect each other at O. Join A to O. Show that :
+(i) \( \mathrm{OB}=\mathrm{OC} \)
+(ii) AO bisects \( \angle \mathrm{A} \)
+2. In \( \Delta \mathrm{ABC}, \mathrm{AD} \) is the perpendicular bisector of \( \mathrm{BC} \) (see Fig. 7.30). Show that \( \triangle \mathrm{ABC} \) is an isosceles triangle in which \( \mathrm{AB}=\mathrm{AC} \).
+Fig. \( 7.30 \)
+2020-21 3. \( \mathrm{ABC} \) is an isosceles triangle in which altitudes \( \mathrm{BE} \) and \( \mathrm{CF} \) are drawn to equal sides \( \mathrm{AC} \) and \( \mathrm{AB} \) respectively (see Fig. 7.31). Show that these altitudes are equal.
+Fig. \( 7.31 \)
+4. \( \mathrm{ABC} \) is a triangle in which altitudes \( \mathrm{BE} \) and \( \mathrm{CF} \) to sides \( \mathrm{AC} \) and \( \mathrm{AB} \) are equal (see Fig. 7.32). Show that
+(i) \( \quad \Delta \mathrm{ABE} \cong \Delta \mathrm{ACF} \)
+(ii) \( \mathrm{AB}=\mathrm{AC} \), i.e., \( \mathrm{ABC} \) is an isosceles triangle.
+Fig. \( 7.32 \)
+5. \( \mathrm{ABC} \) and \( \mathrm{DBC} \) are two isosceles triangles on the same base BC (see Fig. 7.33). Show that CD
+Fig. \( 7.33 \)
+6. \( \quad \Delta \mathrm{ABC} \) is an isosceles triangle in which \( \mathrm{AB}=\mathrm{AC} \). Side BA is produced to \( D \) such that \( A D=A B \) (see Fig. 7.34). Show that \( \angle \mathrm{BCD} \) is a right angle.
+7. \( \mathrm{ABC} \) is a right angled triangle in which \( \angle \mathrm{A}=90^{\circ} \) and \( \mathrm{AB}=\mathrm{AC} \). Find \( \angle \mathrm{B} \) and \( \angle \mathrm{C} \)
+8. Show that the angles of an equilateral triangle are \( 60^{\circ} \) each.
+Fig. \( 7.3 \)
+2020-21 TRIANGLES 2
+7.5 Some More Criteria for Congruence of Triangles
+You have seen earlier in this chapter that equality of three angles of one triangle to three angles of the other is not sufficient for the congruence of the two triangles. You may wonder whether equality of three sides of one triangle to three sides of another triangle is enough for congruence of the two triangles. You have already verified in earlier classes that this is indeed true.
+
+To be sure, construct two triangles with sides \( 4 \mathrm{~cm}, 3.5 \mathrm{~cm} \) and \( 4.5 \mathrm{~cm} \) (see Fig. 7.35). Cut them out and place them on each other. What do you observe? They cover each other completely, if the equal sides are placed on each other. So, the triangles are congruent.
+
+Repeat this activity with some more triangles. We arrive at another rule for congruence.
+
+Theorem \( 7.4 \) (SSS congruence rule) \( : \) If three sides of one triangle are equal to the three sides of another triangle, then the two triangles are congruent.
+This theorem can be proved using a suitable construction.
+You have already seen that in the SAS congruence rule, the pair of equal angles has to be the included angle between the pairs of corresponding pair of equal sides and if this is not so, the two triangles may not be congruent.
+Perform this activity:
+Construct two right angled triangles with hypotenuse equal to \( 5 \mathrm{~cm} \) and one side equal to \( 4 \mathrm{~cm} \) each (see Fig. 7.36).
+2020-21 Fig. \( 7.36 \)
+Cut them out and place one triangle over the other with equal side placed on each other. Turn the triangles, if necessary. What do you observe?
+
+The two triangles cover each other completely and so they are congruent. Repeat this activity with other pairs of right triangles. What do you observe?
+
+You will find that two right triangles are congruent if one pair of sides and the hypotenuse are equal. You have verified this in earlier classes.
+Note that, the right angle is not the included angle in this case.
+So, you arrive at the following congruence rule:
+Theorem \( 7.5 \) (RHS congruence rule) : If in two right triangles the hypotenuse and one side of one triangle are equal to the hypotenuse and one side of the other triangle, then the two triangles are congruent.
+Note that RHS stands for Right angle - Hypotenuse - Side.
+Let us now take some examples.
+Example \( 7: \mathrm{AB} \) is a line-segment. \( \mathrm{P} \) and \( \mathrm{Q} \) are points on opposite sides of \( A B \) such that each of them is equidistant from the points A and B (see Fig. 7.37). Show that the line \( \mathrm{PQ} \) is the perpendicular bisector of AB
+
+Solution : You are given that \( \mathrm{PA}=\mathrm{PB} \) and \( \mathrm{QA}=\mathrm{QB} \) and you are to show that \( \mathrm{PQ} \perp \mathrm{AB} \) and \( \mathrm{PQ} \) bisects \( \mathrm{AB} \). Let \( \mathrm{PQ} \) intersect \( \mathrm{AB} \) at \( \mathrm{C} \).
+Can you think of two congruent triangles in this figure?
+Let us take \( \Delta \mathrm{PAQ} \) and \( \Delta \mathrm{PBQ} \). Fig. 7.37
+In these triangles,
+2020-21 that \( \Delta \mathrm{PAC} \cong \Delta \mathrm{PBC} \) even though \( \mathrm{AP}=\mathrm{BP} \quad( \) Given \( ) \)
+and sides in
+It is because these results give us which is not always valid or true for congruence of triangles. Also the angle is not included between the equal pairs of sides.
+Let us take some more examples
+Example 8 : \( \mathrm{P} \) is a point equidistant from two lines \( l \) and \( m \) intersecting at point \( \mathrm{A} \) (see Fig. 7.38). Show that the line AP bisects the angle between them. ad \( m \) Solution : You are given that lines \( l \) and \( m \) intersect each other at \( A \). Let \( P B \perp l \), \( \mathrm{PC} \perp m \). It is given that \( \mathrm{PB}=\mathrm{PC} \).
+You are to show that \( \angle \mathrm{PAB}=\angle \mathrm{PAC} \).
+2020-21 128
+Let us consider \( \Delta \mathrm{PAB} \) and \( \Delta \mathrm{PAC} \). In these triangles,
+\[
+\mathrm{PB}=\mathrm{PC}
+\]
+\( \angle \mathrm{PBA}=\angle \mathrm{PCA}=90^{\circ} \quad( \) Given \( ) \)
+\( \mathrm{PA}=\mathrm{PA} \)
+(Common)
+So, \( \quad \Delta \mathrm{PAB} \cong \Delta \mathrm{PAC} \quad \) (RHS rule) \( \quad \) Fig. \( 7.38 \)
+So, \( \angle \mathrm{PAB}=\angle \mathrm{PAC} \quad(\mathrm{CPCT}) \)
+Note that this result is the converse of the result proved in Q.5 of Exercise 7.1.
+EXERCISE \( 7.3 \)
+1. \( \quad \Delta \mathrm{ABC} \) and \( \triangle \mathrm{DBC} \) are two isosceles triangles on the same base \( \mathrm{BC} \) and vertices \( \mathrm{A} \) and \( \mathrm{D} \) are on the same side of BC (see Fig. 7.39). If AD is extended
+(ii) \( \Delta \mathrm{ABP} \cong \Delta \mathrm{ACP} \)
+(i) \( \quad \Delta \mathrm{ABD} \cong \Delta \mathrm{ACD} \)
+to intersect \( B C \) at \( P \), show that
+(iii) AP bisects \( \angle \) A as well as \( \angle D \).
+(iv) AP is the perpendicular bisector of BC. Fig. 7.39
+2. \( \mathrm{AD} \) is an altitude of an isosceles triangle \( \mathrm{ABC} \) in which \( \mathrm{AB}=\mathrm{AC} \). Show that
+(i) AD bisects BC
+(ii) AD bisects \( \angle \mathrm{A} \).
+3. Two sides \( \mathrm{AB} \) and \( \mathrm{BC} \) and median AM of one triangle \( \mathrm{ABC} \) are respectively equal to sides PQ and QR and median
+(i) \( \quad \Delta \mathrm{ABM} \cong \Delta \mathrm{PQN} \)
+PN of \( \Delta \) PQR (see Fig. 7.40). Show that:
+(ii) \( \Delta \mathrm{ABC} \cong \Delta \mathrm{PQR} \quad \) Fig. \( 7.40 \)
+4. \( \mathrm{BE} \) and \( \mathrm{CF} \) are two equal altitudes of a triangle \( \mathrm{ABC} \). Using \( \mathrm{RHS} \) congruence rule, prove that the triangle \( \mathrm{ABC} \) is isosceles.
+5. \( \mathrm{ABC} \) is an isosceles triangle with \( \mathrm{AB}=\mathrm{AC} \). Draw \( \mathrm{AP} \perp \mathrm{BC} \) to show that \( \angle \mathrm{B}=\angle \mathrm{C} . \)
+2020-21 TRIANGLES
+Now, which of the triangles given below are congruent to triangle \( \mathrm{ABC} \) in Fig. 7.4 (i)?
+
+Cut out each of these triangles from Fig. \( 7.4 \) (ii) to \( (\mathrm{v}) \) and turn them around and try to cover \( \triangle \mathrm{ABC} \). Observe that triangles in Fig. \( 7.4 \) (ii), (iii) and (iv) are congruent to \( \triangle \mathrm{ABC} \) while \( \Delta \mathrm{TSU} \) of Fig \( 7.4(\mathrm{v}) \) is not congruent to \( \triangle \mathrm{ABC} \).
+If \( \Delta \mathrm{PQR} \) is congruent to \( \Delta \mathrm{ABC} \), we write \( \Delta \mathrm{PQR} \cong \Delta \mathrm{ABC} \).
+Notice that when \( \Delta \mathrm{PQR} \cong \Delta \mathrm{ABC} \), then sides of \( \Delta \mathrm{PQR} \) fall on corresponding equal sides of \( \Delta \mathrm{ABC} \) and so is the case for the angles.
+
+That is, PQ covers AB, QR covers BC and RP covers CA; \( \angle \) P covers \( \angle \) A. \( \angle \mathrm{Q} \) covers \( \angle \mathrm{B} \) and \( \angle \mathrm{R} \) covers \( \angle \mathrm{C} \). Also, there is a one-one correspondence between the vertices. That is, \( \mathrm{P} \) corresponds to \( \mathrm{A}, \mathrm{Q} \) to \( \mathrm{B}, \mathrm{R} \) to \( \mathrm{C} \) and so on which is written as
+\( \mathrm{P} \leftrightarrow \mathrm{A}, \mathrm{Q} \leftrightarrow \mathrm{B}, \mathrm{R} \leftrightarrow \mathrm{C} \)
+Note that under this correspondence, \( \Delta \mathrm{PQR} \cong \Delta \mathrm{ABC} ; \) but it will not be correct to write \( \Delta \mathrm{QRP} \cong \Delta \mathrm{ABC} \).
+Similarly, for Fig. \( 7.4 \) (iii),
+2020-2 TRIANGLES
+7.6 Inequalities in a Triangle
+So far, you have been mainly studying the equality of sides and angles of a triangle or triangles. Sometimes, we do come across unequal objects, we need to compare them. For example, line-segment \( \mathrm{AB} \) is greater in length as compared to line segment \( \mathrm{CD} \) in Fig. \( 7.41 \) (i) and \( \angle \mathrm{A} \) is greater than \( \angle \mathrm{B} \) in Fig \( 7.41 \) (ii).
+
+Let us now examine whether there is any relation between unequal sides and unequal angles of a triangle. For this, let us perform the following activity:
+
+Activity : Fix two pins on a drawing board say at B and \( \mathrm{C} \) and tie a thread to mark a side BC of a triangle.
+Fix one end of another thread at \( \mathrm{C} \) and tie a pencil the other (free) end. Mark a point A with the pencil and draw \( \Delta \mathrm{ABC} \) (see Fig 7.42). Now, shift the pencil and mark another point \( \mathrm{A}^{\prime} \) on \( \mathrm{CA} \) beyond (new position of it)
+
+So, \( \quad A^{\prime} C>A C \quad \) (Comparing the lengths)
+Join \( A^{\prime} \) to \( B \) and complete the triangle \( A^{\prime} B C \). What can you say about \( \angle \mathrm{A}^{\prime} \mathrm{BC} \) and \( \angle \mathrm{ABC} \) ?
+Compare them. What do you observe? \( \quad \) Fig. \( 7.42 \) Clearly, \( \quad \angle \mathrm{A}^{\prime} \mathrm{BC}>\angle \mathrm{ABC} \)
+Continue to mark more points on CA (extended) and draw the triangles with the side \( \mathrm{BC} \) and the points marked.
+
+You will observe that as the length of the side \( \mathrm{AC} \) is increased (by taking different positions of A), the angle opposite to it, that is, \( \angle \mathrm{B} \) also increases.
+Let us now perform another activity :
+2020-21 130
+Activity : Construct a scalene triangle (that is a triangle in which all sides are of different lengths). Measure the lengths of the sides.
+Now, measure the angles. What do you observe?
+
+In \( \Delta \mathrm{ABC} \) of Fig \( 7.43, \mathrm{BC} \) is the longest side and AC is the shortest side.
+
+Also, \( \angle \) A is the largest and \( \angle \mathrm{B} \) is the smallest.
+Repeat this activity with some other triangles. Fig. \( 7.43 \)
+We arrive at a very important result of inequalities in a triangle. It is stated in the form of a theorem as shown below:
+
+Theorem \( 7.6: \) If two sides of a triangle are unequal, the angle opposite to the longer side is larger (or greater).
+You may prove this theorem by taking a point \( \mathrm{P} \) on \( \mathrm{BC} \) such that \( \mathrm{CA}=\mathrm{CP} \) in Fig. \( 7.43 \).
+Now, let us perform another activity :
+Activity : Draw a line-segment \( \mathrm{AB} \). With A as centre and some radius, draw an arc and mark different points say P, Q, R, S, T on it. Fig. \( 7.44 \)
+Join each of these points with A as well as with B (see Fig. 7.44). Observe that as we move from \( \mathrm{P} \) to \( \mathrm{T}, \angle \mathrm{A} \) is becoming larger and larger. What is happening to the length of the side opposite to it? Observe that the length of the side is also increasing; that is \( \angle \mathrm{TAB}>\angle \mathrm{SAB}>\angle \mathrm{RAB}>\angle \mathrm{QAB}>\angle \mathrm{PAB} \) and \( \mathrm{TB}>\mathrm{SB}>\mathrm{RB}>\mathrm{QB}>\mathrm{PB} \)
+Now, draw any triangle with all angles unequal to each other. Measure the lengths of the sides (see Fig. 7.45).
+
+Observe that the side opposite to the largest angle is the longest. In Fig. \( 7.45, \angle \mathrm{B} \) is the largest angle and AC is the longest side.
+
+Repeat this activity for some more triangles and we see that the converse of Theorem \( 7.6 \) is also true. \( \quad \) Fig. \( 7.45 \) In this way, we arrive at the following theorem:
+2020-21 TRIANGLES
+Theorem \( 7.7: \) In any triangle, the side opposite to the larger (greater) angle is longer.
+This theorem can be proved by the method of contradiction.
+Now take a triangle \( \mathrm{ABC} \) and in it, find \( \mathrm{AB}+\mathrm{BC}, \mathrm{BC}+\mathrm{AC} \) and \( \mathrm{AC}+\mathrm{AB} \). What do you observe?
+You will observe that \( \quad \mathrm{AB}+\mathrm{BC}>\mathrm{AC} \),
+\( \mathrm{BC}+\mathrm{AC}>\mathrm{AB} \) and \( \mathrm{AC}+\mathrm{AB}>\mathrm{BC} \)
+Repeat this activity with other triangles and with this you can arrive at the following theorem :
+Theorem \( 7.8 \) : The sum of any two sides of a triangle is greater than the third side.
+In Fig. 7.46, observe that the side BA of \( \triangle \mathrm{ABC} \) has been produced to a point \( \mathrm{D} \) such that \( \mathrm{AD}=\mathrm{AC} \). Can you show that \( \angle \mathrm{BCD}>\angle \mathrm{BDC} \) and \( \mathrm{BA}+\mathrm{AC}>\mathrm{BC} ? \) Have
+you arrived at the proof of the above theorem.
+Let us now take some examples based on these results. Fig. \( 7.46 \)
+Example \( 9: \mathrm{D} \) is a point on side \( \mathrm{BC} \) of \( \Delta \mathrm{ABC} \) such that \( \mathrm{AD}=\mathrm{AC} \) (see Fig. 7.47). Show that \( \mathrm{AB}>\mathrm{AD} \).
+Solution : In \( \Delta \) DAC,
+(Given)
+So, \( \angle \mathrm{ADC}=\angle \mathrm{ACD} \)
+(Angles opposite to equal sides)
+Now, \( \quad \angle \mathrm{ADC} \) is an exterior angle for \( \triangle \mathrm{ABD} \).
+So, \( \angle \mathrm{ADC}>\angle \mathrm{ABD} \)
+or, \( \angle \mathrm{ACD}>\angle \mathrm{ABD} \)
+or, \( \angle \mathrm{ACB}>\angle \mathrm{ABC} \)
+Fig. \( 7.47 \)
+So, \( \quad \mathrm{AB}>\mathrm{AC} \) (Side opposite to larger angle in \( \Delta \mathrm{ABC} \) )
+or, \( \mathrm{AB}>\mathrm{AD}(\mathrm{AD}=\mathrm{AC}) \)
+\( 2020-21 \) 3
+EXERCISE \( 7 . \)
+1. Show that in a right angled triangle, the hypotenuse is the longest side.
+2. In Fig. 7.48, sides \( \mathrm{AB} \) and \( \mathrm{AC} \) of \( \triangle \mathrm{ABC} \) are extended to points \( \mathrm{P} \) and \( \mathrm{Q} \) respectively. Also. \( \angle \mathrm{PBC}<\angle \mathrm{QCB} \). Show that \( \mathrm{AC}>\mathrm{AB} \)
+Fig. 7.48
+3. In Fig. \( 7.49, \angle \mathrm{B}<\angle \mathrm{A} \) and \( \angle \mathrm{C}<\angle \mathrm{D} \). Show that
+\( \mathrm{AD}<\mathrm{BC} \)
+Fig. \( 7.49 \)
+4. \( \mathrm{AB} \) and \( \mathrm{CD} \) are respectively the smallest and longest sides of a quadrilateral \( \mathrm{ABCD} \) (see Fig. 7.50). Show that \( \angle C \) and
+\( \angle \mathrm{B}>\angle \mathrm{D} \)
+Fig. \( 7.50 \)
+5. In Fig 7.51, \( \mathrm{PR}>\mathrm{PQ} \) and PS bisects \( \angle \mathrm{QPR} \). Prove that \( \angle \mathrm{PSR}> \)
+2020-21 TRIANGLES 133
+6. Show that of all line segments drawn from a given point not on it, the perpendicular line segment is the shortest.
+EXERCISE \( 7.5 \) (Optional)*
+1. \( \mathrm{ABC} \) is a triangle. Locate a point in the interior of \( \Delta \mathrm{ABC} \) which is equidistant from all the vertices of \( \Delta \mathrm{ABC} \).
+2. In a triangle locate a point in its interior which is equidistant from all the sides of the triangle.
+3. In a huge park, people are concentrated at three points (see Fig. 7.52):
+A: where there are different slides and swings for children,
+B: near which a man-made lake is situated,
+C: which is near to a large parking and exit.
+Where should an icecream parlour be set up so that maximum number of persons can approach it?
+(Hint : The parlour should be equidistant from A, B and C)
+4. Complete the hexagonal and star shaped Rangolies [see Fig. \( 7.53 \) (i) and (ii)] by filling them with as many equilateral triangles of side \( 1 \mathrm{~cm} \) as you can. Count the number of triangles in each case. Which has more triangles?
+(i)
+Fig. \( 7.53 \)
+"These exercises are not from examination point of view.
+\( 2020-21 \) 134
+MATHEMATICS
+7.7 Summary
+In this chapter, you have studied the following points :
+1. Two figures are congruent, if they are of the same shape and of the same size.
+2. Two circles of the same radii are congruent.
+3. Two squares of the same sides are congruent.
+4. If two triangles \( \mathrm{ABC} \) and \( \mathrm{PQR} \) are congruent under the correspondence \( \mathrm{A} \leftrightarrow \mathrm{P} \), \( \mathrm{B} \leftrightarrow \mathrm{Q} \) and \( \mathrm{C} \leftrightarrow \mathrm{R} \), then symbolically, it is expressed as \( \Delta \mathrm{ABC} \cong \Delta \mathrm{PQR} \)
+5. If two sides and the included angle of one triangle are equal to two sides and the included angle of the other triangle, then the two triangles are congruent (SAS Congruence Rule).
+6. If two angles and the included side of one triangle are equal to two angles and the included side of the other triangle, then the two triangles are congruent (ASA Congruence Rule).
+7. If two angles and one side of one triangle are equal to two angles and the corresponding side of the other triangle, then the two triangles are congruent (AAS Congruence Rule).
+8. Angles opposite to equal sides of a triangle are equal.
+9. Sides opposite to equal angles of a triangle are equal.
+10. Each angle of an equilateral triangle is of \( 60^{\circ} \).
+11. If three sides of one triangle are equal to three sides of the other triangle, then the two triangles are congruent (SSS Congruence Rule).
+12. If in two right triangles, hypotenuse and one side of a triangle are equal to the hypotenuse and one side of other triangle, then the two triangles are congruent (RHS Congruence Rule).
+13. In a triangle, angle opposite to the longer side is larger (greater).
+14. In a triangle, side opposite to the larger (greater) angle is longer.
+15. Sum of any two sides of a triangle is greater than the third side.
+\( 2020-21 \) 12
+\( \mathrm{FD} \leftrightarrow \mathrm{AB}, \mathrm{DE} \leftrightarrow \mathrm{BC} \) and \( \mathrm{EF} \leftrightarrow \mathrm{CA} \)
+and \( \quad \mathrm{F} \leftrightarrow \mathrm{A}, \mathrm{D} \leftrightarrow \mathrm{B} \) and \( \mathrm{E} \leftrightarrow \mathrm{C} \)
+So, \( \Delta \mathrm{FDE} \cong \Delta \mathrm{ABC} \) but writing \( \Delta \mathrm{DEF} \cong \Delta \mathrm{ABC} \) is not correct.
+Give the correspondence between the triangle in Fig. \( 7.4 \) (iv) and \( \Delta \mathrm{ABC} \).
+So, it is necessary to write the correspondence of vertices correctly for writing of congruence of triangles in symbolic form.
+
+Note that in congruent triangles corresponding parts are equal and we write in short 'CPCT' for corresponding parts of congruent triangles.
+7.3 Criteria for Congruence of Triangles
+In earlier classes, you have learnt four criteria for congruence of triangles. Let us recall them.
+
+Draw two triangles with one side \( 3 \mathrm{~cm} \). Are these triangles congruent? Observe that they are not congruent (see Fig. 7.5).
+(ii)
+Fig. \( 7.5 \)
+Now, draw two triangles with one side \( 4 \mathrm{~cm} \) and one angle \( 50^{\circ} \) (see Fig. 7.6). Are they congruent?
+Fig. 7.6
+2020-21 TRIANGLES
+See that these two triangles are not congruent.
+Repeat this activity with some more pairs of triangles.
+So, equality of one pair of sides or one pair of sides and one pair of angles is not sufficient to give us congruent triangles.
+
+What would happen if the other pair of arms (sides) of the equal angles are also equal?
+In Fig \( 7.7, \mathrm{BC}=\mathrm{QR}, \angle \mathrm{B}=\angle \mathrm{Q} \) and also, \( \mathrm{AB}=\mathrm{PQ} \). Now, what can you say
+about congruence of \( \triangle \mathrm{ABC} \) and \( \Delta \mathrm{PQR} \) ?
+Recall from your earlier classes that, in this case, the two triangles are congruent. Verify this for \( \Delta \mathrm{ABC} \) and \( \triangle \mathrm{PQR} \) in Fig. \( 7.7 \).
+
+Repeat this activity with other pairs of triangles. Do you observe that the equality of two sides and the included angle is enough for the congruence of triangles? Yes, it is enough.
+This is the first criterion for congruence of triangles.
+Axiom \( 7.1 \) (SAS congruence rule) : Two triangles are congruent if two sides and the included angle of one triangle are equal to the two sides and the included angle of the other triangle.
+
+This result cannot be proved with the help of previously known results and so it is accepted true as an axiom (see Appendix 1).
+Let us now take some examples.
+Example 1 : In Fig. \( 7.8, \mathrm{OA}=\mathrm{OB} \) and \( \mathrm{OD}=\mathrm{OC} \).
+(i) \( \Delta \mathrm{AOD} \cong \Delta \mathrm{BOC} \) and
+(ii) AD II
+Solution: (i) You may observe that in \( \Delta \mathrm{AOD} \) and
+(Given)
+2020-21 114
+\begin{tabular}{|l}  М тннех \end{tabular}
+Also, since \( \angle \mathrm{AOD} \) and \( \angle \mathrm{BOC} \) form a pair of vertically opposite angles, we have
+\( \angle \mathrm{AOD}=\angle \mathrm{BOC} . \)
+So, \( \Delta \mathrm{AOD} \cong \Delta \mathrm{BOC} \quad \) (by the SAS congruence rule)
+(ii) In congruent triangles \( A O D \) and \( B O C \), the other corresponding parts are also equal.
+
+So, \( \angle \mathrm{OAD}=\angle \mathrm{OBC} \) and these form a pair of alternate angles for line segments \( \mathrm{AD} \) and \( \mathrm{BC} \).
+Therefore, \( \mathrm{AD} \) ॥ BC.
+Example \( 2: \mathrm{AB} \) is a line segment and line \( l \) is its perpendicular bisector. If a point \( \mathrm{P} \) lies on \( l \), show that \( \mathrm{P} \) is equidistant from \( \mathrm{A} \) and \( \mathrm{B} \).
+Solution : Line \( l \perp \mathrm{AB} \) and passes through \( \mathrm{C} \) which is the mid-point of AB (see Fig. 7.9). You have show that \( \mathrm{PA}=\mathrm{PB} \). Consider \( \Delta \mathrm{PCA} \) and \( \triangle \mathrm{PCB} \).
+We have \( \quad A C=B C \quad(C \) is the mid-point of \( A B) \)
+\( \angle \mathrm{PCA}=\angle \mathrm{PCB}=90^{\circ} \quad( \) Given \( ) \)
+\( \mathrm{PC}=\mathrm{PC} \)\( \quad \) (Common)
+So, \( \Delta \mathrm{PCA} \cong \Delta \mathrm{PCB} \) (SAS rule)
+and so, \( \mathrm{PA}=\mathrm{PB} \), as they are corresponding sides congruent triangles. \( \quad \) Fig. \( 7.9 \)
+Now, let us construct two triangles, whose sides are \( 4 \mathrm{~cm} \) and \( 5 \mathrm{~cm} \) and one of the angles is \( 50^{\circ} \) and this angle is not included in between the equal sides (see Fig. 7.10). Are the two triangles congruent?
+Fig.
+2020-21 TRIANGLE
+Notice that the two triangles are not congruent.
+Repeat this activity with more pairs of triangles. You will observe that for triangles to be congruent, it is very important that the equal angles are included between the pairs of equal sides.
+So, SAS congruence rule holds but not ASS or SSA rule.
+Next, try to construct the two triangles in which two angles are \( 60^{\circ} \) and \( 45^{\circ} \) and the side included between these angles is \( 4 \mathrm{~cm} \) (see Fig. 7.11).
+
+Cut out these triangles and place one triangle on the other. What do you observe? See that one triangle covers the other completely; that is, the two triangles are congruent. Repeat this activity with more pairs of triangles. You will observe that equality of two angles and the included side is sufficient for congruence of triangles.
+
+This result is the Angle-Side-Angle criterion for congruence and is written as ASA criterion. You have verified this criterion in earlier classes, but let us state and prove this result.
+
+Since this result can be proved, it is called a theorem and to prove it, we use the SAS axiom for congruence.
+
+Theorem \( 7.1 \) (ASA congruence rule) : Two triangles are congruent if two angles and the included side of one triangle are equal to two angles and the included side of other triangle.
+Proof : We are given two triangles ABC and DEF in which:
+\( \angle \mathrm{B}=\angle \mathrm{E}, \angle \mathrm{C}=\angle \mathrm{F} \)
+and \( \mathrm{BC}=\mathrm{EF} \)
+We need to prove that \( \Delta \mathrm{ABC} \cong \Delta \mathrm{DEF} \)
+For proving the congruence of the two triangles see that three cases arise.
+2020-21 Case (i) : Let AB = DE (see Fig. 7.12).
+Now what do you observe? You may observe that
+\[
+\mathrm{AB}=\mathrm{DE}
+\]
+(Assumed)
+\[
+\begin{aligned}
+\angle \mathrm{B} &=\angle \mathrm{E} \\
+\mathrm{BC} &=\mathrm{EF} \\
+\mathrm{ABC} & \cong \Delta \mathrm{DEF}
+\end{aligned}
+\]
+So, (B
+Case (ii): Let if possible \( \mathrm{AB}>\mathrm{DE} \). So, we can take a point \( \mathrm{P} \) on \( \mathrm{AB} \) such that \( \mathrm{PB}=\mathrm{DE} \). Now consider \( \Delta \mathrm{PBC} \) and \( \Delta \mathrm{DEF} \) (see Fig. 7.13).
+Fig. 7.18
+Observe that in \( \Delta \mathrm{PBC} \) and \( \Delta \mathrm{DEF} \)
+\( \mathrm{PB}=\mathrm{DE} \)
+(By construction)
+\( \angle B=\angle E \)
+\( \mathrm{BC}=\mathrm{EF} \quad \) (Given)
+So, we can conclude that:
+\( \Delta \mathrm{PBC} \cong \Delta \mathrm{DEF} \), by the SAS axiom for congruence.
+2020-2 TRIANGLES
+Since the triangles are congruent, their corresponding parts will be equal.
+So, \( \angle \mathrm{PCB}=\angle \mathrm{DFE} \)
+But, we are given that \( \angle \mathrm{ACB}=\angle \mathrm{DFE} \)
+So, \( \angle \mathrm{ACB}=\angle \mathrm{PCB} \)
+Is this possible?
+This is possible only if \( \mathrm{P} \) coincides with \( \mathrm{A} \).
+or, \( \mathrm{BA}=\mathrm{ED} \)
+So, \( \begin{array}{ll}\Delta \mathrm{ABC} \cong \Delta \mathrm{DEF} & \text { (by SAS axiom) }\end{array} \)
+Case (iii) : If AB < DE, we can choose a point \( M \) on DE such that \( M E=A B \) and repeating the arguments as given in Case (ii), we can conclude that \( \mathrm{AB}=\mathrm{DE} \) and so, \( \Delta \mathrm{ABC} \cong \Delta \mathrm{DEF} . \)
+Suppose, now in two triangles two pairs of angles and one pair of corresponding sides are equal but the side is not included between the corresponding equal pairs of angles. Are the triangles still congruent? You will observe that they are congruent. Can you reason out why?
+
+You know that the sum of the three angles of a triangle is \( 180^{\circ} \). So if two pairs of angles are equal, the third pair is also equal \( \left(180^{\circ}-\right. \) sum of equal angles \( ) \).
+
+So, two triangles are congruent if any two pairs of angles and one pair of corresponding sides are equal. We may call it as the AAS Congruence Rule.
+Now let us perform the following activity:
+
+Draw triangles with angles \( 40^{\circ}, 50^{\circ} \) and \( 90^{\circ} \). How many such triangles can you draw?
+
+In fact, you can draw as many triangles as you want with different lengths of sides (see Fig. 7.14).
+Fig. 7
+\( 2020-21 \) 118
+МАТнЕМАт
+Observe that the triangles may or may not be congruent to each other.
+
+So, equality of three angles is not sufficient for congruence of triangles. Therefore, for congruence of triangles out of three equal parts, one has to be a side.
+Let us now take some more examples.
+Example 3 : Line-segment \( \mathrm{AB} \) is parallel to another line-segment \( \mathrm{CD} \). \( \mathrm{O} \) is the mid-point of AD (see Fig. 7.15). Show that (i) \( \triangle \mathrm{AOB} \cong \Delta \mathrm{DOC} \)
+(ii) \( \mathrm{O} \) is also the mid-point of BC.
+Solution : (i) Consider \( \Delta \mathrm{AOB} \)
+\( \angle \mathrm{AOB}=\angle \mathrm{DOC} \)
+(Vertically opposite angles)
+OD \( \quad \) (Given Fig. \( 7.15 \)
+Therefore, \( \quad \Delta \mathrm{AOB} \cong \Delta \mathrm{DOC} \quad \) (AAS rule)
+(ii) \( \begin{array}{ll}\mathrm{OB}=\mathrm{OC} & (\mathrm{CPCT})\end{array} \)
+So, \( \mathrm{O} \) is the mid-point of \( \mathrm{BC} \).
+EXERCISE \( 7.1 \)
+1. In quadrilateral ACBD,
+\( A C=A D \) and \( A B \) bisects \( \angle A \) (see Fig. 7.16). Show that \( \triangle \mathrm{ABC} \cong \triangle \mathrm{ABD} \).
+What can you say about \( B C \) and BD?
+Fig. \( 7.16 \)
+2020-21 

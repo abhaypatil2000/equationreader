@@ -14,3 +14,7 @@ def text_to_audio(parsed_content, folder_name):
 
     tts = gTTS(parsed_content)
     tts.save(f'./{folder_name}/audio.mp3')
+
+
+content = open('temp.txt', 'r').read()
+text_to_audio(content, "audiofiles")

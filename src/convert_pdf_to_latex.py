@@ -66,9 +66,12 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
             # danger passed
             print(f"{page_id} done API request")
             content += output + " "
+            file1 = open('output.txt', 'w')
+            file1.write(content)
+            file1.close()
     return (processed_pages, content)
 
 
 # to avoid precious requests to mathpix
 # make make_request to False
-# convert_pdf_to_latex("basic.pdf", "request1", False, some integer(upper bound for the number of pages to convert))
+convert_pdf_to_latex("triangle.pdf", "triangle", True,100)
