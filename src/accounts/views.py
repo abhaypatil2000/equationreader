@@ -100,7 +100,7 @@ def register(request):
         otp = str(random.randint(1000 , 9999))
         profile = Profile(user = user , mobile = mobile , otp = otp) 
         profile.save()
-        send_otp(mobile, otp)
+        # send_otp(mobile, otp)
         print(otp)
         request.session['mobile'] = mobile
         return redirect('accounts:otp')
