@@ -267,6 +267,9 @@ def util(content):
                 parsed_content = parsed_content + "divided by"
                 i = i + 3
                 flag = 0
+            elif (content[i:i + 14] == "begin{aligned"):
+                i = i + 15
+                flag = 0
             elif (content[i:i + 13] == "begin{tabular" or table == 1):
                 if table == 0:
                     table = 1
@@ -278,7 +281,7 @@ def util(content):
                     columns = 0
                     j = i + 1
                     while (li):
-                        if(j>=n):
+                        if (j >= n):
                             return 0
                         #if (content[j] == '{'): li.append('{')
                         if (content[j] == '}'): li.pop()
@@ -392,7 +395,7 @@ def util(content):
                 li = ['{']
                 j = i
                 while (li):
-                    if(j>=n):
+                    if (j >= n):
                         return 0
                     if (content[j] == '{'): li.append('{')
                     if (content[j] == '}'): li.pop()
