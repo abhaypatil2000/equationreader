@@ -122,3 +122,45 @@ def otp(request):
             
         
     return render(request,'accounts/otp.html' , context)
+
+def forgot_password(request):
+    if request.method == 'POST':
+        mobile = request.POST.get('mobile')
+        # context = {'mobile': mobile}
+        profile = Profile.objects.filter(mobile=mobile).first()
+        if profile == None:
+            raise ValidationError("Mobile number not found")
+        otp = str(random.randint(1000 , 9999))
+        profile.otp = otp
+        profile.save()
+        # send_otp(mobile, otp)
+        print("OTP is : ", otp)
+        request.session['mobile'] = mobile
+        print(request.session['mobile'], mobile)
+        return redirect('accounts:new_password')
+    return render(request, 'accounts/forgot_password.html')
+    
+def confirm_new_password(request):
+    if request.method == 'POST':
+        print("here")
+        otp = request.POST.get('otp')
+        password1 = request.POST.get('password1')
+        password2 = request.POST.get('password2')
+        
+        if password1 and password2 and password1 != password2:
+            raise ValidationError("Passwords don't match")
+        else:
+            password = password2
+
+        profile = Profile.objects.get(mobile = request.session['mobile'])
+        if otp == profile.otp:
+            user = User.objects.get(id = profile.user.id)
+            user.password = password
+            user.save()
+        else:
+            raise ValidationError("OTP doesn't match")
+
+        return redirect('home')
+    return render(request, 'accounts/new_password.html', )
+        
+
