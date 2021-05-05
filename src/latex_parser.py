@@ -35,17 +35,17 @@ def text_checking(inp):
 
     for x in inp:
         if x == '(':
-            left_counter_1
+            left_counter_1 += 1
         elif x == ')':
-            right_counter_1
+            right_counter_1 += 1
         elif x == '{':
-            left_counter_2
+            left_counter_2 += 1
         elif x == '}':
-            right_counter_2
+            right_counter_2 += 1
         elif x == '[':
-            left_counter_3
+            left_counter_3 += 1
         elif x == ']':
-            right_counter_3
+            right_counter_3 += 1
 
         if left_counter_1 < right_counter_1:
             first = False
