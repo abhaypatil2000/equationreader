@@ -444,20 +444,33 @@ Fig. 7
 МАТнЕМАт
 Observe that the triangles may or may not be congruent to each other.
 
-So, equality of three angles is not sufficient for congruence of triangles. Therefore, for congruence of triangles out of three equal parts, one has to be a side.
-Let us now take some more examples.
-Example 3 : Line-segment \( \mathrm{AB} \) is parallel to another line-segment \( \mathrm{CD} \). \( \mathrm{O} \) is the mid-point of AD (see Fig. 7.15). Show that (i) \( \triangle \mathrm{AOB} \cong \Delta \mathrm{DOC} \)
-(ii) \( \mathrm{O} \) is also the mid-point of BC.
-Solution : (i) Consider \( \Delta \mathrm{AOB} \)
-\( \angle \mathrm{AOB}=\angle \mathrm{DOC} \)
-(Vertically opposite angles)
-OD \( \quad \) (Given Fig. \( 7.15 \)
-Therefore, \( \quad \Delta \mathrm{AOB} \cong \Delta \mathrm{DOC} \quad \) (AAS rule)
-(ii) \( \begin{array}{ll}\mathrm{OB}=\mathrm{OC} & (\mathrm{CPCT})\end{array} \)
-So, \( \mathrm{O} \) is the mid-point of \( \mathrm{BC} \).
-EXERCISE \( 7.1 \)
-1. In quadrilateral ACBD,
-\( A C=A D \) and \( A B \) bisects \( \angle A \) (see Fig. 7.16). Show that \( \triangle \mathrm{ABC} \cong \triangle \mathrm{ABD} \).
-What can you say about \( B C \) and BD?
-Fig. \( 7.16 \)
-2020-21 
+Example 18 : Find the discriminant of the equation \( 3 x^{2}-2 x+\frac{1}{3}=0 \) and hence find the nature of its roots. Find them, if they are real.
+Solution: Here \( a=3, b=-2 \) and \( c=\frac{1}{3} \).
+Therefore, discriminant \( b^{2}-4 a c=(-2)^{2}-4 \times 3 \times \frac{1}{3}=4-4=0 \).
+Hence, the given quadratic equation has two equal real roots.
+The roots are \( \frac{-b}{2 a}, \frac{-b}{2 a} \), i.e., \( \frac{2}{6}, \frac{2}{6} \), i.e., \( \frac{1}{3}, \frac{1}{3} \).
+\[
+2020-21
+\] QUADRATIC EoUATIONS
+EXERCISE \( 4.4 \)
+1. Find the nature of the roots of the following quadratic equations. If the real roots exist, find them:
+(i) \( 2 x^{2}-3 x+5=0 \)
+(ii) \( 3 x^{2}-4 \sqrt{3} x+4=0 \)
+(iii) \( 2 x^{2}-6 x+3=0 \)
+2. Find the values of \( k \) for each of the following quadratic equations, so that they have two equal roots.
+(i) \( 2 x^{2}+k x+3=0 \)
+(ii) \( k x(x-2)+6=0 \)
+3. Is it possible to design a rectangular mango grove whose length is twice its breadth, and the area is \( 800 \mathrm{~m}^{2} \) ? If so, find its length and breadth.
+4. Is the following situation possible? If so, determine their present ages. The sum of the ages of two friends is 20 years. Four years ago, the product of their ages in years was 48 .
+5. Is it possible to design a rectangular park of perimeter \( 80 \mathrm{~m} \) and area \( 400 \mathrm{~m}^{2} \) ? If so, find its length and breadth.
+4.6 Summary In this chapter, you have studied the following points:
+1. A quadratic equation in the variable \( x \) is of the form \( a x^{2}+b x+c=0 \), where \( a, b, c \) are real numbers and \( a \neq 0 \).
+2. A real number \( \alpha \) is said to be a root of the quadratic equation \( a x^{2}+b x+c=0 \), if \( a \alpha^{2}+b \alpha+c=0 \). The zeroes of the quadratic polynomial \( a x^{2}+b x+c \) and the roots of the quadratic equation \( a x^{2}+b x+c=0 \) are the same.
+3. If we can factorise \( a x^{2}+b x+c, a \neq 0 \), into a product of two linear factors, then the roots of the quadratic equation \( a x^{2}+b x+c=0 \) can be found by equating each factor to zero.
+4. A quadratic equation can also be solved by the method of completing the square.
+5. Quadratic formula: The roots of a quadratic equation \( a x^{2}+b x+c=0 \) are given by \( \frac{-b \pm \sqrt{b^{2}-4 a c}}{2 a} \), provided \( b^{2}-4 a c \geq 0 . \)
+6. A quadratic equation \( a x^{2}+b x+c=0 \) has
+(i) two distinct real roots, if \( b^{2}-4 a c>0 \),
+(ii) two equal roots (i.e., coincident roots), if \( b^{2}-4 a c=0 \), and
+(iii) no real roots, if \( b^{2}-4 a c<0 \).
+\( 2020-21 \) 

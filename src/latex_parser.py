@@ -2,6 +2,7 @@ import json
 
 parsed_content = ""
 content = open('output.txt', 'r').read()
+#content = '-x^{3}+x^{2}-x '
 
 
 def text_checking(inp):
@@ -35,17 +36,17 @@ def text_checking(inp):
 
     for x in inp:
         if x == '(':
-            left_counter_1
+            left_counter_1+=1
         elif x == ')':
-            right_counter_1
+            right_counter_1+=1
         elif x == '{':
-            left_counter_2
+            left_counter_2+=1
         elif x == '}':
-            right_counter_2
+            right_counter_2+=1
         elif x == '[':
-            left_counter_3
+            left_counter_3+=1
         elif x == ']':
-            right_counter_3
+            right_counter_3+=1
 
         if left_counter_1 < right_counter_1:
             first = False
@@ -56,7 +57,7 @@ def text_checking(inp):
 
     if left_counter_1 != right_counter_1 or left_counter_2 != right_counter_2 or left_counter_3 != right_counter_3:
         first = False
-
+    #print("returning",(first,second))
     return (first, second)
 
 
@@ -84,7 +85,8 @@ def util(content):
     is_array = 0
     len_parsed = 0
     ignore_eqn_end = 0
-    #print("n is ", n)
+    print("n is ", n)
+    if n < 50: print(content)
     if (n == 0): return 0
 
     i = 0
@@ -221,9 +223,9 @@ def util(content):
                 while (len(li) > 0):
                     if (j >= n):
                         return 0
-                    if (content[j] == '('):
+                    if (content[j] == '(' and content[j - 1] == '\\'):
                         li.append('(')
-                    if (content[j] == ')'):
+                    if (content[j] == ')' and content[j - 1] == '\\'):
                         li.pop()
                     j = j + 1
                 ret = text_checking(content[i:j - 1])
@@ -259,6 +261,14 @@ def util(content):
 
                 i = i + 4
                 flag = 0
+            elif (content[i:i + 3] == "pm"):
+                parsed_content = parsed_content + " plus or minus "
+                i = i + 2
+                flag = 0
+            elif (content[i:i + 3] == "neq"):
+                parsed_content = parsed_content + " not equal to "
+                i = i + 3
+                flag = 0
             elif (content[i:i + 3] == "geq"):
                 parsed_content = parsed_content + " greater than or equal to "
                 i = i + 3
@@ -270,47 +280,64 @@ def util(content):
             elif (content[i:i + 14] == "begin{aligned"):
                 i = i + 15
                 flag = 0
+            elif (content[i:i + 14] == "end{aligned"):
+                i = i + 13
+                flag = 0
+
             elif (content[i:i + 13] == "begin{tabular" or table == 1):
-                if table == 0:
-                    table = 1
-                    parsed_content = parsed_content + "table begins"
-                    parsed_content = parsed_content + " first row "
-                    #print(1)
-                    i = i + 14
-                    li = ['{']
-                    columns = 0
-                    j = i + 1
-                    while (li):
-                        if (j >= n):
-                            return 0
-                        #if (content[j] == '{'): li.append('{')
-                        if (content[j] == '}'): li.pop()
-                        if (content[j] == 'l'): columns += 1
-                        j = j + 1
-                    i = j
-                    is_firstrow = 1
+                del_table = 0
+                if (table == 0):
+                    temp = i
 
-                if (content[i:i + 5] == "hline"
-                        and content[i + 7:i + 10] != "end"):
+                    while (content[temp:temp + 11] != "end{tabular"):
+                        if (content[temp:temp + 7] == "longdiv"): del_table = 1
+                        temp += 1
+                    print(del_table, "delte table")
+                    if (del_table == 1):
+                        i = temp + 11
+                        flag = 0
+                if(del_table==0):
 
-                    if (is_firstrow == 1):
-                        is_firstrow = 0
+                    if table == 0:
+                        table = 1
+                        parsed_content = parsed_content + "table begins"
+                        parsed_content = parsed_content + " first row "
+                        #print(1)
+                        i = i + 14
+                        li = ['{']
+                        columns = 0
+                        j = i + 1
+                        while (li):
+                            if (j >= n):
+                                return 0
+                            #if (content[j] == '{'): li.append('{')
+                            if (content[j] == '}'): li.pop()
+                            if (content[j] == 'l'): columns += 1
+                            j = j + 1
+                        i = j
+                        is_firstrow = 1
+
+                    if (content[i:i + 5] == "hline"
+                            and content[i + 7:i + 10] != "end"):
+
+                        if (is_firstrow == 1):
+                            is_firstrow = 0
+                        else:
+                            parsed_content += " next row "
+                        i += 5
+                        j = i
+                        while (content[j:j + 5] != "hline"):
+                            j += 1
+
+                        util(content[i:j - 3])
+                        i = j
+                    elif (content[i:i + 11] == "end{tabular"):
+                        parsed_content += " table ended "
+                        table = 0
+                        flag = 0
+                        i += 12
                     else:
-                        parsed_content += " next row "
-                    i += 5
-                    j = i
-                    while (content[j:j + 5] != "hline"):
-                        j += 1
-
-                    util(content[i:j - 3])
-                    i = j
-                elif (content[i:i + 11] == "end{tabular"):
-                    parsed_content += " table ended "
-                    table = 0
-                    flag = 0
-                    i += 12
-                else:
-                    i += 1
+                        i += 1
 
             elif (content[i:i + 11] == 'begin{array'):
 
