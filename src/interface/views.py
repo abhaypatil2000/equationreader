@@ -11,6 +11,7 @@ from gtts import gTTS
 from gtts import lang
 import datetime
 from accounts import models as acct_mdls
+from .models import CommonBooks
 # Create your views here.
 
 
@@ -79,5 +80,9 @@ def upload(request):
 
     return render(request, 'upload.html', context)
 
+
+class CommonBooksView(generic.ListView):
+    model = CommonBooks
+    paginate_by = 10
 
 

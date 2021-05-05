@@ -27,6 +27,7 @@ urlpatterns = [
     path('', include('pwa.urls')),
     path('upload',views.upload, name='upload'),
     path('accounts/', include('accounts.urls')),
+    path('interface/', include('interface.urls'))
 ]
 
 

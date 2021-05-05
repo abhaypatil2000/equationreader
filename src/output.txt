@@ -1,448 +1,1064 @@
+Polynomial ncert 9th class chapter2
+\( +\quad-\quad+ \) \\
+2.1 Introduction
+In Class IX, you have studied polynomials in one variable and their degrees. Recall that if \( p(x) \) is a polynomial in \( x \), the highest power of \( x \) in \( p(x) \) is called the degree of the polynomial \( p(x) \). For example, \( 4 x+2 \) is a polynomial in the variable \( x \) of degree \( 1,2 y^{2}-3 y+4 \) is a polynomial in the variable \( y \) of degree \( 2,5 x^{3}-4 x^{2}+x-\sqrt{2} \)
+is a polynomial in the variable \( x \) of degree 3 and \( 7 u^{6}-\frac{3}{2} u^{4}+4 u^{2}+u-8 \) is a polynomial
+in the variable \( u \) of degree 6. Expressions like \( \frac{1}{x-1}, \sqrt{x}+2, \frac{1}{x^{2}+2 x+3} \) etc., are not polynomials.
 
-CHAPTER 7
-TRIANGLES
-7.1 Introduction
-You have studied about triangles and their various properties in your earlier classes. You know that a closed figure formed by three intersecting lines is called a triangle. ('Tri' means 'three'). A triangle has three sides, three angles and three vertices. For example, in triangle ABC, denoted as \( \triangle \mathrm{ABC} \) (see Fig. 7.1); AB, BC, CA are the three sides, \( \angle \mathrm{A}, \angle \mathrm{B}, \angle \mathrm{C} \) are the three angles and \( \mathrm{A}, \mathrm{B}, \mathrm{C} \) are three vertices. In Chapter 6, you have also studied some properties of triangles. In this chapter, you will study in details about the congruence of triangles, rules of congruence, some more properties of triangles and inequalities in a triangle. You have already verified most of these properties in earlier classes. We will now prove some of them.
-\( 7.2 \) Congruence of Triangles
-You must have observed that two copies of your photographs of the same size are identical. Similarly, two bangles of the same size, two ATM cards issued by the same bank are identical. You may recall that on placing a one rupee coin on another minted in the same year, they cover each other completely.
+A polynomial of degree 1 is called a linear polynomial. For example, \( 2 x-3 \), \( \sqrt{3} x+5, y+\sqrt{2}, x-\frac{2}{11}, 3 z+4, \frac{2}{3} u+1 \), etc., are all linear polynomials. Polynomials such as \( 2 x+5-x^{2}, x^{3}+1 \), etc., are not linear polynomials.
 
-Do you remember what such figures are called? Indeed they are called congruent figures ('congruent' means equal in all respects or figures whose shapes and sizes are both the same).
+A polynomial of degree 2 is called a quadratic polynomial. The name 'quadratic'
+has been derived from the word 'quadrate', which means 'square'. \( 2 x^{2}+3 x-\frac{2}{5} \),
+\( y^{2}-2,2-x^{2}+\sqrt{3} x, \frac{u}{3}-2 u^{2}+5, \sqrt{5} v^{2}-\frac{2}{3} v, 4 z^{2}+\frac{1}{7} \) are some examples of
+quadratic polynomials (whose coefficients are real numbers). More generally, any quadratic polynomial in \( x \) is of the form \( a x^{2}+b x+c \), where \( a, b, c \) are real numbers and \( a \neq 0 \). A polynomial of degree 3 is called a cubic polynomial. Some examples of
+2020-21 POLYNOMIALS
+a cubic polynomial are \( 2-x^{3}, x^{3}, \sqrt{2} x^{3}, 3-x^{2}+x^{3}, 3 x^{3}-2 x^{2}+x-1 \). In fact, the most general form of a cubic polynomial is
+\[
+a x^{3}+b x^{2}+c x+d
+\]
+where, \( a, b, c, d \) are real numbers and \( a \neq 0 \). Now consider the polynomial \( p(x)=x^{2}-3 x-4 . \) Then, putting \( x=2 \) in the polynomial, we get \( p(2)=2^{2}-3 \times 2-4=-6 \). The value ' \( -6 \) ', obtained by replacing \( x \) by 2 in \( x^{2}-3 x-4 \), is the value of \( x^{2}-3 x-4 \) at \( x=2 \). Similarly, \( p(0) \) is the value of \( p(x) \) at \( x=0 \), which is \( -4 \).
 
-Now, draw two circles of the same radius and place one on the other. What do you observe? They cover each other completely and we call them as congruent circles.
-\( 2020-21 \) 110
+If \( p(x) \) is a polynomial in \( x \), and if \( k \) is any real number, then the value obtained by replacing \( x \) by \( k \) in \( p(x) \), is called the value of \( p(x) \) at \( x=k \), and is denoted by \( p(k) \). What is the value of \( p(x)=x^{2}-3 x-4 \) at \( x=-1 \) ? We have :
+\[
+p(-1)=(-1)^{2}-\{3 \times(-1)\}-4=0
+\]
+Also, note that \( \quad p(4)=4^{2}-(3 \times 4)-4=0 \).
+As \( p(-1)=0 \) and \( p(4)=0,-1 \) and 4 are called the zeroes of the quadratic polynomial \( x^{2}-3 x-4 \). More generally, a real number \( k \) is said to be a zero of a polynomial \( \boldsymbol{p}(\boldsymbol{x}) \), if \( p(k)=0 \).
+
+You have already studied in Class IX, how to find the zeroes of a linear polynomial. For example, if \( k \) is a zero of \( p(x)=2 x+3 \), then \( p(k)=0 \) gives us
+\[
+2 k+3=0 \text { , i.e., } k=-\frac{3}{2} \text { . }
+\]
+In general, if \( k \) is a zero of \( p(x)=a x+b \), then \( p(k)=a k+b=0 \), i.e., \( k=\frac{-b}{a} \). So, the zero of the linear polynomial \( a x+b \) is \( \frac{-b}{a}=\frac{-(\text { Constant term })}{\text { Coefficient of } x} \).
+
+Thus, the zero of a linear polynomial is related to its coefficients. Does this happen in the case of other polynomials too? For example, are the zeroes of a quadratic polynomial also related to its coefficients?
+
+In this chapter, we will try to answer these questions. We will also study the division algorithm for polynomials.
+2.2 Geometrical Meaning of the Zeroes of a Polynomial
+You know that a real number \( k \) is a zero of the polynomial \( p(x) \) if \( p(k)=0 \). But why are the zeroes of a polynomial so important? To answer this, first we will see the geometrical representations of linear and quadratic polynomials and the geometrical meaning of their zeroes.
+2020-21 22
 MATHEMATICS
-Repeat this activity by placing square on the other with sides of the measure (see Fig. 7.2) or by placing equilateral triangles of equal sides on other. You will observe that the squares congruent to each other and so are the equilateral triangles. Fig. \( 7.2 \)
-You may wonder why we are studying congruence. You all must have seen the ice tray in your refrigerator. Observe that the moulds for making ice are all congruent. The cast used for moulding in the tray also has congruent depressions (may be all are rectangular or all circular or all triangular). So, whenever identical objects have to be produced, the concept of congruence is used in making the cast.
+Consider first a linear polynomial \( a x+b, a \neq 0 \). You have studied in Class IX that the graph of \( y=a x+b \) is a straight line. For example, the graph of \( y=2 x+3 \) is a straight line passing through the points \( (-2,-1) \) and \( (2,7) \).
+\begin{tabular}{|l|l|l|}
+\hline\( x \) & \( -2 \) & 2 \\
+\hline\( y=2 x+3 \) & \( -1 \) & 7 \\
+\hline
+\end{tabular}
+From Fig. 2.1, you can see that the graph of \( y=2 x+3 \) intersects the \( x \) -axis mid-way between \( x=-1 \) and
+that is, at the point \( \left(-\frac{3}{2}, 0\right) \).
+You also know that the zero of
+\( 2 x+3 \) is \( -\frac{3}{2} \). Thus, the zero of the polynomial \( 2 x+3 \) is the \( x \) -coordinate of the point where the graph of \( y=2 x+3 \) intersects the Fig.
+\( x \) -axis.
+In general, for a linear polynomial \( a x+b, a \neq 0 \), the graph of \( y=a x+b \) is a
+straight line which intersects the \( x \) -axis at exactly one point, namely, \( \left(\frac{-b}{a}, 0\right) \).
+Therefore, the linear polynomial \( a x+b, a \neq 0 \), has exactly one zero, namely, the \( x \) -coordinate of the point where the graph of \( y=a x+b \) intersects the \( x \) -axis.
 
-Sometimes, you may find it difficult to replace the refill in your pen by a new one and this is so when the new refill is not of the same size as the one you want to remove. Obviously, if the two refills are identical or congruent, the new refill fits.
-So, you can find numerous examples where congruence of objects is applied in daily life situations.
-Can you think of some more examples of congruent figures?
-Now, which of the following figures are not congruent to the square in Fig \( 7.3(\mathrm{i}): \)
+Now, let us look for the geometrical meaning of a zero of a quadratic polynomial. Consider the quadratic polynomial \( x^{2}-3 x-4 \). Let us see what the graph* of \( y=x^{2}-3 x-4 \) looks like. Let us list a few values of \( y=x^{2}-3 x-4 \) corresponding to a few values for \( x \) as given in Table \( 2.1 \).
+
+Plotting of graphs of quadratic or cubic polynomials is not meant to be done by the students, nor is to be evaluated.
+\( 2020-21 \) \( \mathbf{2 . 1} \)
+\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+\hline\( x \) & \( -2 \) & \( -1 \) & 0 & 1 & 2 & 3 & 4 & 5 \\
+\hline\( y=x^{2}-3 x-4 \) & 6 & 0 & \( -4 \) & \( -6 \) & \( -6 \) & \( -4 \) & 0 & 6 \\
+\hline
+\end{tabular}
+If we locate the points listed
+the points where the graph of \( y=x^{2}-3 x-4 \) intersects
+the \( x \) -axis.
+This fact is true for any quadratic polynomial, i.e., the zeroes of a quadratic polynomial \( a x^{2}+b x+c, a \neq 0 \), are precisely the \( x \) -coordinates of the points where the parabola representing \( y=a x^{2}+b x+c \) intersects the \( x \) -axis.
+
+From our observation earlier about the shape of the graph of \( y=a x^{2}+b x+c \), the following three cases can happen:
+2020-21 24
+МАТнЕ
+Case (i) : Here, the graph cuts \( x \) -axis at two distinct points A and A'.
+The \( x \) -coordinates of \( \mathrm{A} \) and \( \mathrm{A}^{\prime} \) are the two zeroes of the quadratic polynomial \( a x^{2}+b x+c \) in this case (see Fig. 2.3).
+\( \mathbf{2 . 3} \)
+Case (ii) : Here, the graph cuts the \( x \) -axis at exactly one point, i.e., at two coincident points. So, the two points A and \( A^{\prime} \) of Case (i) coincide here to become one point \( A \) (see Fig. 2.4).
 (i)
 (ii)
-(iii)
+Fig. \( 2.4 \)
+The \( x \) -coordinate of \( \mathrm{A} \) is the only zero for the quadratic polynomial \( a x^{2}+b x+c \) in this case.
+2020-21 PoLYNOMIALS
+Case (iii) : Here, the graph is either completely above the \( x \) -axis or completely below the \( x \) -axis. So, it does not cut the \( x \) -axis at any point (see Fig. 2.5).
+(i)
+(ii)
+Fig. \( 2.5 \)
+So, the quadratic polynomial \( a x^{2}+b x+c \) has no zero in this case.
+So, you can see geometrically that a quadratic polynomial can have either two distinct zeroes or two equal zeroes (i.e., one zero), or no zero. This also means that a polynomial of degree 2 has atmost two zeroes.
+
+Now, what do you expect the geometrical meaning of the zeroes of a cubic polynomial to be? Let us find out. Consider the cubic polynomial \( x^{3}-4 x \). To see what the graph of \( y=x^{3}-4 x \) looks like, let us list a few values of \( y \) corresponding to a few values for \( x \) as shown in Table \( 2.2 \).
+Table \( 2.2 \)
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline\( x \) & \( -2 \) & \( -1 \) & 0 & 1 & 2 \\
+\hline\( y=x^{3}-4 x \) & 0 & 3 & 0 & \( -3 \) & 0 \\
+\hline
+\end{tabular}
+Locating the points of the table on a graph paper and drawing the graph, we see that the graph of \( y=x^{3}-4 x \) actually looks like the one given in Fig. 2.6.
+2020-21 We see from the table above
+0 and 2 are zeroes of the
+cubic polynomial \( x^{3}-4 x \). Observe
+that \( -2,0 \) and 2 are, in fact, the
+\( x \) -coordinates of the only points graph of \( y=x^{3}-4 x \)
+\( x \) -axis. Since the curve eets the \( x \) -axis in only these 3
+points, their \( x \) -coordinates are the only zeroes of the polynomial.
+Let us take a few more
+examples. Consider the cubic polynomials \( x^{3} \) and \( x^{3}-x^{2} \). We draw the graphs of \( y=x^{3} \) and \( y=x^{3}-x^{2} \) in Fig. \( 2.7 \) and Fig. \( 2.8 \) respectively. Fig. \( 2.6 \)
+\( \begin{array}{ll}\text { Fig. 2.7 } & \text { Fig. } 2.8\end{array} \)
+2020-2 POLYNOMIALS 27
+Note that 0 is the only zero of the polynomial \( x^{3} \). Also, from Fig. \( 2.7 \), you can see that 0 is the \( x \) -coordinate of the only point where the graph of \( y=x^{3} \) intersects the \( x \) -axis. Similarly, since \( x^{3}-x^{2}=x^{2}(x-1), 0 \) and 1 are the only zeroes of the polynomial \( x^{3}-x^{2} . \) Also, from Fig. \( 2.8 \), these values are the \( x \) -coordinates of the only points where the graph of \( y=x^{3}-x^{2} \) intersects the \( x \) -axis.
+
+From the examples above, we see that there are at most 3 zeroes for any cubic polynomial. In other words, any polynomial of degree 3 can have at most three zeroes.
+Remark : In general, given a polynomial \( p(x) \) of degree \( n \), the graph of \( y=p(x) \) intersects the \( x \) -axis at atmost \( n \) points. Therefore, a polynomial \( p(x) \) of degree \( n \) has at most \( n \) zeroes.
+
+Example 1 : Look at the graphs in Fig. \( 2.9 \) given below. Each is the graph of \( y=p(x) \), where \( p(x) \) is a polynomial. For each of the graphs, find the number of zeroes of \( p(x) \).
 (iv)
-Fig. \( 7.3 \)
-The large squares in Fig. \( 7.3 \) (ii) and (iii) are obviously not congruent to the one in Fig \( 7.3 \) (i), but the square in Fig \( 7.3 \) (iv) is congruent to the one given in Fig \( 7.3 \) (i).
-Let us now discuss the congruence of two triangles.
-
-You already know that two triangles are congruent if the sides and angles of one triangle are equal to the corresponding sides and angles of the other triangle.
+(v)
+(vi)
+Fig. \( 2.9 \)
+Solution:
+(i) The number of zeroes is 1 as the graph intersects the \( x \) -axis at one point only.
+(ii) The number of zeroes is 2 as the graph intersects the \( x \) -axis at two points.
+(iii) The number of zeroes is \( 3 . \) (Why?)
+\( 2020-21 \) 28
+МАТнЕМАТ
+(iv) The number of zeroes is 1 . (Why?)
+(v) The number of zeroes is 1 . (Why?)
+(vi) The number of zeroes is 4 . (Why?)
+EXERCISE \( 2.1 \)
+1. The graphs of \( y=p(x) \) are given in Fig. \( 2.10 \) below, for some polynomials \( p(x) \). Find the number of zeroes of \( p(x) \), in each case.
+(iv)
+(v)
+(vi)
+\( \mathbf{2 . 1 0} \)
+2.3 Relationship between Zeroes and Coefficients of a Polynomial You have already seen that zero of a linear polynomial \( a x+b \) is \( -\frac{b}{a} \). We will now try to answer the question raised in Section \( 2.1 \) regarding the relationship between zeroes and coefficients of a quadratic polynomial. For this, let us take a quadratic polynomial, say \( p(x)=2 x^{2}-8 x+6 \). In Class IX, you have learnt how to factorise quadratic polynomials by splitting the middle term. So, here we need to split the middle term \( '-8 x^{\prime} \) as a sum of two terms, whose product is \( 6 \times 2 x^{2}=12 x^{2} . \) So, we write
+\( 2 x^{2}-8 x+6=2 x^{2}-6 x-2 x+6=2 x(x-3)-2(x-3) \)
 \[
-2020-21
-\] TRIANGLES
-2. \( \mathrm{ABCD} \) is a quadrilateral in which \( \mathrm{AD}=\mathrm{BC} \) \( \angle \mathrm{DAB}=\angle \mathrm{CBA} \) (see Fig. 7.17). Prove
-(i) \( \quad \Delta \mathrm{ABD} \cong \Delta \mathrm{BAC} \)
-(ii) \( \mathrm{BD}=\mathrm{AC} \)
-(iii) \( \angle \mathrm{ABD}=\angle \mathrm{BAC} \).
-3. \( \mathrm{AD} \) and \( \mathrm{BC} \) are equal perpendiculars segment AB (see Fig. 7.18). Show \( \mathrm{AB} \)
-Fig. 7.18
-4. \( l \) and \( m \) are two parallel lines intersected another pair of parallel lines \( p \) and CDA. (see Fig. 7.19). Show that
-Fig. 7.19
-5. Line \( l \) is the bisector of an angle \( \angle \mathrm{A} \) and \( \mathrm{B} \) is any point on \( l \). BP and BQ are perpendiculars from B to the arms of \( \angle \mathrm{A} \) (see Fig. 7.20). Show that:
-(i) \( \triangle \mathrm{APB} \cong \Delta \mathrm{AQB} \)
-(ii) \( \mathrm{BP}=\mathrm{BQ} \) or \( \mathrm{B} \) is equidistant from the arms
-of \( \angle \mathrm{A} \)
-Fig. 7.20
-2020-21 6. In Fig. \( 7.21, \mathrm{AC}=\mathrm{AE}, \mathrm{AB}=\mathrm{AD} \) and
-\( \angle \mathrm{BAD}=\angle \mathrm{EAC} \). Show that \( \mathrm{BC}=\mathrm{DE} \).
-Fig. \( 7.21 \)
-7. \( \mathrm{AB} \) is a line segment and \( \mathrm{P} \) is its mid-point. \( \mathrm{D} \) and \( \mathrm{E} \) are points on the same side of AB such that \( \angle \mathrm{BAD}=\angle \mathrm{ABE} \) and
-DPB (see Fig. 7.22). Show that
-(i) \( \quad \Delta \mathrm{DAP} \cong \Delta \mathrm{EBP} \)
-(ii) \( \mathrm{AD}=\mathrm{BE} \)
-Fig. \( 7.22 \)
-8. In right triangle \( \mathrm{ABC} \), right angled at \( \mathrm{C}, \mathrm{M} \) is the mid-point of hypotenuse AB. C is joined to \( \mathrm{M} \) and produced to a point \( \mathrm{D} \) such that \( \mathrm{DM}=\mathrm{CM} \). Point \( \mathrm{D} \) is joined to point \( \mathrm{B} \) (see Fig. 7.23). Show that:
-(i) \( \Delta \mathrm{AMC} \cong \Delta \mathrm{BMD} \)
-(ii) \( \angle \mathrm{DBC} \) is a right angle.
-(iii) \( \Delta \mathrm{DBC} \cong \triangle \mathrm{ACB} \)
-Fig. \( 7.23 \)
-(iv) \( \mathrm{CM}=\frac{1}{2} \mathrm{AB} \)
-7.4 Some Properties of a Triangle
-In the above section you have studied two criteria for congruence of triangles. Let us now apply these results to study some properties related to a triangle whose two sides are equal.
-2020-2 Perform the activity given below:
-triangle in which two sides equal and the third Fig. 7.24). You have done constructions in earlier classes.
-Do you remember what is such a triangle called? Fig. \( 7.24 \) A triangle in which two sides are equal is called an isosceles triangle. So, \( \Delta \mathrm{ABC} \) of Fig. \( 7.24 \) is an isosceles triangle with \( \mathrm{AB}=\mathrm{AC} \)
-Now, measure \( \angle \mathrm{B} \) and \( \angle \mathrm{C} \). What do you observe?
-Repeat this activity with other isosceles triangles with different sides. You may observe that in each such triangle, the angles opposite to the equal sides are equal.
-
-This is a very important result and is indeed true for any isosceles triangle. It can be proved as shown below.
-
-Theorem \( 7.2 \) : Angles opposite to equal sides of an isosceles triangle are equal.
-This result can be proved in many ways. One of the proofs is given here. Proof: We are given an isosceles triangle ABC
-\( \angle B=\angle C . \)
-in which \( \mathrm{AB}=\mathrm{AC} \). We need to prove that
-Let us draw the bisector of \( \angle \mathrm{A} \) and let \( \mathrm{D} \) be the point of intersection of this bisector of \( \quad \) Fig. \( 7.25 \) \( \angle \mathrm{A} \) and \( \mathrm{BC} \) (see Fig. \( 7.25) \).
-In \( \Delta \) BAD and \( \Delta \) CAD,
-\( \mathrm{AB}=\mathrm{AC} \quad \) (Given)
-\( \angle \mathrm{BAD}=\angle \mathrm{CAD} \quad \) (By construction)
-\( \begin{array}{ll}A D=A D & (\text { Common })\end{array} \)
-So, \( \quad \Delta \mathrm{BAD} \cong \Delta \mathrm{CAD} \quad \) (By SAS rule)
-So, \( \angle \mathrm{ABD}=\angle \mathrm{ACD} \), since they are corresponding angles of congruent triangles.
-So, \( \angle B=\angle C \)
-2020-21 122
-МАТнЕмАт
-Is the converse also true? That is:
-
-If two angles of any triangle are equal, can we conclude that the sides opposite to them are also equal?
-Perform the following activity. Construct a triangle \( \mathrm{ABC} \) with \( \mathrm{BC} \) of any length and \( \angle \mathrm{B}=\angle \mathrm{C}=50^{\circ} . \) Draw the bisector of \( \angle \mathrm{A} \) and let it intersect \( \mathrm{BC} \) at \( \mathrm{D} \) (see Fig. 7.26).
-
-Cut out the triangle from the sheet of paper and fold it along AD so that vertex \( \mathrm{C} \) falls on vertex B.
-What can you say about sides AC and AB?
-Observe that AC covers AB completely
-So, \( \mathrm{AC}=\mathrm{AB} \)
-Repeat this activity with some more triangles. Each time you will observe that the sides opposite to equal angles are equal. So we have the \( \quad \) Fig. \( 7.26 \) following:
-Theorem 7.3 : The sides opposite to equal angles of a triangle are equal.
-This is the converse of Theorem \( 7.2 \).
-You can prove this theorem by ASA congruence rule.
-Let us take some examples to apply these results.
-Example \( 4: \) In \( \Delta \mathrm{ABC} \), the bisector \( \mathrm{AD} \) of \( \angle \mathrm{A} \) is perpendicular to side \( \mathrm{BC} \) (see Fig. 7.27). Show that \( \mathrm{AB}=\mathrm{AC} \) and \( \triangle \mathrm{ABC} \) is isosceles.
-Solution : In \( \triangle \mathrm{ABD} \) and \( \triangle \mathrm{ACD} \),
-\( \angle \mathrm{BAD}=\angle \mathrm{CAD} \)
-\( \mathrm{AD}=\mathrm{AD} \)
-\( \angle \mathrm{ADB}=\angle \mathrm{ADC}=90^{\circ} \)
-So, \( \quad \Delta \mathrm{ABD} \cong \Delta \mathrm{ACD} \)
-So, \( \mathrm{AB}=\mathrm{AC} \)
-or, \( \Delta \mathrm{ABC} \) is an isosceles triangle.
-Fig. \( 7.27 \)
-\( 2020-21 \) TRIANG
-Example \( 5: \mathrm{E} \) and \( \mathrm{F} \) are respectively the mid-points of equal sides \( \mathrm{AB} \) and \( \mathrm{AC} \) of \( \triangle \mathrm{ABC} \) (see Fig. \( 7.28 \) ). Show that \( \mathrm{BF}=\mathrm{CE} \)
-Solution : In \( \Delta \mathrm{ABF} \) and \( \triangle \mathrm{ACE} \).
-\( \mathrm{AB}=\mathrm{AC} \)
-\( \begin{array}{ll}\text { C } \mathrm{A}=\angle \mathrm{A} & (\text { Common })\end{array} \)
-\( \mathrm{AF}=\mathrm{AE} \quad \) (Halves of equal sides)
-So \( \begin{array}{ll}\mathrm{ABF} \cong \Delta \mathrm{ACE} & \text { (SAS rule) }\end{array} \)
-Fig. 7.28
-Therefore, \( \quad \mathrm{BF}=\mathrm{CF} \)
-Example 6 : In an isosceles triangle \( \mathrm{ABC} \) with \( \mathrm{AB}=\mathrm{AC}, \mathrm{D} \) and \( \mathrm{E} \) are points on \( \mathrm{BC} \) such that \( \mathrm{BE}=\mathrm{CD} \) (see Fig. 7.29). Show that \( \mathrm{AD}=\mathrm{AE} \).
-Solution : In \( \Delta \mathrm{ABD} \) and \( \triangle \mathrm{ACE} \),
-Given
-\( \angle \mathrm{B}=\angle \)
-(Angles opposite to equal sides) (2)
-Also, \( \mathrm{BE}=\mathrm{CD} \)
-So, \( \quad B E-D E=C D-D E \)
-That is, \( \quad \mathrm{BD}=\mathrm{CE} \quad \) (3) \( \quad \) Fig. 7.29
-So, \( \Delta \) \( \mathrm{ACF} \)
-(Using (1), (2),
-(3) and SAS rule).
-This gives \( \quad \mathrm{AD}=\mathrm{AE} \)
-(CPCT)
-EXERCISE
-1. In an isosceles triangle \( \mathrm{ABC} \), with \( \mathrm{AB}=\mathrm{AC} \), the bisectors of \( \angle \mathrm{B} \) and \( \angle \mathrm{C} \) intersect each other at O. Join A to O. Show that :
-(i) \( \mathrm{OB}=\mathrm{OC} \)
-(ii) AO bisects \( \angle \mathrm{A} \)
-2. In \( \Delta \mathrm{ABC}, \mathrm{AD} \) is the perpendicular bisector of \( \mathrm{BC} \) (see Fig. 7.30). Show that \( \triangle \mathrm{ABC} \) is an isosceles triangle in which \( \mathrm{AB}=\mathrm{AC} \).
-Fig. \( 7.30 \)
-2020-21 3. \( \mathrm{ABC} \) is an isosceles triangle in which altitudes \( \mathrm{BE} \) and \( \mathrm{CF} \) are drawn to equal sides \( \mathrm{AC} \) and \( \mathrm{AB} \) respectively (see Fig. 7.31). Show that these altitudes are equal.
-Fig. \( 7.31 \)
-4. \( \mathrm{ABC} \) is a triangle in which altitudes \( \mathrm{BE} \) and \( \mathrm{CF} \) to sides \( \mathrm{AC} \) and \( \mathrm{AB} \) are equal (see Fig. 7.32). Show that
-(i) \( \quad \Delta \mathrm{ABE} \cong \Delta \mathrm{ACF} \)
-(ii) \( \mathrm{AB}=\mathrm{AC} \), i.e., \( \mathrm{ABC} \) is an isosceles triangle.
-Fig. \( 7.32 \)
-5. \( \mathrm{ABC} \) and \( \mathrm{DBC} \) are two isosceles triangles on the same base BC (see Fig. 7.33). Show that CD
-Fig. \( 7.33 \)
-6. \( \quad \Delta \mathrm{ABC} \) is an isosceles triangle in which \( \mathrm{AB}=\mathrm{AC} \). Side BA is produced to \( D \) such that \( A D=A B \) (see Fig. 7.34). Show that \( \angle \mathrm{BCD} \) is a right angle.
-7. \( \mathrm{ABC} \) is a right angled triangle in which \( \angle \mathrm{A}=90^{\circ} \) and \( \mathrm{AB}=\mathrm{AC} \). Find \( \angle \mathrm{B} \) and \( \angle \mathrm{C} \)
-8. Show that the angles of an equilateral triangle are \( 60^{\circ} \) each.
-Fig. \( 7.3 \)
-2020-21 TRIANGLES 2
-7.5 Some More Criteria for Congruence of Triangles
-You have seen earlier in this chapter that equality of three angles of one triangle to three angles of the other is not sufficient for the congruence of the two triangles. You may wonder whether equality of three sides of one triangle to three sides of another triangle is enough for congruence of the two triangles. You have already verified in earlier classes that this is indeed true.
-
-To be sure, construct two triangles with sides \( 4 \mathrm{~cm}, 3.5 \mathrm{~cm} \) and \( 4.5 \mathrm{~cm} \) (see Fig. 7.35). Cut them out and place them on each other. What do you observe? They cover each other completely, if the equal sides are placed on each other. So, the triangles are congruent.
-
-Repeat this activity with some more triangles. We arrive at another rule for congruence.
-
-Theorem \( 7.4 \) (SSS congruence rule) \( : \) If three sides of one triangle are equal to the three sides of another triangle, then the two triangles are congruent.
-This theorem can be proved using a suitable construction.
-You have already seen that in the SAS congruence rule, the pair of equal angles has to be the included angle between the pairs of corresponding pair of equal sides and if this is not so, the two triangles may not be congruent.
-Perform this activity:
-Construct two right angled triangles with hypotenuse equal to \( 5 \mathrm{~cm} \) and one side equal to \( 4 \mathrm{~cm} \) each (see Fig. 7.36).
-2020-21 Fig. \( 7.36 \)
-Cut them out and place one triangle over the other with equal side placed on each other. Turn the triangles, if necessary. What do you observe?
-
-The two triangles cover each other completely and so they are congruent. Repeat this activity with other pairs of right triangles. What do you observe?
-
-You will find that two right triangles are congruent if one pair of sides and the hypotenuse are equal. You have verified this in earlier classes.
-Note that, the right angle is not the included angle in this case.
-So, you arrive at the following congruence rule:
-Theorem \( 7.5 \) (RHS congruence rule) : If in two right triangles the hypotenuse and one side of one triangle are equal to the hypotenuse and one side of the other triangle, then the two triangles are congruent.
-Note that RHS stands for Right angle - Hypotenuse - Side.
-Let us now take some examples.
-Example \( 7: \mathrm{AB} \) is a line-segment. \( \mathrm{P} \) and \( \mathrm{Q} \) are points on opposite sides of \( A B \) such that each of them is equidistant from the points A and B (see Fig. 7.37). Show that the line \( \mathrm{PQ} \) is the perpendicular bisector of AB
-
-Solution : You are given that \( \mathrm{PA}=\mathrm{PB} \) and \( \mathrm{QA}=\mathrm{QB} \) and you are to show that \( \mathrm{PQ} \perp \mathrm{AB} \) and \( \mathrm{PQ} \) bisects \( \mathrm{AB} \). Let \( \mathrm{PQ} \) intersect \( \mathrm{AB} \) at \( \mathrm{C} \).
-Can you think of two congruent triangles in this figure?
-Let us take \( \Delta \mathrm{PAQ} \) and \( \Delta \mathrm{PBQ} \). Fig. 7.37
-In these triangles,
-2020-21 that \( \Delta \mathrm{PAC} \cong \Delta \mathrm{PBC} \) even though \( \mathrm{AP}=\mathrm{BP} \quad( \) Given \( ) \)
-and sides in
-It is because these results give us which is not always valid or true for congruence of triangles. Also the angle is not included between the equal pairs of sides.
-Let us take some more examples
-Example 8 : \( \mathrm{P} \) is a point equidistant from two lines \( l \) and \( m \) intersecting at point \( \mathrm{A} \) (see Fig. 7.38). Show that the line AP bisects the angle between them. ad \( m \) Solution : You are given that lines \( l \) and \( m \) intersect each other at \( A \). Let \( P B \perp l \), \( \mathrm{PC} \perp m \). It is given that \( \mathrm{PB}=\mathrm{PC} \).
-You are to show that \( \angle \mathrm{PAB}=\angle \mathrm{PAC} \).
-2020-21 128
-Let us consider \( \Delta \mathrm{PAB} \) and \( \Delta \mathrm{PAC} \). In these triangles,
-\[
-\mathrm{PB}=\mathrm{PC}
+=(2 x-2)(x-3)=2(x-1)(x-3)
 \]
-\( \angle \mathrm{PBA}=\angle \mathrm{PCA}=90^{\circ} \quad( \) Given \( ) \)
-\( \mathrm{PA}=\mathrm{PA} \)
-(Common)
-So, \( \quad \Delta \mathrm{PAB} \cong \Delta \mathrm{PAC} \quad \) (RHS rule) \( \quad \) Fig. \( 7.38 \)
-So, \( \angle \mathrm{PAB}=\angle \mathrm{PAC} \quad(\mathrm{CPCT}) \)
-Note that this result is the converse of the result proved in Q.5 of Exercise 7.1.
-EXERCISE \( 7.3 \)
-1. \( \quad \Delta \mathrm{ABC} \) and \( \triangle \mathrm{DBC} \) are two isosceles triangles on the same base \( \mathrm{BC} \) and vertices \( \mathrm{A} \) and \( \mathrm{D} \) are on the same side of BC (see Fig. 7.39). If AD is extended
-(ii) \( \Delta \mathrm{ABP} \cong \Delta \mathrm{ACP} \)
-(i) \( \quad \Delta \mathrm{ABD} \cong \Delta \mathrm{ACD} \)
-to intersect \( B C \) at \( P \), show that
-(iii) AP bisects \( \angle \) A as well as \( \angle D \).
-(iv) AP is the perpendicular bisector of BC. Fig. 7.39
-2. \( \mathrm{AD} \) is an altitude of an isosceles triangle \( \mathrm{ABC} \) in which \( \mathrm{AB}=\mathrm{AC} \). Show that
-(i) AD bisects BC
-(ii) AD bisects \( \angle \mathrm{A} \).
-3. Two sides \( \mathrm{AB} \) and \( \mathrm{BC} \) and median AM of one triangle \( \mathrm{ABC} \) are respectively equal to sides PQ and QR and median
-(i) \( \quad \Delta \mathrm{ABM} \cong \Delta \mathrm{PQN} \)
-PN of \( \Delta \) PQR (see Fig. 7.40). Show that:
-(ii) \( \Delta \mathrm{ABC} \cong \Delta \mathrm{PQR} \quad \) Fig. \( 7.40 \)
-4. \( \mathrm{BE} \) and \( \mathrm{CF} \) are two equal altitudes of a triangle \( \mathrm{ABC} \). Using \( \mathrm{RHS} \) congruence rule, prove that the triangle \( \mathrm{ABC} \) is isosceles.
-5. \( \mathrm{ABC} \) is an isosceles triangle with \( \mathrm{AB}=\mathrm{AC} \). Draw \( \mathrm{AP} \perp \mathrm{BC} \) to show that \( \angle \mathrm{B}=\angle \mathrm{C} . \)
-2020-21 TRIANGLES
-Now, which of the triangles given below are congruent to triangle \( \mathrm{ABC} \) in Fig. 7.4 (i)?
-
-Cut out each of these triangles from Fig. \( 7.4 \) (ii) to \( (\mathrm{v}) \) and turn them around and try to cover \( \triangle \mathrm{ABC} \). Observe that triangles in Fig. \( 7.4 \) (ii), (iii) and (iv) are congruent to \( \triangle \mathrm{ABC} \) while \( \Delta \mathrm{TSU} \) of Fig \( 7.4(\mathrm{v}) \) is not congruent to \( \triangle \mathrm{ABC} \).
-If \( \Delta \mathrm{PQR} \) is congruent to \( \Delta \mathrm{ABC} \), we write \( \Delta \mathrm{PQR} \cong \Delta \mathrm{ABC} \).
-Notice that when \( \Delta \mathrm{PQR} \cong \Delta \mathrm{ABC} \), then sides of \( \Delta \mathrm{PQR} \) fall on corresponding equal sides of \( \Delta \mathrm{ABC} \) and so is the case for the angles.
-
-That is, PQ covers AB, QR covers BC and RP covers CA; \( \angle \) P covers \( \angle \) A. \( \angle \mathrm{Q} \) covers \( \angle \mathrm{B} \) and \( \angle \mathrm{R} \) covers \( \angle \mathrm{C} \). Also, there is a one-one correspondence between the vertices. That is, \( \mathrm{P} \) corresponds to \( \mathrm{A}, \mathrm{Q} \) to \( \mathrm{B}, \mathrm{R} \) to \( \mathrm{C} \) and so on which is written as
-\( \mathrm{P} \leftrightarrow \mathrm{A}, \mathrm{Q} \leftrightarrow \mathrm{B}, \mathrm{R} \leftrightarrow \mathrm{C} \)
-Note that under this correspondence, \( \Delta \mathrm{PQR} \cong \Delta \mathrm{ABC} ; \) but it will not be correct to write \( \Delta \mathrm{QRP} \cong \Delta \mathrm{ABC} \).
-Similarly, for Fig. \( 7.4 \) (iii),
-2020-2 TRIANGLES
-7.6 Inequalities in a Triangle
-So far, you have been mainly studying the equality of sides and angles of a triangle or triangles. Sometimes, we do come across unequal objects, we need to compare them. For example, line-segment \( \mathrm{AB} \) is greater in length as compared to line segment \( \mathrm{CD} \) in Fig. \( 7.41 \) (i) and \( \angle \mathrm{A} \) is greater than \( \angle \mathrm{B} \) in Fig \( 7.41 \) (ii).
-
-Let us now examine whether there is any relation between unequal sides and unequal angles of a triangle. For this, let us perform the following activity:
-
-Activity : Fix two pins on a drawing board say at B and \( \mathrm{C} \) and tie a thread to mark a side BC of a triangle.
-Fix one end of another thread at \( \mathrm{C} \) and tie a pencil the other (free) end. Mark a point A with the pencil and draw \( \Delta \mathrm{ABC} \) (see Fig 7.42). Now, shift the pencil and mark another point \( \mathrm{A}^{\prime} \) on \( \mathrm{CA} \) beyond (new position of it)
-
-So, \( \quad A^{\prime} C>A C \quad \) (Comparing the lengths)
-Join \( A^{\prime} \) to \( B \) and complete the triangle \( A^{\prime} B C \). What can you say about \( \angle \mathrm{A}^{\prime} \mathrm{BC} \) and \( \angle \mathrm{ABC} \) ?
-Compare them. What do you observe? \( \quad \) Fig. \( 7.42 \) Clearly, \( \quad \angle \mathrm{A}^{\prime} \mathrm{BC}>\angle \mathrm{ABC} \)
-Continue to mark more points on CA (extended) and draw the triangles with the side \( \mathrm{BC} \) and the points marked.
-
-You will observe that as the length of the side \( \mathrm{AC} \) is increased (by taking different positions of A), the angle opposite to it, that is, \( \angle \mathrm{B} \) also increases.
-Let us now perform another activity :
-2020-21 130
-Activity : Construct a scalene triangle (that is a triangle in which all sides are of different lengths). Measure the lengths of the sides.
-Now, measure the angles. What do you observe?
-
-In \( \Delta \mathrm{ABC} \) of Fig \( 7.43, \mathrm{BC} \) is the longest side and AC is the shortest side.
-
-Also, \( \angle \) A is the largest and \( \angle \mathrm{B} \) is the smallest.
-Repeat this activity with some other triangles. Fig. \( 7.43 \)
-We arrive at a very important result of inequalities in a triangle. It is stated in the form of a theorem as shown below:
-
-Theorem \( 7.6: \) If two sides of a triangle are unequal, the angle opposite to the longer side is larger (or greater).
-You may prove this theorem by taking a point \( \mathrm{P} \) on \( \mathrm{BC} \) such that \( \mathrm{CA}=\mathrm{CP} \) in Fig. \( 7.43 \).
-Now, let us perform another activity :
-Activity : Draw a line-segment \( \mathrm{AB} \). With A as centre and some radius, draw an arc and mark different points say P, Q, R, S, T on it. Fig. \( 7.44 \)
-Join each of these points with A as well as with B (see Fig. 7.44). Observe that as we move from \( \mathrm{P} \) to \( \mathrm{T}, \angle \mathrm{A} \) is becoming larger and larger. What is happening to the length of the side opposite to it? Observe that the length of the side is also increasing; that is \( \angle \mathrm{TAB}>\angle \mathrm{SAB}>\angle \mathrm{RAB}>\angle \mathrm{QAB}>\angle \mathrm{PAB} \) and \( \mathrm{TB}>\mathrm{SB}>\mathrm{RB}>\mathrm{QB}>\mathrm{PB} \)
-Now, draw any triangle with all angles unequal to each other. Measure the lengths of the sides (see Fig. 7.45).
-
-Observe that the side opposite to the largest angle is the longest. In Fig. \( 7.45, \angle \mathrm{B} \) is the largest angle and AC is the longest side.
-
-Repeat this activity for some more triangles and we see that the converse of Theorem \( 7.6 \) is also true. \( \quad \) Fig. \( 7.45 \) In this way, we arrive at the following theorem:
-2020-21 TRIANGLES
-Theorem \( 7.7: \) In any triangle, the side opposite to the larger (greater) angle is longer.
-This theorem can be proved by the method of contradiction.
-Now take a triangle \( \mathrm{ABC} \) and in it, find \( \mathrm{AB}+\mathrm{BC}, \mathrm{BC}+\mathrm{AC} \) and \( \mathrm{AC}+\mathrm{AB} \). What do you observe?
-You will observe that \( \quad \mathrm{AB}+\mathrm{BC}>\mathrm{AC} \),
-\( \mathrm{BC}+\mathrm{AC}>\mathrm{AB} \) and \( \mathrm{AC}+\mathrm{AB}>\mathrm{BC} \)
-Repeat this activity with other triangles and with this you can arrive at the following theorem :
-Theorem \( 7.8 \) : The sum of any two sides of a triangle is greater than the third side.
-In Fig. 7.46, observe that the side BA of \( \triangle \mathrm{ABC} \) has been produced to a point \( \mathrm{D} \) such that \( \mathrm{AD}=\mathrm{AC} \). Can you show that \( \angle \mathrm{BCD}>\angle \mathrm{BDC} \) and \( \mathrm{BA}+\mathrm{AC}>\mathrm{BC} ? \) Have
-you arrived at the proof of the above theorem.
-Let us now take some examples based on these results. Fig. \( 7.46 \)
-Example \( 9: \mathrm{D} \) is a point on side \( \mathrm{BC} \) of \( \Delta \mathrm{ABC} \) such that \( \mathrm{AD}=\mathrm{AC} \) (see Fig. 7.47). Show that \( \mathrm{AB}>\mathrm{AD} \).
-Solution : In \( \Delta \) DAC,
-(Given)
-So, \( \angle \mathrm{ADC}=\angle \mathrm{ACD} \)
-(Angles opposite to equal sides)
-Now, \( \quad \angle \mathrm{ADC} \) is an exterior angle for \( \triangle \mathrm{ABD} \).
-So, \( \angle \mathrm{ADC}>\angle \mathrm{ABD} \)
-or, \( \angle \mathrm{ACD}>\angle \mathrm{ABD} \)
-or, \( \angle \mathrm{ACB}>\angle \mathrm{ABC} \)
-Fig. \( 7.47 \)
-So, \( \quad \mathrm{AB}>\mathrm{AC} \) (Side opposite to larger angle in \( \Delta \mathrm{ABC} \) )
-or, \( \mathrm{AB}>\mathrm{AD}(\mathrm{AD}=\mathrm{AC}) \)
-\( 2020-21 \) 3
-EXERCISE \( 7 . \)
-1. Show that in a right angled triangle, the hypotenuse is the longest side.
-2. In Fig. 7.48, sides \( \mathrm{AB} \) and \( \mathrm{AC} \) of \( \triangle \mathrm{ABC} \) are extended to points \( \mathrm{P} \) and \( \mathrm{Q} \) respectively. Also. \( \angle \mathrm{PBC}<\angle \mathrm{QCB} \). Show that \( \mathrm{AC}>\mathrm{AB} \)
-Fig. 7.48
-3. In Fig. \( 7.49, \angle \mathrm{B}<\angle \mathrm{A} \) and \( \angle \mathrm{C}<\angle \mathrm{D} \). Show that
-\( \mathrm{AD}<\mathrm{BC} \)
-Fig. \( 7.49 \)
-4. \( \mathrm{AB} \) and \( \mathrm{CD} \) are respectively the smallest and longest sides of a quadrilateral \( \mathrm{ABCD} \) (see Fig. 7.50). Show that \( \angle C \) and
-\( \angle \mathrm{B}>\angle \mathrm{D} \)
-Fig. \( 7.50 \)
-5. In Fig 7.51, \( \mathrm{PR}>\mathrm{PQ} \) and PS bisects \( \angle \mathrm{QPR} \). Prove that \( \angle \mathrm{PSR}> \)
-2020-21 TRIANGLES 133
-6. Show that of all line segments drawn from a given point not on it, the perpendicular line segment is the shortest.
-EXERCISE \( 7.5 \) (Optional)*
-1. \( \mathrm{ABC} \) is a triangle. Locate a point in the interior of \( \Delta \mathrm{ABC} \) which is equidistant from all the vertices of \( \Delta \mathrm{ABC} \).
-2. In a triangle locate a point in its interior which is equidistant from all the sides of the triangle.
-3. In a huge park, people are concentrated at three points (see Fig. 7.52):
-A: where there are different slides and swings for children,
-B: near which a man-made lake is situated,
-C: which is near to a large parking and exit.
-Where should an icecream parlour be set up so that maximum number of persons can approach it?
-(Hint : The parlour should be equidistant from A, B and C)
-4. Complete the hexagonal and star shaped Rangolies [see Fig. \( 7.53 \) (i) and (ii)] by filling them with as many equilateral triangles of side \( 1 \mathrm{~cm} \) as you can. Count the number of triangles in each case. Which has more triangles?
-(i)
-Fig. \( 7.53 \)
-"These exercises are not from examination point of view.
-\( 2020-21 \) 134
-MATHEMATICS
-7.7 Summary
-In this chapter, you have studied the following points :
-1. Two figures are congruent, if they are of the same shape and of the same size.
-2. Two circles of the same radii are congruent.
-3. Two squares of the same sides are congruent.
-4. If two triangles \( \mathrm{ABC} \) and \( \mathrm{PQR} \) are congruent under the correspondence \( \mathrm{A} \leftrightarrow \mathrm{P} \), \( \mathrm{B} \leftrightarrow \mathrm{Q} \) and \( \mathrm{C} \leftrightarrow \mathrm{R} \), then symbolically, it is expressed as \( \Delta \mathrm{ABC} \cong \Delta \mathrm{PQR} \)
-5. If two sides and the included angle of one triangle are equal to two sides and the included angle of the other triangle, then the two triangles are congruent (SAS Congruence Rule).
-6. If two angles and the included side of one triangle are equal to two angles and the included side of the other triangle, then the two triangles are congruent (ASA Congruence Rule).
-7. If two angles and one side of one triangle are equal to two angles and the corresponding side of the other triangle, then the two triangles are congruent (AAS Congruence Rule).
-8. Angles opposite to equal sides of a triangle are equal.
-9. Sides opposite to equal angles of a triangle are equal.
-10. Each angle of an equilateral triangle is of \( 60^{\circ} \).
-11. If three sides of one triangle are equal to three sides of the other triangle, then the two triangles are congruent (SSS Congruence Rule).
-12. If in two right triangles, hypotenuse and one side of a triangle are equal to the hypotenuse and one side of other triangle, then the two triangles are congruent (RHS Congruence Rule).
-13. In a triangle, angle opposite to the longer side is larger (greater).
-14. In a triangle, side opposite to the larger (greater) angle is longer.
-15. Sum of any two sides of a triangle is greater than the third side.
-\( 2020-21 \) 12
-\( \mathrm{FD} \leftrightarrow \mathrm{AB}, \mathrm{DE} \leftrightarrow \mathrm{BC} \) and \( \mathrm{EF} \leftrightarrow \mathrm{CA} \)
-and \( \quad \mathrm{F} \leftrightarrow \mathrm{A}, \mathrm{D} \leftrightarrow \mathrm{B} \) and \( \mathrm{E} \leftrightarrow \mathrm{C} \)
-So, \( \Delta \mathrm{FDE} \cong \Delta \mathrm{ABC} \) but writing \( \Delta \mathrm{DEF} \cong \Delta \mathrm{ABC} \) is not correct.
-Give the correspondence between the triangle in Fig. \( 7.4 \) (iv) and \( \Delta \mathrm{ABC} \).
-So, it is necessary to write the correspondence of vertices correctly for writing of congruence of triangles in symbolic form.
-
-Note that in congruent triangles corresponding parts are equal and we write in short 'CPCT' for corresponding parts of congruent triangles.
-7.3 Criteria for Congruence of Triangles
-In earlier classes, you have learnt four criteria for congruence of triangles. Let us recall them.
-
-Draw two triangles with one side \( 3 \mathrm{~cm} \). Are these triangles congruent? Observe that they are not congruent (see Fig. 7.5).
-(ii)
-Fig. \( 7.5 \)
-Now, draw two triangles with one side \( 4 \mathrm{~cm} \) and one angle \( 50^{\circ} \) (see Fig. 7.6). Are they congruent?
-Fig. 7.6
-2020-21 TRIANGLES
-See that these two triangles are not congruent.
-Repeat this activity with some more pairs of triangles.
-So, equality of one pair of sides or one pair of sides and one pair of angles is not sufficient to give us congruent triangles.
-
-What would happen if the other pair of arms (sides) of the equal angles are also equal?
-In Fig \( 7.7, \mathrm{BC}=\mathrm{QR}, \angle \mathrm{B}=\angle \mathrm{Q} \) and also, \( \mathrm{AB}=\mathrm{PQ} \). Now, what can you say
-about congruence of \( \triangle \mathrm{ABC} \) and \( \Delta \mathrm{PQR} \) ?
-Recall from your earlier classes that, in this case, the two triangles are congruent. Verify this for \( \Delta \mathrm{ABC} \) and \( \triangle \mathrm{PQR} \) in Fig. \( 7.7 \).
-
-Repeat this activity with other pairs of triangles. Do you observe that the equality of two sides and the included angle is enough for the congruence of triangles? Yes, it is enough.
-This is the first criterion for congruence of triangles.
-Axiom \( 7.1 \) (SAS congruence rule) : Two triangles are congruent if two sides and the included angle of one triangle are equal to the two sides and the included angle of the other triangle.
-
-This result cannot be proved with the help of previously known results and so it is accepted true as an axiom (see Appendix 1).
-Let us now take some examples.
-Example 1 : In Fig. \( 7.8, \mathrm{OA}=\mathrm{OB} \) and \( \mathrm{OD}=\mathrm{OC} \).
-(i) \( \Delta \mathrm{AOD} \cong \Delta \mathrm{BOC} \) and
-(ii) AD II
-Solution: (i) You may observe that in \( \Delta \mathrm{AOD} \) and
-(Given)
-2020-21 114
-\begin{tabular}{|l}  М тннех \end{tabular}
-Also, since \( \angle \mathrm{AOD} \) and \( \angle \mathrm{BOC} \) form a pair of vertically opposite angles, we have
-\( \angle \mathrm{AOD}=\angle \mathrm{BOC} . \)
-So, \( \Delta \mathrm{AOD} \cong \Delta \mathrm{BOC} \quad \) (by the SAS congruence rule)
-(ii) In congruent triangles \( A O D \) and \( B O C \), the other corresponding parts are also equal.
-
-So, \( \angle \mathrm{OAD}=\angle \mathrm{OBC} \) and these form a pair of alternate angles for line segments \( \mathrm{AD} \) and \( \mathrm{BC} \).
-Therefore, \( \mathrm{AD} \) ॥ BC.
-Example \( 2: \mathrm{AB} \) is a line segment and line \( l \) is its perpendicular bisector. If a point \( \mathrm{P} \) lies on \( l \), show that \( \mathrm{P} \) is equidistant from \( \mathrm{A} \) and \( \mathrm{B} \).
-Solution : Line \( l \perp \mathrm{AB} \) and passes through \( \mathrm{C} \) which is the mid-point of AB (see Fig. 7.9). You have show that \( \mathrm{PA}=\mathrm{PB} \). Consider \( \Delta \mathrm{PCA} \) and \( \triangle \mathrm{PCB} \).
-We have \( \quad A C=B C \quad(C \) is the mid-point of \( A B) \)
-\( \angle \mathrm{PCA}=\angle \mathrm{PCB}=90^{\circ} \quad( \) Given \( ) \)
-\( \mathrm{PC}=\mathrm{PC} \)\( \quad \) (Common)
-So, \( \Delta \mathrm{PCA} \cong \Delta \mathrm{PCB} \) (SAS rule)
-and so, \( \mathrm{PA}=\mathrm{PB} \), as they are corresponding sides congruent triangles. \( \quad \) Fig. \( 7.9 \)
-Now, let us construct two triangles, whose sides are \( 4 \mathrm{~cm} \) and \( 5 \mathrm{~cm} \) and one of the angles is \( 50^{\circ} \) and this angle is not included in between the equal sides (see Fig. 7.10). Are the two triangles congruent?
-Fig.
-2020-21 TRIANGLE
-Notice that the two triangles are not congruent.
-Repeat this activity with more pairs of triangles. You will observe that for triangles to be congruent, it is very important that the equal angles are included between the pairs of equal sides.
-So, SAS congruence rule holds but not ASS or SSA rule.
-Next, try to construct the two triangles in which two angles are \( 60^{\circ} \) and \( 45^{\circ} \) and the side included between these angles is \( 4 \mathrm{~cm} \) (see Fig. 7.11).
-
-Cut out these triangles and place one triangle on the other. What do you observe? See that one triangle covers the other completely; that is, the two triangles are congruent. Repeat this activity with more pairs of triangles. You will observe that equality of two angles and the included side is sufficient for congruence of triangles.
-
-This result is the Angle-Side-Angle criterion for congruence and is written as ASA criterion. You have verified this criterion in earlier classes, but let us state and prove this result.
-
-Since this result can be proved, it is called a theorem and to prove it, we use the SAS axiom for congruence.
-
-Theorem \( 7.1 \) (ASA congruence rule) : Two triangles are congruent if two angles and the included side of one triangle are equal to two angles and the included side of other triangle.
-Proof : We are given two triangles ABC and DEF in which:
-\( \angle \mathrm{B}=\angle \mathrm{E}, \angle \mathrm{C}=\angle \mathrm{F} \)
-and \( \mathrm{BC}=\mathrm{EF} \)
-We need to prove that \( \Delta \mathrm{ABC} \cong \Delta \mathrm{DEF} \)
-For proving the congruence of the two triangles see that three cases arise.
-2020-21 Case (i) : Let AB = DE (see Fig. 7.12).
-Now what do you observe? You may observe that
+\( 2020-21 \) POLYNOMIALS
+So, the value of \( p(x)=2 x^{2}-8 x+6 \) is zero when \( x-1=0 \) or \( x-3=0 \), i.e., when \( x=1 \) or \( x=3 \). So, the zeroes of \( 2 x^{2}-8 x+6 \) are 1 and 3 . Observe that :
 \[
-\mathrm{AB}=\mathrm{DE}
+\text { Sum of its zeroes }=1+3=4=\frac{-(-8)}{2}=\frac{-(\text { Coefficient of } x)}{\text { Coefficient of } x^{2}}
 \]
-(Assumed)
+Product of its zeroes \( =1 \times 3=3=\frac{6}{2}=\frac{\text { Constant term }}{\text { Coefficient of } x^{2}} \)
+Let us take one more quadratic polynomial, say, \( p(x)=3 x^{2}+5 x-2 \). By the method of splitting the middle term,
 \[
 \begin{aligned}
-\angle \mathrm{B} &=\angle \mathrm{E} \\
-\mathrm{BC} &=\mathrm{EF} \\
-\mathrm{ABC} & \cong \Delta \mathrm{DEF}
+3 x^{2}+5 x-2 &=3 x^{2}+6 x-x-2=3 x(x+2)-1(x+2) \\
+&=(3 x-1)(x+2)
 \end{aligned}
 \]
-So, (B
-Case (ii): Let if possible \( \mathrm{AB}>\mathrm{DE} \). So, we can take a point \( \mathrm{P} \) on \( \mathrm{AB} \) such that \( \mathrm{PB}=\mathrm{DE} \). Now consider \( \Delta \mathrm{PBC} \) and \( \Delta \mathrm{DEF} \) (see Fig. 7.13).
-Fig. 7.18
-Observe that in \( \Delta \mathrm{PBC} \) and \( \Delta \mathrm{DEF} \)
-\( \mathrm{PB}=\mathrm{DE} \)
-(By construction)
-\( \angle B=\angle E \)
-\( \mathrm{BC}=\mathrm{EF} \quad \) (Given)
-So, we can conclude that:
-\( \Delta \mathrm{PBC} \cong \Delta \mathrm{DEF} \), by the SAS axiom for congruence.
-2020-2 TRIANGLES
-Since the triangles are congruent, their corresponding parts will be equal.
-So, \( \angle \mathrm{PCB}=\angle \mathrm{DFE} \)
-But, we are given that \( \angle \mathrm{ACB}=\angle \mathrm{DFE} \)
-So, \( \angle \mathrm{ACB}=\angle \mathrm{PCB} \)
-Is this possible?
-This is possible only if \( \mathrm{P} \) coincides with \( \mathrm{A} \).
-or, \( \mathrm{BA}=\mathrm{ED} \)
-So, \( \begin{array}{ll}\Delta \mathrm{ABC} \cong \Delta \mathrm{DEF} & \text { (by SAS axiom) }\end{array} \)
-Case (iii) : If AB < DE, we can choose a point \( M \) on DE such that \( M E=A B \) and repeating the arguments as given in Case (ii), we can conclude that \( \mathrm{AB}=\mathrm{DE} \) and so, \( \Delta \mathrm{ABC} \cong \Delta \mathrm{DEF} . \)
-Suppose, now in two triangles two pairs of angles and one pair of corresponding sides are equal but the side is not included between the corresponding equal pairs of angles. Are the triangles still congruent? You will observe that they are congruent. Can you reason out why?
+Hence, the value of \( 3 x^{2}+5 x-2 \) is zero when either \( 3 x-1=0 \) or \( x+2=0 \), i.e. when \( x=\frac{1}{3} \) or \( x=-2 \). So, the zeroes of \( 3 x^{2}+5 x-2 \) are \( \frac{1}{3} \) and \( -2 \). Observe that :
+\[
+\text { Sum of its zeroes }=\frac{1}{3}+(-2)=\frac{-5}{3}=\frac{-(\text { Coefficient of } x)}{\text { Coefficient of } x^{2}}
+\]
+Product of its zeroes \( =\frac{1}{3} \times(-2)=\frac{-2}{3}=\frac{\text { Constant term }}{\text { Coefficient of } x^{2}} \)
+In general, if \( \alpha \) and \( \beta^{*} \) are the zeroes of the quadratic polynomial \( p(x)=a x^{2}+b x+c \), \( a \neq 0 \), then you know that \( x-\alpha \) and \( x-\beta \) are the factors of \( p(x) \). Therefore, \( a x^{2}+b x+c=k(x-\alpha)(x-\beta) \), where \( k \) is a constant
+\[
+\begin{array}{l}
+=k\left[x^{2}-(\alpha+\beta) x+\alpha \beta\right] \\
+=k x^{2}-k(\alpha+\beta) x+k \alpha \beta
+\end{array}
+\]
+Comparing the coefficients of \( x^{2}, x \) and constant terms on both the sides, we get
+This gives
+\[
+\begin{aligned}
+a=k, b &=-k(\alpha+\beta) \text { and } c=k \alpha \beta . \\
+\alpha+\beta &=\frac{-b}{a}
+\end{aligned}
+\]
+\[
+\alpha \beta=\frac{c}{a}
+\]
+\( \alpha, \beta \) are Greek letters pronounced as 'alpha' and 'beta' respectively. We will use later one more letter ' \( \gamma \) ' pronounced as 'gamma'.
+2020-21 30
+MATHEMATIC
+i.e.,
+\[
+\text { sum of zeroes }=\alpha+\beta=-\frac{b}{a}=\frac{-(\text { Coefficient of } x)}{\text { Coefficient of } x^{2}}
+\]
+product of zeroes \( =\alpha \beta=\frac{c}{a}=\frac{\text { Constant term }}{\text { Coefficient of } x^{2}} \).
+Let us consider some examples.
+Example \( 2: \) Find the zeroes of the quadratic polynomial \( x^{2}+7 x+10 \), and verify the relationship between the zeroes and the coefficients. Solution : We have
+\[
+x^{2}+7 x+10=(x+2)(x+5)
+\]
+So, the value of \( x^{2}+7 x+10 \) is zero when \( x+2=0 \) or \( x+5=0 \), i.e., when \( x=-2 \) or \( x=-5 \). Therefore, the zeroes of \( x^{2}+7 x+10 \) are \( -2 \) and \( -5 \). Now,
+\[
+\text { sum of zeroes }=-2+(-5)=-(7)=\frac{-(7)}{1}=\frac{-(\text { Coefficient of } x)}{\text { Coefficient of } x^{2}}
+\]
+product of zeroes \( =(-2) \times(-5)=10=\frac{10}{1}=\frac{\text { Constant term }}{\text { Coefficient of } x^{2}} \).
+Example 3 : Find the zeroes of the polynomial \( x^{2}-3 \) and verify the relationship between the zeroes and the coefficients. Solution : Recall the identity \( a^{2}-b^{2}=(a-b)(a+b) \). Using it, we can write:
+\[
+x^{2}-3=(x-\sqrt{3})(x+\sqrt{3})
+\]
+So, the value of \( x^{2}-3 \) is zero when \( x=\sqrt{3} \) or \( x=-\sqrt{3} \).
+Therefore, the zeroes of \( x^{2}-3 \) are \( \sqrt{3} \) and \( -\sqrt{3} \).
+Now,
+\[
+\begin{array}{c}
+\text { sum of zeroes }=\sqrt{3}-\sqrt{3}=0=\frac{-(\text { Coefficient of } x)}{\text { Coefficient of } x^{2}} \\
+\text { product of zeroes }=(\sqrt{3})(-\sqrt{3})=-3=\frac{-3}{1}=\frac{\text { Constant term }}{\text { Coefficient of } x^{2}} \\
+2020-21
+\end{array}
+\] POLYNOMIALS
+Example 4 : Find a quadratic polynomial, the sum and product of whose zeroes are \( -3 \) and 2, respectively. Solution : Let the quadratic polynomial be \( a x^{2}+b x+c \), and its zeroes be \( \alpha \) and \( \beta \). We have
+and
+\[
+\begin{array}{c}
+\alpha+\beta=-3=\frac{-b}{a}, \\
+\alpha \beta=2=\frac{c}{a}
+\end{array}
+\]
+If \( a=1 \), then \( b=3 \) and \( c=2 \).
+So, one quadratic polynomial which fits the given conditions is \( x^{2}+3 x+2 \).
+You can check that any other quadratic polynomial that fits these conditions will be of the form \( k\left(x^{2}+3 x+2\right) \), where \( k \) is real.
 
-You know that the sum of the three angles of a triangle is \( 180^{\circ} \). So if two pairs of angles are equal, the third pair is also equal \( \left(180^{\circ}-\right. \) sum of equal angles \( ) \).
+Let us now look at cubic polynomials. Do you think a similar relation holds between the zeroes of a cubic polynomial and its coefficients? Let us consider \( p(x)=2 x^{3}-5 x^{2}-14 x+8 \). You can check that \( p(x)=0 \) for \( x=4,-2, \frac{1}{2} \). Since \( p(x) \) can have atmost three zeroes, these are the zeores of \( 2 x^{3}-5 x^{2}-14 x+8 \). Now,
+\[
+\text { sum of the zeroes }=4+(-2)+\frac{1}{2}=\frac{5}{2}=\frac{-(-5)}{2}=\frac{-\left(\text { Coefficient of } x^{2}\right)}{\text { Coefficient of } x^{3}}
+\]
+product of the zeroes \( =4 \times(-2) \times \frac{1}{2}=-4=\frac{-8}{2}=\frac{-\text { Constant term }}{\text { Coefficient of } x^{3}} \).
+However, there is one more relationship here. Consider the sum of the products of the zeroes taken two at a time. We have
+\[
+\begin{aligned}
+\{4 \times(-2)\}+\left\{(-2) \times \frac{1}{2}\right\}+\left\{\frac{1}{2} \times 4\right\} & \\
+=&-8-1+2=-7=\frac{-14}{2}=\frac{\text { Coefficient of } x}{\text { Coefficient of } x^{3}} .
+\end{aligned}
+\]
+In general, it can be proved that if \( \alpha, \beta, \gamma \) are the zeroes of the cubic polynomial \( a x^{3}+b x^{2}+c x+d \), then
+2020-21 32
+MATHEMAT
+\[
+\begin{aligned}
+\alpha+\beta+\gamma &=\frac{-b}{a} \\
+\alpha \beta+\beta \gamma+\gamma \alpha &=\frac{c}{a} \\
+\alpha \beta \gamma &=\frac{-d}{a} .
+\end{aligned}
+\]
+Let us consider an example.
+Example \( 5^{*} \) : Verify that \( 3,-1,-\frac{1}{3} \) are the zeroes of the cubic polynomial \( p(x)=3 x^{3}-5 x^{2}-11 x-3 \), and then verify the relationship between the zeroes and the coefficients.
+Solution : Comparing the given polynomial with \( a x^{3}+b x^{2}+c x+d \), we get
+\[
+\begin{array}{l}
+a=3, b=-5, c=-11, d=-3 . \text { Further } \\
+p(3)=3 \times 3^{3}-\left(5 \times 3^{2}\right)-(11 \times 3)-3=81-45-33-3=0, \\
+p(-1)=3 \times(-1)^{3}-5 \times(-1)^{2}-11 \times(-1)-3=-3-5+11-3=0, \\
+p\left(-\frac{1}{3}\right)=3 \times\left(-\frac{1}{3}\right)^{3}-5 \times\left(-\frac{1}{3}\right)^{2}-11 \times\left(-\frac{1}{3}\right)-3, \\
+=-\frac{1}{9}-\frac{5}{9}+\frac{11}{3}-3=-\frac{2}{3}+\frac{2}{3}=0
+\end{array}
+\]
+Therefore, \( 3,-1 \) and \( -\frac{1}{3} \) are the zeroes of \( 3 x^{3}-5 x^{2}-11 x-3 \). So, we take \( \alpha=3, \beta=-1 \) and \( \gamma=-\frac{1}{3} \). Now,
+\[
+\begin{array}{l}
+\alpha+\beta+\gamma=3+(-1)+\left(-\frac{1}{3}\right)=2-\frac{1}{3}=\frac{5}{3}=\frac{-(-5)}{3}=\frac{-b}{a}, \\
+\alpha \beta+\beta \gamma+\gamma \alpha=3 \times(-1)+(-1) \times\left(-\frac{1}{3}\right)+\left(-\frac{1}{3}\right) \times 3=-3+\frac{1}{3}-1=\frac{-11}{3}=\frac{c}{a}, \\
+\alpha \beta \gamma=3 \times(-1) \times\left(-\frac{1}{3}\right)=1=\frac{-(-3)}{3}=\frac{-d}{a}
+\end{array}
+\]
+Not from the examination point of view.
+2020-21 PoLYNomIALS
+EXERCISE \( 2.2 \)
+1. Find the zeroes of the following quadratic polynomials and verify the relationship between the zeroes and the coefficients.
+(i) \( x^{2}-2 x-8 \)
+(ii) \( 4 s^{2}-4 s+1 \)
+(iii) \( 6 x^{2}-3-7 x \)
+(iv) \( 4 u^{2}+8 u \)
+(v) \( t^{2}-15 \)
+(vi) \( 3 x^{2}-x-4 \)
+2. Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively.
+(i) \( \frac{1}{4},-1 \)
+(ii) \( \sqrt{2}, \frac{1}{3} \)
+(iii) \( 0, \sqrt{5} \)
+(iv) 1,1
+(v) \( -\frac{1}{4}, \frac{1}{4} \)
+(vi) 4,1
+2.4 Division Algorithm for Polynomials You know that a cubic polynomial has at most three zeroes. However, if you are given only one zero, can you find the other two? For this, let us consider the cubic polynomial \( x^{3}-3 x^{2}-x+3 \). If we tell you that one of its zeroes is 1 , then you know that \( x-1 \) is a factor of \( x^{3}-3 x^{2}-x+3 \). So, you can divide \( x^{3}-3 x^{2}-x+3 \) by \( x-1 \), as you have learnt in Class IX, to get the quotient \( x^{2}-2 x-3 \).
 
-So, two triangles are congruent if any two pairs of angles and one pair of corresponding sides are equal. We may call it as the AAS Congruence Rule.
-Now let us perform the following activity:
+Next, you could get the factors of \( x^{2}-2 x-3 \), by splitting the middle term, as \( (x+1)(x-3) \). This would give you
+\[
+\begin{aligned}
+x^{3}-3 x^{2}-x+3 &=(x-1)\left(x^{2}-2 x-3\right) \\
+&=(x-1)(x+1)(x-3)
+\end{aligned}
+\]
+So, all the three zeroes of the cubic polynomial are now known to you as \( 1,-1,3 . \)
+Let us discuss the method of dividing one polynomial by another in some detail. Before noting the steps formally, consider an example.
+Example 6 : Divide \( 2 x^{2}+3 x+1 \) by \( x+2 \).
+\[
+x + 2 \longdiv { 2 x ^ { 2 } + 3 x + 1 }
+\]
+Solution : Note that we stop the division process when either the remainder is zero or its degree is less than the
+\[
+\frac{2 x^{2} \pm 4 x}{-x+1}
+\]
+degree of the divisor. So, here the quotient is \( 2 x-1 \) and the remainder is 3 . Also, \( (2 x-1)(x+2)+3=2 x^{2}+3 x-2+3=2 x^{2}+3 x+1 \)
+\[
+\frac{-x-2}{+} \frac{3}{3}
+\]
+i.e., \( \quad 2 x^{2}+3 x+1=(x+2)(2 x-1)+3 \)
+Therefore, Dividend = Divisor \( \times \) Quotient + Remainder
+Let us now extend this process to divide a polynomial by a quadratic polynomial.
+\[
+2020-21
+\] 3
+МАтнв
+Example 7 : Divide \( 3 x^{3}+x^{2}+2 x+5 \) by \( 1+2 x+x^{2} \).
+Solution : We first arrange the terms of dividend and the divisor in the decreasing order of their degrees. Recall that arranging the terms in this order is called writing the polynomials standard form. In this example, the dividend already in standard form, and the divisor, standard form, is \( x^{2}+2 x+1 \).
+Step 1 : To obtain the first term of the quotient, divide the highest degree term of the dividend (i.e., \( 3 x^{3} \) ) by the highest degree term of the divisor (i.e., \( x^{2} \) ). This is \( 3 x \). Then carry out the division process. What remains is \( -5 x^{2}-x+5 \).
 
-Draw triangles with angles \( 40^{\circ}, 50^{\circ} \) and \( 90^{\circ} \). How many such triangles can you draw?
+Step 2 : Now, to obtain the second term of the quotient, divide the highest degree term of the new dividend (i.e., \( -5 x^{2} \) ) by the highest degree term of the divisor (i.e., \( x^{2} \) ). This gives \( -5 \). Again carry out the division process with \( -5 x^{2}-x+5 \).
 
-In fact, you can draw as many triangles as you want with different lengths of sides (see Fig. 7.14).
-Fig. 7
-\( 2020-21 \) 118
-МАТнЕМАт
-Observe that the triangles may or may not be congruent to each other.
+Step 3 : What remains is \( 9 x+10 \). Now, the degree of \( 9 x+10 \) is less than the degree of the divisor \( x^{2}+2 x+1 \). So, we cannot continue the division any further.
+So, the quotient is \( 3 x-5 \) and the remainder is \( 9 x+10 \). Also,
+\[
+\begin{aligned}
+\left(x^{2}+2 x+1\right) \times(3 x-5)+(9 x+10) &=3 x^{3}+6 x^{2}+3 x-5 x^{2}-10 x-5+9 x+10 \\
+&=3 x^{3}+x^{2}+2 x+5
+\end{aligned}
+\]
+Here again, we see that Dividend \( = \) Divisor \( \times \) Quotient \( + \) Remainder
+What we are applying here is an algorithm which is similar to Euclid's division algorithm that you studied in Chapter 1 .
+This says that
+If \( p(x) \) and \( g(x) \) are any two polynomials with \( g(x) \neq 0 \), then we can find polynomials \( q(x) \) and \( r(x) \) such that
+\[
+p(x)=g(x) \times q(x)+r(x)
+\]
+where \( r(x)=0 \) or degree of \( r(x)< \) degree of \( g(x) \).
+This result is known as the Division Algorithm for polynomials.
+Let us now take some examples to illustrate its use.
+Example 8 : Divide \( 3 x^{2}-x^{3}-3 x+5 \) by \( x-1-x^{2} \), and verify the division algorithm.
+\[
+2020-21
+\] polynomials y out \begin{tabular}{r}
+\( x-2 \) \\
+\( - x ^ { 2 } + x - 1 \longdiv { - x ^ { 3 } + 3 x ^ { 2 } - 3 x + 5 } \) \\
+\( -x^{3}+x^{2}-x \) \\
+\( +\quad-\quad+ \) \\
+\hline \( 2 x^{2}-2 x+5 \) \\
+\( 2 x^{2}-2 x+2 \) \\
+\( \frac{-}{3}+\frac{-}{3} \)
+\end{tabular} To carry
+he dividend and
+of their degrees.
+\[
++5 \text { and }
+\]
+We stop \( (3)=0<2= \) degree \( \left(-x^{2}+x-1\right) \)
+So, quotient \( =x-2 \), remainder \( =3 \).
+Now,
+Divisor \( \times \) Quotient + Remainder
+\[
+\begin{array}{l}
+=\left(-x^{2}+x-1\right)(x-2)+3 \\
+=-x^{3}+x^{2}-x+2 x^{2}-2 x+2+3 \\
+=-x^{3}+3 x^{2}-3 x+5
+\end{array}
+\]
+\( = \) Dividend
+In this way, the division algorithm is verified.
+Example \( 9: \) Find all the zeroes of \( 2 x^{4}-3 x^{3}-3 x^{2}+6 x-2 \), if you know that two of its zeroes are \( \sqrt{2} \) and \( -\sqrt{2} \).
+
+Solution: Since two zeroes are \( \sqrt{2} \) and \( -\sqrt{2},(x-\sqrt{2})(x+\sqrt{2})=x^{2}-2 \) is
+factor of the given polynomial. Now, we divide the given polynomial by \( x^{2}-2 \).
+2020-21 36
+MATHEMATICS
+So, \( 2 x^{4}-3 x^{3}-3 x^{2}+6 x-2=\left(x^{2}-2\right)\left(2 x^{2}-3 x+1\right) \).
+Now, by splitting \( -3 x \), we factorise \( 2 x^{2}-3 x+1 \) as \( (2 x-1)(x-1) \). So, its zeroes are given by \( x=\frac{1}{2} \) and \( x=1 \). Therefore, the zeroes of the given polynomial are \( \sqrt{2},-\sqrt{2}, \frac{1}{2} \), and 1
+EXERCISE \( 2.3 \)
+1. Divide the polynomial \( p(x) \) by the polynomial \( g(x) \) and find the quotient and remainder in each of the following :
+(i) \( p(x)=x^{3}-3 x^{2}+5 x-3, \quad g(x)=x^{2}-2 \)
+(ii) \( p(x)=x^{4}-3 x^{2}+4 x+5, \quad g(x)=x^{2}+1-x \)
+(iii) \( p(x)=x^{4}-5 x+6, \quad g(x)=2-x^{2} \)
+2. Check whether the first polynomial is a factor of the second polynomial by dividing the second polynomial by the first polynomial:
+(i) \( t^{2}-3,2 t^{4}+3 t^{3}-2 t^{2}-9 t-12 \)
+(ii) \( x^{2}+3 x+1,3 x^{4}+5 x^{3}-7 x^{2}+2 x+2 \)
+(iii) \( x^{3}-3 x+1, x^{5}-4 x^{3}+x^{2}+3 x+1 \)
+3. Obtain all other zeroes of \( 3 x^{4}+6 x^{3}-2 x^{2}-10 x-5 \), if two of its zeroes are \( \sqrt{\frac{5}{3}} \) and \( -\sqrt{\frac{5}{3}} \).
+4. On dividing \( x^{3}-3 x^{2}+x+2 \) by a polynomial \( g(x) \), the quotient and remainder were \( x-2 \) and \( -2 x+4 \), respectively. Find \( g(x) \).
+5. Give examples of polynomials \( p(x), g(x), q(x) \) and \( r(x) \), which satisfy the division algorithm and
+(i) \( \operatorname{deg} p(x)=\operatorname{deg} q(x) \)
+(ii) deg \( q(x)=\operatorname{deg} r(x) \)
+(iii) \( \operatorname{deg} r(x)=0 \)
+EXERCISE \( 2.4 \) (Optional)*
+1. Verify that the numbers given alongside of the cubic polynomials below are their zeroes. Also verify the relationship between the zeroes and the coefficients in each case:
+(i) \( 2 x^{3}+x^{2}-5 x+2 ; \frac{1}{2}, 1,-2 \)
+(ii) \( x^{3}-4 x^{2}+5 x-2 ; 2,1,1 \)
+2. Find a cubic polynomial with the sum, sum of the product of its zeroes taken two at a time, and the product of its zeroes as \( 2,-7,-14 \) respectively. "These exercises are not from the examination point of view.
+\( 2020-21 \) PoLYNOMIALS
+3. If the zeroes of the polynomial \( x^{3}-3 x^{2}+x+1 \) are \( a-b, a, a+b \), find \( a \) and \( b \).
+4. If two zeroes of the polynomial \( x^{4}-6 x^{3}-26 x^{2}+138 x-35 \) are \( 2 \pm \sqrt{3} \), find other zeroes.
+5. If the polynomial \( x^{4}-6 x^{3}+16 x^{2}-25 x+10 \) is divided by another polynomial \( x^{2}-2 x+k \), the remainder comes out to be \( x+a \), find \( k \) and \( a \).
+2.5 Summary
+In this chapter, you have studied the following points:
+1. Polynomials of degrees 1,2 and 3 are called linear, quadratic and cubic polynomials respectively.
+2. A quadratic polynomial in \( x \) with real coefficients is of the form \( a x^{2}+b x+c \), where \( a, b, c \) are real numbers with \( a \neq 0 \).
+3. The zeroes of a polynomial \( p(x) \) are precisely the \( x \) -coordinates of the points, where the graph of \( y=p(x) \) intersects the \( x \) -axis.
+4. A quadratic polynomial can have at most 2 zeroes and a cubic polynomial can have at most 3 zeroes.
+5. If \( \alpha \) and \( \beta \) are the zeroes of the quadratic polynomial \( a x^{2}+b x+c \), then
+\( \alpha+\beta=-\frac{b}{a}, \quad \alpha \beta=\frac{c}{a} \)
+6. If \( \alpha, \beta, \gamma \) are the zeroes of the cubic polynomial \( a x^{3}+b x^{2}+c x+d \), then
+\[
+\begin{array}{l}
+\alpha+\beta+\gamma=\frac{-b}{a}, \\
+\alpha \beta+\beta \gamma+\gamma \alpha=\frac{c}{a}, \\
+\text { and } \quad \alpha \beta \gamma=\frac{-d}{a} .
+\end{array}
+\]
+7. The division algorithm states that given any polynomial \( p(x) \) and any non-zero polynomial \( g(x) \), there are polynomials \( q(x) \) and \( r(x) \) such that
+\[
+p(x)=g(x) q(x)+r(x)
+\]
+where \( \quad r(x)=0 \) or degree \( r(x)< \) degree \( g(x) \).
+\[
+2020-21
+\]
+
+
+
+
+
+
+
+
+
+maths ncert class 9 chapter 4 quadratic
+4.1 Introduction
+In Chapter 2, you have studied different types of polynomials. One type was the quadratic polynomial of the form \( a x^{2}+b x+c, a \neq 0 \). When we equate this polynomial to zero, we get a quadratic equation. Quadratic equations come up when we deal with many real-life situations. For instance, suppose a charity trust decides to build a prayer hall having a carpet area of 300 square metres with its length one metre more than twice its breadth. What should be the length and breadth of the hall? Suppose the breadth of the hall is \( x \) metres. Then, \( \quad 2 x+1 \) its length should be \( (2 x+1) \) metres. We can depict this information pictorially as shown in Fig. \( 4.1 \). Fig. \( 4.1 \)
+Now, area of the hall \( =(2 x+1) . x \mathrm{~m}^{2}=\left(2 x^{2}+x\right) \mathrm{m}^{2} \)
+So, \( 2 x^{2}+x=300 \quad \) (Given)
+Therefore, \( 2 x^{2}+x-300=0 \)
+So, the breadth of the hall should satisfy the equation \( 2 x^{2}+x-300=0 \) which is a quadratic equation.
+
+Many people believe that Babylonians were the first to solve quadratic equations. For instance, they knew how to find two positive numbers with a given positive sum and a given positive product, and this problem is equivalent to solving a quadratic equation of the form \( x^{2}-p x+q=0 . \) Greek mathematician Euclid developed a geometrical approach for finding out lengths which, in our present day terminology, are solutions of quadratic equations. Solving of quadratic equations, in general form, is often credited to ancient Indian mathematicians. In fact, Brahmagupta (C.E.598-665) gave an explicit formula to solve a quadratic equation of the form \( a x^{2}+b x=c \). Later,
+\( 2020-21 \) QUADRATIC EQUATIONS 71
+Sridharacharya (C.E. 1025 ) derived a formula, now known as the quadratic formula, (as quoted by Bhaskara II) for solving a quadratic equation by the method of completing the square. An Arab mathematician Al-Khwarizmi (about C.E. 800 ) also studied quadratic equations of different types. Abraham bar Hiyya Ha-Nasi, in his book 'Liber embadorum' published in Europe in C.E. 1145 gave complete solutions of different quadratic equations.
+
+In this chapter, you will study quadratic equations, and various ways of finding their roots. You will also see some applications of quadratic equations in daily life situations.
+4.2 Quadratic Equations
+A quadratic equation in the variable \( x \) is an equation of the form \( a x^{2}+b x+c=0 \), where \( a, b, c \) are real numbers, \( a \neq 0 . \) For example, \( 2 x^{2}+x-300=0 \) is a quadratic equation. Similarly, \( 2 x^{2}-3 x+1=0,4 x-3 x^{2}+2=0 \) and \( 1-x^{2}+300=0 \) are also quadratic equations.
+
+In fact, any equation of the form \( p(x)=0 \), where \( p(x) \) is a polynomial of degree 2 , is a quadratic equation. But when we write the terms of \( p(x) \) in descending order of their degrees, then we get the standard form of the equation. That is, \( a x^{2}+b x+c=0 \), \( a \neq 0 \) is called the standard form of a quadratic equation.
+
+Quadratic equations arise in several situations in the world around us and in different fields of mathematics. Let us consider a few examples.
+Example 1 : Represent the following situations mathematically:
+(i) John and Jivanti together have 45 marbles. Both of them lost 5 marbles each, and the product of the number of marbles they now have is 124 . We would like to find out how many marbles they had to start with.
+(ii) A cottage industry produces a certain number of toys in a day. The cost of production of each toy (in rupees) was found to be 55 minus the number of toys produced in a day. On a particular day, the total cost of production was \( ₹ 750 . \) We would like to find out the number of toys produced on that day.
+Solution :
+(i) Let the number of marbles John had be \( x \). Then the number of marbles Jivanti had \( =45-x \) (Why?).
+The number of marbles left with John, when he lost 5 marbles \( =x-5 \)
+The number of marbles left with Jivanti, when she lost 5 marbles \( =45-x-5 \)
+\[
+\begin{array}{l}
+=40-x \\
+2020-21
+\end{array}
+\] 72
+MATHEMATIC
+Therefore, their product \( =(x-5)(40-x) \)
+\[
+\begin{array}{l}
+=40 x-x^{2}-200+5 x \\
+=-x^{2}+45 x-200
+\end{array}
+\]
+So, \( \quad-x^{2}+45 x-200=124 \quad \) (Given that product = 124)
+\[
+\text { i.e., } \quad-x^{2}+45 x-324=0
+\]
+\[
+\text { i.e., } \quad x^{2}-45 x+324=0
+\]
+Therefore, the number of marbles John had, satisfies the quadratic equation
+\[
+x^{2}-45 x+324=0
+\]
+which is the required representation of the problem mathematically.
+(ii) Let the number of toys produced on that day be \( x \). Therefore, the cost of production (in rupees) of each toy that day \( =55-x \)
+So, the total cost of production (in rupees) that day \( =x(55-x) \) Therefore, \( \quad x(55-x)=750 \)
+i.e., \( 55 x-x^{2}=750 \)
+i.e., \( -x^{2}+55 x-750=0 \)
+i.e.,
+\[
+x^{2}-55 x+750=0
+\]
+Therefore, the number of toys produced that day satisfies the quadratic equation
+\[
+x^{2}-55 x+750=0
+\]
+which is the required representation of the problem mathematically.
+Example \( 2: \) Check whether the following are quadratic equations:
+(i) \( (x-2)^{2}+1=2 x-3 \)
+(ii) \( x(x+1)+8=(x+2)(x-2) \)
+\[
+\text { (iii) } x(2 x+3)=x^{2}+1
+\]
+(iv) \( (x+2)^{3}=x^{3}-4 \)
+Solution :
+(i) LHS \( =(x-2)^{2}+1=x^{2}-4 x+4+1=x^{2}-4 x+5 \)
+Therefore, \( (x-2)^{2}+1=2 x-3 \) can be rewritten as
+\[
+x^{2}-4 x+5=2 x-3
+\]
+i.e., \( x^{2}-6 x+8=0 \)
+It is of the form \( a x^{2}+b x+c=0 \).
+Therefore, the given equation is a quadratic equation.
+\[
+2020-21
+\] QUADRATIC E\rhoUATIONS
+(ii) Since \( x(x+1)+8=x^{2}+x+8 \) and \( (x+2)(x-2)=x^{2}-4 \) Therefore,
+\[
+x^{2}+x+8=x^{2}-4
+\]
+i.e.,
+\[
+x+12=0
+\]
+It is not of the form \( a x^{2}+b x+c=0 \).
+Therefore, the given equation is not a quadratic equation.
+(iii) Here, LHS \( =x(2 x+3)=2 x^{2}+3 x \)
+So, \( x(2 x+3)=x^{2}+1 \) can be rewritten as
+\[
+2 x^{2}+3 x=x^{2}+1
+\]
+Therefore, we get \( \quad x^{2}+3 x-1=0 \) It is of the form \( a x^{2}+b x+c=0 \).
+So, the given equation is a quadratic equation.
+(iv) Here, LHS \( =(x+2)^{3}=x^{3}+6 x^{2}+12 x+8 \)
+Therefore, \( (x+2)^{3}=x^{3}-4 \) can be rewritten as
+\[
+x^{3}+6 x^{2}+12 x+8=x^{3}-4
+\]
+i.e., \( 6 x^{2}+12 x+12=0 \) or, \( x^{2}+2 x+2=0 \)
+It is of the form \( a x^{2}+b x+c=0 \). So, the given equation is a quadratic equation. Remark : Be careful! In (ii) above, the given equation appears to be a quadratic equation, but it is not a quadratic equation.
+
+In (iv) above, the given equation appears to be a cubic equation (an equation of degree 3 ) and not a quadratic equation. But it turns out to be a quadratic equation. As you can see, often we need to simplify the given equation before deciding whether it is quadratic or not.
+EXERCISE \( 4.1 \)
+1. Check whether the following are quadratic equations:
+(i) \( (x+1)^{2}=2(x-3) \)
+(ii) \( x^{2}-2 x=(-2)(3-x) \)
+(iii) \( (x-2)(x+1)=(x-1)(x+3) \)
+(iv) \( (x-3)(2 x+1)=x(x+5) \)
+(v) \( (2 x-1)(x-3)=(x+5)(x-1) \)
+(vi) \( x^{2}+3 x+1=(x-2)^{2} \)
+(vii) \( (x+2)^{3}=2 x\left(x^{2}-1\right) \)
+(viii) \( x^{3}-4 x^{2}-x+1=(x-2)^{3} \)
+2. Represent the following situations in the form of quadratic equations :
+(i) The area of a rectangular plot is \( 528 \mathrm{~m}^{2} \). The length of the plot (in metres) is one more than twice its breadth. We need to find the length and breadth of the plot.
+\[
+2020-21
+\] 72
+MATHEMATICS
+(ii) The product of two consecutive positive integers is 306 . We need to find the integers.
+(iii) Rohan's mother is 26 years older than him. The product of their ages (in years) 3 years from now will be 360 . We would like to find Rohan's present age.
+(iv) A train travels a distance of \( 480 \mathrm{~km} \) at a uniform speed. If the speed had been \( 8 \mathrm{~km} / \mathrm{h} \) less, then it would have taken 3 hours more to cover the same distance. We need to find the speed of the train.
+4.3 Solution of a Quadratic Equation by Factorisation Consider the quadratic equation \( 2 x^{2}-3 x+1=0 \). If we replace \( x \) by 1 on the LHS of this equation, we get \( \left(2 \times 1^{2}\right)-(3 \times 1)+1=0=\mathrm{RHS} \) of the equation. We say that 1 is a root of the quadratic equation \( 2 x^{2}-3 x+1=0 \). This also means that 1 is a zero of the quadratic polynomial \( 2 x^{2}-3 x+1 \).
+
+In general, a real number \( \alpha \) is called a root of the quadratic equation \( a x^{2}+b x+c=0, a \neq 0 \) if \( a \alpha^{2}+b \alpha+c=0 \). We also say that \( x=\alpha \) is a solution of the quadratic equation, or that \( \alpha \) satisfies the quadratic equation. Note that the zeroes of the quadratic polynomial \( a x^{2}+b x+c \) and the roots of the quadratic equation \( a x^{2}+b x+c=0 \) are the same
+
+You have observed, in Chapter 2, that a quadratic polynomial can have at most two zeroes. So, any quadratic equation can have atmost two roots.
+
+You have learnt in Class IX, how to factorise quadratic polynomials by splitting their middle terms. We shall use this knowledge for finding the roots of a quadratic equation. Let us see how.
+Example 3 : Find the roots of the equation \( 2 x^{2}-5 x+3=0 \), by factorisation. Solution : Let us first split the middle term \( -5 x \) as \( -2 x-3 x \) [because \( (-2 x) \times(-3 x)= \) \( \left.6 x^{2}=\left(2 x^{2}\right) \times 3\right] \)
+So, \( 2 x^{2}-5 x+3=2 x^{2}-2 x-3 x+3=2 x(x-1)-3(x-1)=(2 x-3)(x-1) \)
+Now, \( 2 x^{2}-5 x+3=0 \) can be rewritten as \( (2 x-3)(x-1)=0 \).
+So, the values of \( x \) for which \( 2 x^{2}-5 x+3=0 \) are the same for which \( (2 x-3)(x-1)=0 \),
+i.e., either \( 2 x-3=0 \) or \( x-1=0 \). Now, \( 2 x-3=0 \) gives \( x=\frac{3}{2} \) and \( x-1=0 \) gives \( x=1 \). So, \( x=\frac{3}{2} \) and \( x=1 \) are the solutions of the equation. In other words, 1 and \( \frac{3}{2} \) are the roots of the equation \( 2 x^{2}-5 x+3=0 \). Verify that these are the roots of the given equation.
+\( 2020-21 \) QUADRATIC EQUATIONS
+Note that we have found the roots of \( 2 x^{2}-5 x+3=0 \) by factorising \( 2 x^{2}-5 x+3 \) into two linear factors and equating each factor to zero.
+Example 4 : Find the roots of the quadratic equation \( 6 x^{2}-x-2=0 \). Solution: We have
+\[
+\begin{aligned}
+6 x^{2}-x-2 &=6 x^{2}+3 x-4 x-2 \\
+&=3 x(2 x+1)-2(2 x+1) \\
+&=(3 x-2)(2 x+1)
+\end{aligned}
+\]
+The roots of \( 6 x^{2}-x-2=0 \) are the values of \( x \) for which \( (3 x-2)(2 x+1)=0 \)
+\[
+\begin{array}{l}
+\text { Therefore, } 3 x-2=0 \text { or } 2 x+1=0 \\
+\text { i.e., } \quad x=\frac{2}{3} \quad \text { or } \quad x=-\frac{1}{2}
+\end{array}
+\]
+Therefore, the roots of \( 6 x^{2}-x-2=0 \) are \( \frac{2}{3} \) and \( -\frac{1}{2} \).
+We verify the roots, by checking that \( \frac{2}{3} \) and \( -\frac{1}{2} \) satisfy \( 6 x^{2}-x-2=0 \).
+Example 5 : Find the roots of the quadratic equation \( 3 x^{2}-2 \sqrt{6} x+2=0 \).
+\[
+\text { Solution : } \begin{aligned}
+3 x^{2}-2 \sqrt{6} x+2 &=3 x^{2}-\sqrt{6} x-\sqrt{6} x+2 \\
+&=\sqrt{3} x(\sqrt{3} x-\sqrt{2})-\sqrt{2}(\sqrt{3} x-\sqrt{2}) \\
+&=(\sqrt{3} x-\sqrt{2})(\sqrt{3} x-\sqrt{2})
+\end{aligned}
+\]
+So, the roots of the equation are the values of \( x \) for which
+\[
+(\sqrt{3} x-\sqrt{2})(\sqrt{3} x-\sqrt{2})=0
+\]
+Now, \( \sqrt{3} x-\sqrt{2}=0 \) for \( x=\sqrt{\frac{2}{3}} \).
+So, this root is repeated twice, one for each repeated factor \( \sqrt{3} x-\sqrt{2} \).
+Therefore, the roots of \( 3 x^{2}-2 \sqrt{6} x+2=0 \) are \( \sqrt{\frac{2}{3}}, \sqrt{\frac{2}{3}} \).
+\[
+2020-21
+\] \[
+76
+\]
+MATHEMATICS
+Example \( 6: \) Find the dimensions of the prayer hall discussed in Section 4.1. Solution : In Section 4.1, we found that if the breadth of the hall is \( x \mathrm{~m} \), then \( x \) satisfies the equation \( 2 x^{2}+x-300=0 . \) Applying the factorisation method, we write this equation as
+i.e.,
+\[
+\begin{array}{r}
+2 x^{2}-24 x+25 x-300=0 \\
+2 x(x-12)+25(x-12)=0 \\
+(x-12)(2 x+25)=0
+\end{array}
+\]
+So, the roots of the given equation are \( x=12 \) or \( x=-12.5 \). Since \( x \) is the breadth of the hall, it cannot be negative.
+Thus, the breadth of the hall is \( 12 \mathrm{~m} \). Its length \( =2 x+1=25 \mathrm{~m} \).
+EXERCISE \( 4.2 \)
+1. Find the roots of the following quadratic equations by factorisation:
+\[
+\text { (i) } x^{2}-3 x-10=0
+\]
+(ii) \( 2 x^{2}+x-6=0 \)
+(iii) \( \sqrt{2} x^{2}+7 x+5 \sqrt{2}=0 \)
+(iv) \( 2 x^{2}-x+\frac{1}{8}=0 \)
+\[
+\text { (v) } 100 x^{2}-20 x+1=0
+\]
+2. Solve the problems given in Example 1 .
+3. Find two numbers whose sum is 27 and product is 182 .
+4. Find two consecutive positive integers, sum of whose squares is 365 .
+5. The altitude of a right triangle is \( 7 \mathrm{~cm} \) less than its base. If the hypotenuse is \( 13 \mathrm{~cm} \), find the other two sides.
+6. A cottage industry produces a certain number of pottery articles in a day. It was observed on a particular day that the cost of production of each article (in rupees) was 3 more than twice the number of articles produced on that day. If the total cost of production on that day was \( ₹ 90 \), find the number of articles produced and the cost of each article.
+4.4 Solution of a Quadratic Equation by Completing the Square
+In the previous section, you have learnt one method of obtaining the roots of a quadratic equation. In this section, we shall study another method.
+Consider the following situation:
+The product of Sunita's age (in years) two years ago and her age four years from now is one more than twice her present age. What is her present age?
+
+To answer this, let her present age (in years) be \( x . \) Then the product of her ages two years ago and four years from now is \( (x-2)(x+4) \).
+\[
+2020-21
+\] QUADRATIC EQUATIONS
+Therefore, \( (x-2)(x+4)=2 x+1 \)
+i.e., \( x^{2}+2 x-8=2 x+1 \)
+i.e.,
+\[
+x^{2}-9=0
+\]
+So, Sunita's present age satisfies the quadratic equation \( x^{2}-9=0 \).
+We can write this as \( x^{2}=9 \). Taking square roots, we get \( x=3 \) or \( x=-3 \). Since the age is a positive number, \( x=3 \).
+So, Sunita's present age is 3 years.
+Now consider the quadratic equation \( (x+2)^{2}-9=0 . \) To solve it, we can write it as \( (x+2)^{2}=9 \). Taking square roots, we get \( x+2=3 \) or \( x+2=-3 \).
+Therefore, \( x=1 \quad \) or \( \quad x=-5 \)
+So, the roots of the equation \( (x+2)^{2}-9=0 \) are 1 and \( -5 \).
+In both the examples above, the term containing \( x \) is completely inside a square, and we found the roots easily by taking the square roots. But, what happens if we are asked to solve the equation \( x^{2}+4 x-5=0 ? \) We would probably apply factorisation to do so, unless we realise (somehow!) that \( x^{2}+4 x-5=(x+2)^{2}-9 \).
+
+So, solving \( x^{2}+4 x-5=0 \) is equivalent to solving \( (x+2)^{2}-9=0 \), which we have seen is very quick to do. In fact, we can convert any quadratic equation to the form \( (x+a)^{2}-b^{2}=0 \) and then we can easily find its roots. Let us see if this is possible. Look at Fig. 4.2.
+In this figure, we can see how \( x^{2}+4 x \) is being converted to \( (x+2)^{2}-4 \).
+Fig. 4.2
+\( 2020-21 \) 78
+MATHEMATIC
+The process is as follows:
+\[
+\begin{aligned}
+x^{2}+4 x &=\left(x^{2}+\frac{4}{2} x\right)+\frac{4}{2} x \\
+&=x^{2}+2 x+2 x \\
+&=(x+2) x+2 \times x \\
+&=(x+2) x+2 \times x+2 \times 2-2 \times 2 \\
+&=(x+2) x+(x+2) \times 2-2 \times 2 \\
+&=(x+2)(x+2)-2^{2} \\
+&=(x+2)^{2}-4 \\
+\text { So, } x^{2}+4 x-5 &=(x+2)^{2}-4-5=(x+2)^{2}-9
+\end{aligned}
+\]
+So, \( x^{2}+4 x-5=0 \) can be written as \( (x+2)^{2}-9=0 \) by this process of completing the square. This is known as the method of completing the square. In brief, this can be shown as follows:
+\[
+x^{2}+4 x=\left(x+\frac{4}{2}\right)^{2}-\left(\frac{4}{2}\right)^{2}=\left(x+\frac{4}{2}\right)^{2}-4
+\]
+So, \( x^{2}+4 x-5=0 \) can be rewritten as
+\[
+\left(x+\frac{4}{2}\right)^{2}-4-5=0
+\]
+i.e., \( (x+2)^{2}-9=0 \)
+Consider now the equation \( 3 x^{2}-5 x+2=0 \). Note that the coefficient of \( x^{2} \) is not a perfect square. So, we multiply the equation throughout by 3 to get
+\( 9 x^{2}-15 x+6=0 \)
+Now,
+\[
+\begin{aligned}
+9 x^{2}-15 x+6 &=(3 x)^{2}-2 \times 3 x \times \frac{5}{2}+6 \\
+&=(3 x)^{2}-2 \times 3 x \times \frac{5}{2}+\left(\frac{5}{2}\right)^{2}-\left(\frac{5}{2}\right)^{2}+6 \\
+&=\left(3 x-\frac{5}{2}\right)^{2}-\frac{25}{4}+6=\left(3 x-\frac{5}{2}\right)^{2}-\frac{1}{4} \\
+2020-21
+\end{aligned}
+\] QuADRATIC EQUATIONS
+So, \( 9 x^{2}-15 x+6=0 \) can be written as
+i.e.,
+\[
+\begin{array}{r}
+\left(3 x-\frac{5}{2}\right)^{2}-\frac{1}{4}=0 \\
+\left(3 x-\frac{5}{2}\right)^{2}=\frac{1}{4}
+\end{array}
+\]
+So, the solutions of \( 9 x^{2}-15 x+6=0 \) are the same as those of \( \left(3 x-\frac{5}{2}\right)^{2}=\frac{1}{4} \).
+i.e.,
+\[
+3 x-\frac{5}{2}=\frac{1}{2} \text { or } 3 x-\frac{5}{2}=-\frac{1}{2}
+\]
+(We can also write this as \( 3 x-\frac{5}{2}=\pm \frac{1}{2} \), where ' \( \pm \) ' denotes 'plus minus'.)
+Thus,
+\[
+3 x=\frac{5}{2}+\frac{1}{2} \text { or } 3 x=\frac{5}{2}-\frac{1}{2}
+\]
+So, \( x=\frac{5}{6}+\frac{1}{6} \) or \( x=\frac{5}{6}-\frac{1}{6} \)
+Therefore, \( x=1 \) or \( x=\frac{4}{6} \)
+i.e., \( x=1 \) or \( x=\frac{2}{3} \)
+Therefore, the roots of the given equation are 1 and \( \frac{2}{3} \).
+Remark : Another way of showing this process is as follows:
+The equation \( 3 x^{2}-5 x+2=0 \)
+is the same as
+\[
+x^{2}-\frac{5}{3} x+\frac{2}{3}=0
+\]
+Now, \( x^{2}-\frac{5}{3} x+\frac{2}{3}=\left\{x-\frac{1}{2}\left(\frac{5}{3}\right)\right\}^{2}-\left\{\frac{1}{2}\left(\frac{5}{3}\right)\right\}^{2}+\frac{2}{3} \)
+\( 2020-21 \) 80
+MATHEMATIC
+\[
+\begin{array}{l}
+=\left(x-\frac{5}{6}\right)^{2}+\frac{2}{3}-\frac{25}{36} \\
+=\left(x-\frac{5}{6}\right)^{2}-\frac{1}{36}=\left(x-\frac{5}{6}\right)^{2}-\left(\frac{1}{6}\right)^{2}
+\end{array}
+\]
+So, the solutions of \( 3 x^{2}-5 x+2=0 \) are the same as those of \( \left(x-\frac{5}{6}\right)^{2}-\left(\frac{1}{6}\right)^{2}=0 \),
+which are \( x-\frac{5}{6}=\pm \frac{1}{6} \), i.e., \( x=\frac{5}{6}+\frac{1}{6}=1 \) and \( x=\frac{5}{6}-\frac{1}{6}=\frac{2}{3} \).
+Let us consider some examples to illustrate the above process.
+Example 7 : Solve the equation given in Example 3 by the method of completing the square.
+Solution: The equation \( 2 x^{2}-5 x+3=0 \) is the same as \( x^{2}-\frac{5}{2} x+\frac{3}{2}=0 \).
+Now,
+\[
+x^{2}-\frac{5}{2} x+\frac{3}{2}=\left(x-\frac{5}{4}\right)^{2}-\left(\frac{5}{4}\right)^{2}+\frac{3}{2}=\left(x-\frac{5}{4}\right)^{2}-\frac{1}{16}
+\]
+Therefore, \( 2 x^{2}-5 x+3=0 \) can be written as \( \left(x-\frac{5}{4}\right)^{2}-\frac{1}{16}=0 \).
+So, the roots of the equation \( 2 x^{2}-5 x+3=0 \) are exactly the same as those of \( \left(x-\frac{5}{4}\right)^{2}-\frac{1}{16}=0 . \) Now, \( \left(x-\frac{5}{4}\right)^{2}-\frac{1}{16}=0 \) is the same as \( \left(x-\frac{5}{4}\right)^{2}=\frac{1}{16} \)
+Therefore,
+\[
+x-\frac{5}{4}=\pm \frac{1}{4}
+\]
+i.e.
+\[
+x=\frac{5}{4} \pm \frac{1}{4}
+\]
+i.e.,
+\[
+x=\frac{5}{4}+\frac{1}{4} \text { or } x=\frac{5}{4}-\frac{1}{4}
+\]
+i.e.,
+\[
+x=\frac{3}{2} \text { or } x=1
+\]
+\[
+2020-21
+\] QUADRATIC EQUATIONS
+Therefore, the solutions of the equations are \( x=\frac{3}{2} \) and 1 . Let us verify our solutions.
+Putting \( x=\frac{3}{2} \) in \( 2 x^{2}-5 x+3=0 \), we get \( 2\left(\frac{3}{2}\right)^{2}-5\left(\frac{3}{2}\right)+3=0 \), which is correct. Similarly, you can verify that \( x=1 \) also satisfies the given equation.
+
+In Example 7 , we divided the equation \( 2 x^{2}-5 x+3=0 \) throughout by 2 to get \( x^{2}-\frac{5}{2} x+\frac{3}{2}=0 \) to make the first term a perfect square and then completed the square. Instead, we can multiply throughout by 2 to make the first term as \( 4 x^{2}=(2 x)^{2} \) and then complete the square. This method is illustrated in the next example.
+Example 8 : Find the roots of the equation \( 5 x^{2}-6 x-2=0 \) by the method of completing the square. Solution : Multiplying the equation throughout by 5 , we get
+\[
+25 x^{2}-30 x-10=0
+\]
+This is the same as
+\[
+(5 x)^{2}-2 \times(5 x) \times 3+3^{2}-3^{2}-10=0
+\]
+i.e. \( (5 x-3)^{2}-9-10=0 \)
+i.e., \( (5 x-3)^{2}-19=0 \)
+i.e., \( (5 x-3)^{2}=19 \)
+i.e., \( 5 x-3=\pm \sqrt{19} \)
+i.e., \( 5 x=3 \pm \sqrt{19} \)
+So, \( x=\frac{3 \pm \sqrt{19}}{5} \)
+Therefore, the roots are \( \frac{3+\sqrt{19}}{5} \) and \( \frac{3-\sqrt{19}}{5} \).
+Verify that the roots are \( \frac{3+\sqrt{19}}{5} \) and \( \frac{3-\sqrt{19}}{5} \).
+2020-21 82
+MATHEMATICS
+Example \( 9: \) Find the roots of \( 4 x^{2}+3 x+5=0 \) by the method of completing the square.
+Solution : Note that \( 4 x^{2}+3 x+5=0 \) is the same as
+i.e.,
+\[
+\begin{array}{r}
+(2 x)^{2}+2 \times(2 x) \times \frac{3}{4}+\left(\frac{3}{4}\right)^{2}-\left(\frac{3}{4}\right)^{2}+5=0 \\
+\left(2 x+\frac{3}{4}\right)^{2}-\frac{9}{16}+5=0
+\end{array}
+\]
+i.e.,
+\[
+\left(2 x+\frac{3}{4}\right)^{2}+\frac{71}{16}=0
+\]
+i.e.,
+\[
+\left(2 x+\frac{3}{4}\right)^{2}=\frac{-71}{6}<0
+\]
+But \( \left(2 x+\frac{3}{4}\right)^{2} \) cannot be negative for any real value of \( x \) (Why?). So, there is no real value of \( x \) satisfying the given equation. Therefore, the given equation has no real roots.
+
+Now, you have seen several examples of the use of the method of completing the square. So, let us give this method in general.
+
+Consider the quadratic equation \( a x^{2}+b x+c=0(a \neq 0) \). Dividing throughout by
+\( a \), we get
+\[
+x^{2}+\frac{b}{a} x+\frac{c}{a}=0
+\]
+This is the same as \( \quad\left(x+\frac{b}{2 a}\right)^{2}-\left(\frac{b}{2 a}\right)^{2}+\frac{c}{a}=0 \)
+i.e., \( \left(x+\frac{b}{2 a}\right)^{2}-\frac{b^{2}-4 a c}{4 a^{2}}=0 \)
+So, the roots of the given equation are the same as those of
+\( \left(x+\frac{b}{2 a}\right)^{2}-\frac{b^{2}-4 a c}{4 a^{2}}=0 \), i.e., those of \( \left(x+\frac{b}{2 a}\right)^{2}=\frac{b^{2}-4 a c}{4 a^{2}} \)
+2020-21 QUADRATIC EQUATIONS
+If \( b^{2}-4 a c \geq 0 \), then by taking the square roots in (1), we get
+Therefore,
+\[
+\begin{aligned}
+x+\frac{b}{2 a} &=\frac{\pm \sqrt{b^{2}-4 a c}}{2 a} \\
+x &=\frac{-b \pm \sqrt{b^{2}-4 a c}}{2 a}
+\end{aligned}
+\]
+So, the roots of \( a x^{2}+b x+c=0 \) are \( \frac{-b+\sqrt{b^{2}-4 a c}}{2 a} \) and \( \frac{-b-\sqrt{b^{2}-4 a c}}{2 a} \), if \( b^{2}-4 a c \geq 0 \). If \( b^{2}-4 a c<0 \), the equation will have no real roots. (Why?)
+
+Thus, if \( b^{2}-4 a c \geq 0 \), then the roots of the quadratic equation \( a x^{2}+b x+c=0 \) are given by \( \frac{-b \pm \sqrt{b^{2}-4 a c}}{2 a} \)
+This formula for finding the roots of a quadratic equation is known as the quadratic formula.
+
+Let us consider some examples for illustrating the use of the quadratic formula.
+Example 10 : Solve Q. 2(i) of Exercise \( 4.1 \) by using the quadratic formula.
+
+Solution : Let the breadth of the plot be \( x \) metres. Then the length is \( (2 x+1) \) metres. Then we are given that \( x(2 x+1)=528 \), i.e., \( 2 x^{2}+x-528=0 \). This is of the form \( a x^{2}+b x+c=0 \), where \( a=2, b=1, c=-528 \).
+So, the quadratic formula gives us the solution as
+\[
+x=\frac{-1 \pm \sqrt{1+4(2)(528)}}{4}=\frac{-1 \pm \sqrt{4225}}{4}=\frac{-1 \pm 65}{4}
+\]
+i.e., \( x=\frac{64}{4} \) or \( x=\frac{-66}{4} \)
+i.e.,
+\[
+x=16 \text { or } x=-\frac{33}{2}
+\]
+Since \( x \) cannot be negative, being a dimension, the breadth of the plot is 16 metres and hence, the length of the plot is \( 33 \mathrm{~m} \).
+You should verify that these values satisfy the conditions of the problem.
+2020-21 84
+MATHEMATIC
+Example 11 : Find two consecutive odd positive integers, sum of whose squares is 290 .
+
+Solution : Let the smaller of the two consecutive odd positive integers be \( x \). Then, the second integer will be \( x+2 \). According to the question,
+\[
+x^{2}+(x+2)^{2}=290
+\]
+i.e., \( x^{2}+x^{2}+4 x+4=290 \)
+i.e.
+\[
+2 x^{2}+4 x-286=0
+\]
+i.e., \( x^{2}+2 x-143=0 \)
+which is a quadratic equation in \( x \).
+Using the quadratic formula, we get
+\[
+x=\frac{-2 \pm \sqrt{4+572}}{2}=\frac{-2 \pm \sqrt{576}}{2}=\frac{-2 \pm 24}{2}
+\]
+i.e.,
+\[
+x=11 \text { or } x=-13
+\]
+But \( x \) is given to be an odd positive integer. Therefore, \( x \neq-13, x=11 \). Thus, the two consecutive odd integers are 11 and 13 .
+\[
+\text { Check : } 11^{2}+13^{2}=121+169=290 \text { . }
+\]
+Example 12 : A rectangular park is to be designed whose breadth is \( 3 \mathrm{~m} \) less than its length. Its area is to be 4 square metres more than the area of a park that has already been made in the shape of an isosceles triangle with its base as the breadth of the rectangular park and of altitude \( 12 \mathrm{~m} \) (see Fig. 4.3). Find its length and breadth. Solution : Let the breadth of the rectangular park be \( x \mathrm{~m} \).
+So, its length \( =(x+3) \mathrm{m} \). Therefore, the area of the rectangular park \( =x(x+3) \mathrm{m}^{2}=\left(x^{2}+3\right. \). Now, base of the isosceles triangle \( =x \mathrm{~m} \).
+Therefore, its area \( =\frac{1}{2} \times x \times 12=6 x \mathrm{~m}^{2} \)
+According to our requirements, \( x^{2}+3 x=6 x+4 \)
+i.e., \( x^{2}-3 x-4=0 \)
+Using the quadratic formula, we get Fig. \( 4.3 \)
+\[
+2020-21
+\] QUADRATIC EQUATIoNs
+\[
+x=\frac{3 \pm \sqrt{25}}{2}=\frac{3 \pm 5}{2}=4 \text { or }-1
+\]
+But \( x \neq-1 \) (Why?). Therefore, \( x=4 \).
+So, the breadth of the park \( =4 \mathrm{~m} \) and its length will be \( 7 \mathrm{~m} \).
+Verification : Area of rectangular park \( =28 \mathrm{~m}^{2} \),
+area of triangular park \( =24 \mathrm{~m}^{2}=(28-4) \mathrm{m}^{2} \)
+Example 13 : Find the roots of the following quadratic equations, if they exist, using the quadratic formula:
+\[
+\text { (i) } 3 x^{2}-5 x+2=0
+\]
+(ii) \( x^{2}+4 x+5=0 \)
+(iii) \( 2 x^{2}-2 \sqrt{2} x+1=0 \)
+Solution :
+\[
+\text { (i) } 3 x^{2}-5 x+2=0 \text { . Here, } a=3, b=-5, c=2 \text { . So, } b^{2}-4 a c=25-24=1>0 \text { . }
+\]
+Therefore, \( x=\frac{5 \pm \sqrt{1}}{6}=\frac{5 \pm 1}{6} \), i.e., \( x=1 \) or \( x=\frac{2}{3} \)
+So, the roots are \( \frac{2}{3} \) and 1 .
+(ii) \( x^{2}+4 x+5=0 \). Here, \( a=1, b=4, c=5 \). So, \( b^{2}-4 a c=16-20=-4<0 \).
+Since the square of a real number cannot be negative, therefore \( \sqrt{b^{2}-4 a c} \) will
+not have any real value.
+So, there are no real roots for the given equation.
+(iii) \( 2 x^{2}-2 \sqrt{2} x+1=0 \). Here, \( a=2, b=-2 \sqrt{2}, c=1 \).
+So, \( \quad b^{2}-4 a c=8-8=0 \)
+Therefore, \( x=\frac{2 \sqrt{2} \pm \sqrt{0}}{4}=\frac{\sqrt{2}}{2} \pm 0 \), i.e., \( x=\frac{1}{\sqrt{2}} \).
+So, the roots are \( \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} \).
+2020-21 86
+MATHEMATICS
+Example 14 : Find the roots of the following equations:
+\[
+\text { (i) } x+\frac{1}{x}=3, x \neq 0
+\]
+(ii) \( \frac{1}{x}-\frac{1}{x-2}=3, x \neq 0,2 \)
+Solution :
+(i) \( x+\frac{1}{x}=3 \). Multiplying throughout by \( x \), we get
+\[
+x^{2}+1=3 x
+\]
+i.e., \( x^{2}-3 x+1=0 \), which is a quadratic equation.
+Here, \( a=1, b=-3, c=1 \)
+So,
+\[
+b^{2}-4 a c=9-4=5>0
+\]
+Therefore,
+\[
+x=\frac{3 \pm \sqrt{5}}{2} \quad \text { (Why?) }
+\]
+So, the roots are \( \frac{3+\sqrt{5}}{2} \) and \( \frac{3-\sqrt{5}}{2} \).
+(ii) \( \frac{1}{x}-\frac{1}{x-2}=3, x \neq 0,2 \).
+As \( x \neq 0,2 \), multiplying the equation by \( x(x-2) \), we get
+\[
+\begin{aligned}
+(x-2)-x &=3 x(x-2) \\
+&=3 x^{2}-6 x
+\end{aligned}
+\]
+So, the given equation reduces to \( 3 x^{2}-6 x+2=0 \), which is a quadratic equation.
+Here,
+\[
+a=3, b=-6, c=2 . \quad \text { So, } b^{2}-4 a c=36-24=12>0
+\]
+Therefore,
+\[
+x=\frac{6 \pm \sqrt{12}}{6}=\frac{6 \pm 2 \sqrt{3}}{6}=\frac{3 \pm \sqrt{3}}{3} \text { . }
+\]
+So, the roots are \( \frac{3+\sqrt{3}}{3} \) and \( \frac{3-\sqrt{3}}{3} \).
+\[
+2020-21
+\] QuADRATIC EQUATIONS
+Example 15 : A motor boat whose speed is \( 18 \mathrm{~km} / \mathrm{h} \) in still water takes 1 hour more to go \( 24 \mathrm{~km} \) upstream than to return downstream to the same spot. Find the speed of the stream.
+Solution : Let the speed of the stream be \( x \mathrm{~km} / \mathrm{h} \).
+Therefore, the speed of the boat upstream \( =(18-x) \mathrm{km} / \mathrm{h} \) and the speed of the boat downstream \( =(18+x) \mathrm{km} / \mathrm{h} \).
+The time taken to go upstream \( =\frac{\text { distance }}{\text { speed }}=\frac{24}{18-x} \) hours.
+Similarly, the time taken to go downstream \( =\frac{24}{18+x} \) hours. According to the question,
+i.e.,
+\[
+\begin{array}{c}
+\frac{24}{18-x}-\frac{24}{18+x}=1 \\
+24(18+x)-24(18-x)=(18-x)(18+x)
+\end{array}
+\]
+i.e.,
+\[
+x^{2}+48 x-324=0
+\]
+Using the quadratic formula, we get
+\[
+\begin{aligned}
+x &=\frac{-48 \pm \sqrt{48^{2}+1296}}{2}=\frac{-48 \pm \sqrt{3600}}{2} \\
+&=\frac{-48 \pm 60}{2}=6 \mathrm{or}-54
+\end{aligned}
+\]
+Since \( x \) is the speed of the stream, it cannot be negative. So, we ignore the root \( x=-54 \). Therefore, \( x=6 \) gives the speed of the stream as \( 6 \mathrm{~km} / \mathrm{h} \).
+EXERCISE \( 4.3 \)
+1. Find the roots of the following quadratic equations, if they exist, by the method of completing the square:
+(i) \( 2 x^{2}-7 x+3=0 \)
+(ii) \( 2 x^{2}+x-4=0 \)
+(iii) \( 4 x^{2}+4 \sqrt{3} x+3=0 \)
+(iv) \( 2 x^{2}+x+4=0 \)
+2. Find the roots of the quadratic equations given in Q.1 above by applying the quadratic formula.
+\[
+2020-21
+\] 8
+3. Find the roots of the following equations:
+\[
+\text { (i) } x-\frac{1}{x}=3, x \neq 0
+\]
+(ii) \( \frac{1}{x+4}-\frac{1}{x-7}=\frac{11}{30}, x \neq-4,7 \)
+4. The sum of the reciprocals of Rehman's ages, (in years) 3 years ago and 5 years from
+now is \( \frac{1}{3} \). Find his present age.
+5. In a class test, the sum of Shefali's marks in Mathematics and English is 30 . Had she got 2 marks more in Mathematics and 3 marks less in English, the product of their marks would have been 210 . Find her marks in the two subjects.
+6. The diagonal of a rectangular field is 60 metres more than the shorter side. If the longer side is 30 metres more than the shorter side, find the sides of the field.
+7. The difference of squares of two numbers is 180 . The square of the smaller number is 8 times the larger number. Find the two numbers.
+8. A train travels \( 360 \mathrm{~km} \) at a uniform speed. If the speed had been \( 5 \mathrm{~km} / \mathrm{h} \) more, it would have taken 1 hour less for the same journey. Find the speed of the train.
+9. Two water taps together can fill a tank in \( 9 \frac{3}{8} \) hours. The tap of larger diameter takes 10 hours less than the smaller one to fill the tank separately. Find the time in which each tap can separately fill the tank.
+10. An express train takes 1 hour less than a passenger train to travel \( 132 \mathrm{~km} \) between Mysore and Bangalore (without taking into consideration the time they stop at intermediate stations). If the average speed of the express train is \( 11 \mathrm{~km} / \mathrm{h} \) more than that of the passenger train, find the average speed of the two trains.
+11. Sum of the areas of two squares is \( 468 \mathrm{~m}^{2} \). If the difference of their perimeters is \( 24 \mathrm{~m} \), find the sides of the two squares.
+4.5 Nature of Roots
+In the previous section, you have seen that the roots of the equation \( a x^{2}+b x+c=0 \) are given by
+\[
+x=\frac{-b \pm \sqrt{b^{2}-4 a c}}{2 a}
+\]
+If \( b^{2}-4 a c>0 \), we get two distinct real roots \( -\frac{b}{2 a}+\frac{\sqrt{b^{2}-4 a c}}{2 a} \) and \( -\frac{b}{2 a}-\frac{\sqrt{b^{2}-4 a c}}{2 a} . \)
+\[
+2020-21
+\] QuADRATIC EQUATIONS
+If \( b^{2}-4 a c=0 \), then \( x=-\frac{b}{2 a} \pm 0 \), i.e., \( x=-\frac{b}{2 a} \) or \( -\frac{b}{2 a} \).
+So, the roots of the equation \( a x^{2}+b x+c=0 \) are both \( \frac{-b}{2 a} \).
+Therefore, we say that the quadratic equation \( a x^{2}+b x+c=0 \) has two equal real roots in this case.
+
+If \( b^{2}-4 a c<0 \), then there is no real number whose square is \( b^{2}-4 a c \). Therefore, there are no real roots for the given quadratic equation in this case.
+
+Since \( b^{2}-4 a c \) determines whether the quadratic equation \( a x^{2}+b x+c=0 \) has real roots or not, \( b^{2}-4 a c \) is called the discriminant of this quadratic equation.
+So, a quadratic equation \( a x^{2}+b x+c=0 \) has
+(i) two distinct real roots, if \( b^{2}-4 a c>0 \),
+(ii) two equal real roots, if \( b^{2}-4 a c=0 \),
+(iii) no real roots, if \( b^{2}-4 a c<0 \).
+Let us consider some examples.
+Example 16 : Find the discriminant of the quadratic equation \( 2 x^{2}-4 x+3=0 \), and hence find the nature of its roots.
+
+Solution : The given equation is of the form \( a x^{2}+b x+c=0 \), where \( a=2, b=-4 \) and \( c=3 \). Therefore, the discriminant \( b^{2}-4 a c=(-4)^{2}-(4 \times 2 \times 3)=16-24=-8<0 \)
+So, the given equation has no real roots.
+Example 17 : A pole has to be erected at a point on the boundary of a circular park of diameter 13 metres in such a way that the differences of its distances from two diametrically opposite fixed gates A and B on the boundary is 7 metres. Is it possible to do so? If yes, at what distances from the two gates should the pole be erected?
+Solution : Let us first draw the diagram (see Fig. 4.4).
+
+Let \( \mathrm{P} \) be the required location of the pole. Let the distance of the pole from the gate \( \mathrm{B} \) be \( x \mathrm{~m} \), i.e., \( \mathrm{BP}=x \mathrm{~m} \). Now the difference of the distances of the pole from the two gates \( =\mathrm{AP}-\mathrm{BP}( \) or, \( \mathrm{BP}-\mathrm{AP})= \)
+\( 7 \mathrm{~m} \). Therefore, \( \mathrm{AP}=(x+7) \mathrm{m} \).
+Fig. \( 4.4 \)
+\( 2020-21 \) 90
+Now, \( \mathrm{AB}=13 \mathrm{~m} \), and since \( \mathrm{AB} \) is a diameter,
+\[
+\angle \mathrm{APB}=90^{\circ} \quad \text { (Why?) }
+\]
+Therefore, \( \quad \mathrm{AP}^{2}+\mathrm{PB}^{2}=\mathrm{AB}^{2} \quad \) (By Pythagoras theorem)
+i.e., \( (x+7)^{2}+x^{2}=13^{2} \)
+i.e.,
+\[
+x^{2}+14 x+49+x^{2}=169
+\]
+i.e.,
+\[
+2 x^{2}+14 x-120=0
+\]
+So, the distance ' \( x \) ' of the pole from gate B satisfies the equation
+\[
+x^{2}+7 x-60=0
+\]
+So, it would be possible to place the pole if this equation has real roots. To see if this is so or not, let us consider its discriminant. The discriminant is
+\[
+b^{2}-4 a c=7^{2}-4 \times 1 \times(-60)=289>0 .
+\]
+So, the given quadratic equation has two real roots, and it is possible to erect the pole on the boundary of the park.
+
+Solving the quadratic equation \( x^{2}+7 x-60=0 \), by the quadratic formula, we get
+\[
+x=\frac{-7 \pm \sqrt{289}}{2}=\frac{-7 \pm 17}{2}
+\]
+Therefore, \( x=5 \) or \( -12 \).
+Since \( x \) is the distance between the pole and the gate \( \mathrm{B} \), it must be positive. Therefore, \( x=-12 \) will have to be ignored. So, \( x=5 \).
+
+Thus, the pole has to be erected on the boundary of the park at a distance of \( 5 \mathrm{~m} \) from the gate \( \mathrm{B} \) and \( 12 \mathrm{~m} \) from the gate \( \mathrm{A} \).
 
 Example 18 : Find the discriminant of the equation \( 3 x^{2}-2 x+\frac{1}{3}=0 \) and hence find the nature of its roots. Find them, if they are real.
 Solution: Here \( a=3, b=-2 \) and \( c=\frac{1}{3} \).
@@ -473,4 +1089,5 @@ EXERCISE \( 4.4 \)
 (i) two distinct real roots, if \( b^{2}-4 a c>0 \),
 (ii) two equal roots (i.e., coincident roots), if \( b^{2}-4 a c=0 \), and
 (iii) no real roots, if \( b^{2}-4 a c<0 \).
-\( 2020-21 \) 
+\( 2020-21 \)  ,, page22 missing ,, 
+

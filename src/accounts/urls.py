@@ -13,4 +13,6 @@ urlpatterns = [
     path('otp' , otp , name="otp"),
     path('login-otp', login_otp , name="login_otp"),
     path('logout', auth_views.LogoutView.as_view(), name="logout"),
+    path('forgot_password', forgot_password, name="forgot_password"),
+    path('new_password', confirm_new_password, name="new_password")
 ]

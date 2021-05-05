@@ -1,459 +1,130 @@
+Polynomial ncert 9th class chapter2
+ +  p(x)  is a polynomial in  x , the highest power of  x  in  p(x)  is called the degree of the polynomial  p(x) . For example,  4 x+2  is a polynomial in the variable  x  of degree  1,2 y to the power 2-3 y+4  is a polynomial in the variable  y  of degree  2,5 x to the power 3-4 x to the power 2+x- square root of 2 
+is a polynomial in the variable  x  of degree 3 and  7 u to the power 6-3 by 2 u to the power 4+4 u to the power 2+u-8  is a polynomial
+in the variable  u  of degree 6. Expressions like  equation start 1 by x-1,  square root of x+2, 1 by x to the power 2+2 x+3  equation end  etc., are not polynomials.
 
-CHAPTER 7
-TRIANGLES
-7.1 Introduction
-You have studied about triangles and their various properties in your earlier classes. You know that a closed figure formed by three intersecting lines is called a triangle. ('Tri' means 'three'). A triangle has three sides, three angles and three vertices. For example, in triangle ABC, denoted as   angle  ABC  (see Fig. 7.1); AB, BC, CA are the three sides,   angle  A,  angle  B,  angle  C  are the three angles and  A, B, C  are three vertices. In Chapter 6, you have also studied some properties of triangles. In this chapter, you will study in details about the congruence of triangles, rules of congruence, some more properties of triangles and inequalities in a triangle. You have already verified most of these properties in earlier classes. We will now prove some of them.
- 7.2  Congruence of Triangles
-You must have observed that two copies of your photographs of the same size are identical. Similarly, two bangles of the same size, two ATM cards issued by the same bank are identical. You may recall that on placing a one rupee coin on another minted in the same year, they cover each other completely.
+A polynomial of degree 1 is called a linear polynomial. For example,  2 x-3 ,  equation start  square root of 3 x+5, y+ square root of 2, x-2 by 11, 3 z+4, 2 by 3 u+1  equation end , etc., are all linear polynomials. Polynomials such as  2 x+5-x to the power 2, x to the power 3+1 , etc., are not linear polynomials.
 
-Do you remember what such figures are called? Indeed they are called congruent figures ('congruent' means equal in all respects or figures whose shapes and sizes are both the same).
+A polynomial of degree 2 is called a quadratic polynomial. The name 'quadratic'
+has been derived from the word 'quadrate', which means 'square'.  2 x to the power 2+3 x-2 by 5 ,
+ equation start y to the power 2-2,2-x to the power 2+ square root of 3 x, u by 3-2 u to the power 2+5,  square root of 5 v to the power 2-2 by 3 v, 4 z to the power 2+1 by 7  equation end  are some examples of
+quadratic polynomials (whose coefficients are real numbers). More generally, any quadratic polynomial in  x  is of the form  a x to the power 2+b x+c , where  a, b, c  are real numbers and  a  not equal to  0 . A polynomial of degree 3 is called a cubic polynomial. Some examples of
+2020-21 POLYNOMIALS
+a cubic polynomial are  2-x to the power 3, x to the power 3,  square root of 2 x to the power 3, 3-x to the power 2+x to the power 3, 3 x to the power 3-2 x to the power 2+x-1 . In fact, the most general form of a cubic polynomial is
+new row
+a x to the power 3+b x to the power 2+c x+d
 
-Now, draw two circles of the same radius and place one on the other. What do you observe? They cover each other completely and we call them as congruent circles.
- 2020-21  110
+where,  a, b, c, d  are real numbers and  a  not equal to  0 . Now consider the polynomial  p(x)=x to the power 2-3 x-4 .  Then, putting  x=2  in the polynomial, we get  p(2)=2 to the power 2-3  times  2-4=-6 . The value '  -6  ', obtained by replacing  x  by 2 in  x to the power 2-3 x-4 , is the value of  x to the power 2-3 x-4  at  x=2 . Similarly,  p(0)  is the value of  p(x)  at  x=0 , which is  -4 .
+
+If  p(x)  is a polynomial in  x , and if  k  is any real number, then the value obtained by replacing  x  by  k  in  p(x) , is called the value of  p(x)  at  x=k , and is denoted by  p(k) . What is the value of  p(x)=x to the power 2-3 x-4  at  x=-1  ? We have :
+new row
+p(-1)=(-1) to the power 2- times (-1)
+Also, note that  .
+As  p(-1)=0  and  p(4)=0,-1  and 4 are called the zeroes of the quadratic polynomial  x to the power 2-3 x-4 . More generally, a real number  k  is said to be a zero of a polynomial  , if  p(k)=0 .
+
+You have already studied in Class IX, how to find the zeroes of a linear polynomial. For example, if  k  is a zero of  p(x)=2 x+3 , then  p(k)=0  gives us
+new row
+2 k+3=0  , i.e.,  k=-3 by 2  . 
+
+In general, if  k  is a zero of  p(x)=a x+b , then  p(k)=a k+b=0 , i.e.,  k=-b by a . So, the zero of the linear polynomial  a x+b  is  equation start -b by a=-( Constant term ) by  Coefficient of  x  equation end .
+
+Thus, the zero of a linear polynomial is related to its coefficients. Does this happen in the case of other polynomials too? For example, are the zeroes of a quadratic polynomial also related to its coefficients?
+
+In this chapter, we will try to answer these questions. We will also study the division algorithm for polynomials.
+2.2 Geometrical Meaning of the Zeroes of a Polynomial
+You know that a real number  k  is a zero of the polynomial  p(x)  if  p(k)=0 . But why are the zeroes of a polynomial so important? To answer this, first we will see the geometrical representations of linear and quadratic polynomials and the geometrical meaning of their zeroes.
+2020-21 22
 MATHEMATICS
-Repeat this activity by placing square on the other with sides of the measure (see Fig. 7.2) or by placing equilateral triangles of equal sides on other. You will observe that the squares congruent to each other and so are the equilateral triangles. Fig.  7.2 
-You may wonder why we are studying congruence. You all must have seen the ice tray in your refrigerator. Observe that the moulds for making ice are all congruent. The cast used for moulding in the tray also has congruent depressions (may be all are rectangular or all circular or all triangular). So, whenever identical objects have to be produced, the concept of congruence is used in making the cast.
+Consider first a linear polynomial  a x+b, a  not equal to  0 . You have studied in Class IX that the graph of  y=a x+b  is a straight line. For example, the graph of  y=2 x+3  is a straight line passing through the points  (-2,-1)  and  (2,7) .
+table begins first row  x   next column   -2   next column  2  next row  y=2 x+3   next column   -1   next column  7  table ended 
+From Fig. 2.1, you can see that the graph of  y=2 x+3  intersects the  x  -axis mid-way between  x=-1  and
+that is, at the point  (-3 by 2, 0) .
+You also know that the zero of
+ 2 x+3  is  -3 by 2 . Thus, the zero of the polynomial  2 x+3  is the  x  -coordinate of the point where the graph of  y=2 x+3  intersects the Fig.
+ x  -axis.
+In general, for a linear polynomial  a x+b, a  not equal to  0 , the graph of  y=a x+b  is a
+straight line which intersects the  x  -axis at exactly one point, namely,  (-b by a, 0) .
+Therefore, the linear polynomial  a x+b, a  not equal to  0 , has exactly one zero, namely, the  x  -coordinate of the point where the graph of  y=a x+b  intersects the  x  -axis.
 
-Sometimes, you may find it difficult to replace the refill in your pen by a new one and this is so when the new refill is not of the same size as the one you want to remove. Obviously, if the two refills are identical or congruent, the new refill fits.
-So, you can find numerous examples where congruence of objects is applied in daily life situations.
-Can you think of some more examples of congruent figures?
-Now, which of the following figures are not congruent to the square in Fig  7.3(i): 
+Now, let us look for the geometrical meaning of a zero of a quadratic polynomial. Consider the quadratic polynomial  x to the power 2-3 x-4 . Let us see what the graph* of  y=x to the power 2-3 x-4  looks like. Let us list a few values of  y=x to the power 2-3 x-4  corresponding to a few values for  x  as given in Table  2.1 .
+
+Plotting of graphs of quadratic or cubic polynomials is not meant to be done by the students, nor is to be evaluated.
+ 2020-21   2 . 1 
+table begins first row  x   next column   -2   next column   -1   next column  0  next column  1  next column  2  next column  3  next column  4  next column  5  next row  y=x to the power 2-3 x-4   next column  6  next column  0  next column   -4   next column   -6   next column   -6   next column   -4   next column  0  next column  6  table ended 
+If we locate the points listed
+the points where the graph of  y=x to the power 2-3 x-4  intersects
+the  x  -axis.
+This fact is true for any quadratic polynomial, i.e., the zeroes of a quadratic polynomial  a x to the power 2+b x+c, a  not equal to  0 , are precisely the  x  -coordinates of the points where the parabola representing  y=a x to the power 2+b x+c  intersects the  x  -axis.
+
+From our observation earlier about the shape of the graph of  y=a x to the power 2+b x+c , the following three cases can happen:
+2020-21 24
+МАТнЕ
+Case (i) : Here, the graph cuts  x  -axis at two distinct points A and A'.
+The  x  -coordinates of  A  and  A to the power   are the two zeroes of the quadratic polynomial  a x to the power 2+b x+c  in this case (see Fig. 2.3).
+ 2 . 3 
+Case (ii) : Here, the graph cuts the  x  -axis at exactly one point, i.e., at two coincident points. So, the two points A and  A to the power   of Case (i) coincide here to become one point  A  (see Fig. 2.4).
 (i)
 (ii)
-(iii)
+Fig.  2.4 
+The  x  -coordinate of  A  is the only zero for the quadratic polynomial  a x to the power 2+b x+c  in this case.
+2020-21 PoLYNOMIALS
+Case (iii) : Here, the graph is either completely above the  x  -axis or completely below the  x  -axis. So, it does not cut the  x  -axis at any point (see Fig. 2.5).
+(i)
+(ii)
+Fig.  2.5 
+So, the quadratic polynomial  a x to the power 2+b x+c  has no zero in this case.
+So, you can see geometrically that a quadratic polynomial can have either two distinct zeroes or two equal zeroes (i.e., one zero), or no zero. This also means that a polynomial of degree 2 has atmost two zeroes.
+
+Now, what do you expect the geometrical meaning of the zeroes of a cubic polynomial to be? Let us find out. Consider the cubic polynomial  x to the power 3-4 x . To see what the graph of  y=x to the power 3-4 x  looks like, let us list a few values of  y  corresponding to a few values for  x  as shown in Table  2.2 .
+Table  2.2 
+table begins first row  x   next column   -2   next column   -1   next column  0  next column  1  next column  2  next row  y=x to the power 3-4 x   next column  0  next column  3  next column  0  next column   -3   next column  0  table ended 
+Locating the points of the table on a graph paper and drawing the graph, we see that the graph of  y=x to the power 3-4 x  actually looks like the one given in Fig. 2.6.
+2020-21 We see from the table above
+0 and 2 are zeroes of the
+cubic polynomial  x to the power 3-4 x . Observe
+that  -2,0  and 2 are, in fact, the
+ x  -coordinates of the only points graph of  y=x to the power 3-4 x 
+ x  -axis. Since the curve eets the  x  -axis in only these 3
+points, their  x  -coordinates are the only zeroes of the polynomial.
+Let us take a few more
+examples. Consider the cubic polynomials  x to the power 3  and  x to the power 3-x to the power 2 . We draw the graphs of  y=x to the power 3  and  y=x to the power 3-x to the power 2  in Fig.  2.7  and Fig.  2.8  respectively. Fig.  2.6 
+  Fig. 2.7    Fig.  2.8 
+2020-2 POLYNOMIALS 27
+Note that 0 is the only zero of the polynomial  x to the power 3 . Also, from Fig.  2.7 , you can see that 0 is the  x  -coordinate of the only point where the graph of  y=x to the power 3  intersects the  x  -axis. Similarly, since  x to the power 3-x to the power 2=x to the power 2(x-1), 0  and 1 are the only zeroes of the polynomial  x to the power 3-x to the power 2 .  Also, from Fig.  2.8 , these values are the  x  -coordinates of the only points where the graph of  y=x to the power 3-x to the power 2  intersects the  x  -axis.
+
+From the examples above, we see that there are at most 3 zeroes for any cubic polynomial. In other words, any polynomial of degree 3 can have at most three zeroes.
+Remark : In general, given a polynomial  p(x)  of degree  n , the graph of  y=p(x)  intersects the  x  -axis at atmost  n  points. Therefore, a polynomial  p(x)  of degree  n  has at most  n  zeroes.
+
+Example 1 : Look at the graphs in Fig.  2.9  given below. Each is the graph of  y=p(x) , where  p(x)  is a polynomial. For each of the graphs, find the number of zeroes of  p(x) .
 (iv)
-Fig.  7.3 
-The large squares in Fig.  7.3  (ii) and (iii) are obviously not congruent to the one in Fig  7.3  (i), but the square in Fig  7.3  (iv) is congruent to the one given in Fig  7.3  (i).
-Let us now discuss the congruence of two triangles.
-
-You already know that two triangles are congruent if the sides and angles of one triangle are equal to the corresponding sides and angles of the other triangle.
+(v)
+(vi)
+Fig.  2.9 
+Solution:
+(i) The number of zeroes is 1 as the graph intersects the  x  -axis at one point only.
+(ii) The number of zeroes is 2 as the graph intersects the  x  -axis at two points.
+(iii) The number of zeroes is  3 .  (Why?)
+ 2020-21  28
+МАТнЕМАТ
+(iv) The number of zeroes is 1 . (Why?)
+(v) The number of zeroes is 1 . (Why?)
+(vi) The number of zeroes is 4 . (Why?)
+EXERCISE  2.1 
+1. The graphs of  y=p(x)  are given in Fig.  2.10  below, for some polynomials  p(x) . Find the number of zeroes of  p(x) , in each case.
+(iv)
+(v)
+(vi)
+ 2 . 1 0 
+2.3 Relationship between Zeroes and Coefficients of a Polynomial You have already seen that zero of a linear polynomial  a x+b  is  -b by a . We will now try to answer the question raised in Section  2.1  regarding the relationship between zeroes and coefficients of a quadratic polynomial. For this, let us take a quadratic polynomial, say  p(x)=2 x to the power 2-8 x+6 . In Class IX, you have learnt how to factorise quadratic polynomials by splitting the middle term. So, here we need to split the middle term  '-8 x to the power   as a sum of two terms, whose product is  6  times  2 x to the power 2=12 x to the power 2 .  So, we write
+ 2 x to the power 2-8 x+6=2 x to the power 2-6 x-2 x+6=2 x(x-3)-2(x-3) 
 new row
-2020-21
- TRIANGLES
-2.  ABCD  is a quadrilateral in which  AD=BC    angle  DAB= angle  CBA  (see Fig. 7.17). Prove
-(i)   triangle  ABD  congruent to   triangle  BAC 
-(ii)  BD=AC 
-(iii)   angle  ABD= angle  BAC .
-3.  AD  and  BC  are equal perpendiculars segment AB (see Fig. 7.18). Show  AB 
-Fig. 7.18
-4.  l  and  m  are two parallel lines intersected another pair of parallel lines  p  and CDA. (see Fig. 7.19). Show that
-Fig. 7.19
-5. Line  l  is the bisector of an angle   angle  A  and  B  is any point on  l . BP and BQ are perpendiculars from B to the arms of   angle  A  (see Fig. 7.20). Show that:
-(i)   angle  APB  congruent to   triangle  AQB 
-(ii)  BP=BQ  or  B  is equidistant from the arms
-of   angle  A 
-Fig. 7.20
-2020-21 6. In Fig.  7.21, AC=AE, AB=AD  and
-  angle  BAD= angle  EAC . Show that  BC=DE .
-Fig.  7.21 
-7.  AB  is a line segment and  P  is its mid-point.  D  and  E  are points on the same side of AB such that   angle  BAD= angle  ABE  and
-DPB (see Fig. 7.22). Show that
-(i)   triangle  DAP  congruent to   triangle  EBP 
-(ii)  AD=BE 
-Fig.  7.22 
-8. In right triangle  ABC , right angled at  C, M  is the mid-point of hypotenuse AB. C is joined to  M  and produced to a point  D  such that  DM=CM . Point  D  is joined to point  B  (see Fig. 7.23). Show that:
-(i)   triangle  AMC  congruent to   triangle  BMD 
-(ii)   angle  DBC  is a right angle.
-(iii)   triangle  DBC  congruent to   angle  ACB 
-Fig.  7.23 
-(iv)  CM=1 by 2 AB 
-7.4 Some Properties of a Triangle
-In the above section you have studied two criteria for congruence of triangles. Let us now apply these results to study some properties related to a triangle whose two sides are equal.
-2020-2 Perform the activity given below:
-triangle in which two sides equal and the third Fig. 7.24). You have done constructions in earlier classes.
-Do you remember what is such a triangle called? Fig.  7.24  A triangle in which two sides are equal is called an isosceles triangle. So,   triangle  ABC  of Fig.  7.24  is an isosceles triangle with  AB=AC 
-Now, measure   angle  B  and   angle  C . What do you observe?
-Repeat this activity with other isosceles triangles with different sides. You may observe that in each such triangle, the angles opposite to the equal sides are equal.
+=(2 x-2)(x-3)=2(x-1)(x-3)
 
-This is a very important result and is indeed true for any isosceles triangle. It can be proved as shown below.
-
-Theorem  7.2  : Angles opposite to equal sides of an isosceles triangle are equal.
-This result can be proved in many ways. One of the proofs is given here. Proof: We are given an isosceles triangle ABC
-  angle  B= angle  C . 
-in which  AB=AC . We need to prove that
-Let us draw the bisector of   angle  A  and let  D  be the point of intersection of this bisector of   Fig.  7.25    angle  A  and  BC  (see Fig.  7.25) .
-In   triangle   BAD and   triangle   CAD,
- AB=AC  (Given)
-  angle  BAD= angle  CAD  (By construction)
- A D=A D  ( Common ) 
-So,   triangle  BAD  congruent to   triangle  CAD  (By SAS rule)
-So,   angle  ABD= angle  ACD , since they are corresponding angles of congruent triangles.
-So,   angle  B= angle  C 
-2020-21 122
-МАТнЕмАт
-Is the converse also true? That is:
-
-If two angles of any triangle are equal, can we conclude that the sides opposite to them are also equal?
-Perform the following activity. Construct a triangle  ABC  with  BC  of any length and   angle  B= angle  C=50 to the power  .  Draw the bisector of   angle  A  and let it intersect  BC  at  D  (see Fig. 7.26).
-
-Cut out the triangle from the sheet of paper and fold it along AD so that vertex  C  falls on vertex B.
-What can you say about sides AC and AB?
-Observe that AC covers AB completely
-So,  AC=AB 
-Repeat this activity with some more triangles. Each time you will observe that the sides opposite to equal angles are equal. So we have the   Fig.  7.26  following:
-Theorem 7.3 : The sides opposite to equal angles of a triangle are equal.
-This is the converse of Theorem  7.2 .
-You can prove this theorem by ASA congruence rule.
-Let us take some examples to apply these results.
-Example  4:  In   triangle  ABC , the bisector  AD  of   angle  A  is perpendicular to side  BC  (see Fig. 7.27). Show that  AB=AC  and   angle  ABC  is isosceles.
-Solution : In   angle  ABD  and   angle  ACD ,
-  angle  BAD= angle  CAD 
- AD=AD 
-  angle  ADB= angle  ADC=90 to the power  
-So,   triangle  ABD  congruent to   triangle  ACD 
-So,  AB=AC 
-or,   triangle  ABC  is an isosceles triangle.
-Fig.  7.27 
- 2020-21  TRIANG
-Example  5: E  and  F  are respectively the mid-points of equal sides  AB  and  AC  of   angle  ABC  (see Fig.  7.28  ). Show that  BF=CE 
-Solution : In   triangle  ABF  and   angle  ACE .
- AB=AC 
-  C  A= angle  A  ( Common ) 
- AF=AE  (Halves of equal sides)
-So  ABF  congruent to   triangle  ACE   (SAS rule)  
-Fig. 7.28
-Therefore,  BF=CF 
-Example 6 : In an isosceles triangle  ABC  with  AB=AC, D  and  E  are points on  BC  such that  BE=CD  (see Fig. 7.29). Show that  AD=AE .
-Solution : In   triangle  ABD  and   angle  ACE ,
-Given
-  angle  B= angle  
-(Angles opposite to equal sides) (2)
-Also,  BE=CD 
-So,  
-That is,  BD=CE  (3)   Fig. 7.29
-So,   triangle    ACF 
-(Using (1), (2),
-(3) and SAS rule).
-This gives  AD=AE 
-(CPCT)
-EXERCISE
-1. In an isosceles triangle  ABC , with  AB=AC , the bisectors of   angle  B  and   angle  C  intersect each other at O. Join A to O. Show that :
-(i)  OB=OC 
-(ii) AO bisects   angle  A 
-2. In   triangle  ABC, AD  is the perpendicular bisector of  BC  (see Fig. 7.30). Show that   angle  ABC  is an isosceles triangle in which  AB=AC .
-Fig.  7.30 
-2020-21 3.  ABC  is an isosceles triangle in which altitudes  BE  and  CF  are drawn to equal sides  AC  and  AB  respectively (see Fig. 7.31). Show that these altitudes are equal.
-Fig.  7.31 
-4.  ABC  is a triangle in which altitudes  BE  and  CF  to sides  AC  and  AB  are equal (see Fig. 7.32). Show that
-(i)   triangle  ABE  congruent to   triangle  ACF 
-(ii)  AB=AC , i.e.,  ABC  is an isosceles triangle.
-Fig.  7.32 
-5.  ABC  and  DBC  are two isosceles triangles on the same base BC (see Fig. 7.33). Show that CD
-Fig.  7.33 
-6.   triangle  ABC  is an isosceles triangle in which  AB=AC . Side BA is produced to  D  such that  A D=A B  (see Fig. 7.34). Show that   angle  BCD  is a right angle.
-7.  ABC  is a right angled triangle in which   angle  A=90 to the power   and  AB=AC . Find   angle  B  and   angle  C 
-8. Show that the angles of an equilateral triangle are  60 to the power   each.
-Fig.  7.3 
-2020-21 TRIANGLES 2
-7.5 Some More Criteria for Congruence of Triangles
-You have seen earlier in this chapter that equality of three angles of one triangle to three angles of the other is not sufficient for the congruence of the two triangles. You may wonder whether equality of three sides of one triangle to three sides of another triangle is enough for congruence of the two triangles. You have already verified in earlier classes that this is indeed true.
-
-To be sure, construct two triangles with sides  4 ~cm, 3.5 ~cm  and  4.5 ~cm  (see Fig. 7.35). Cut them out and place them on each other. What do you observe? They cover each other completely, if the equal sides are placed on each other. So, the triangles are congruent.
-
-Repeat this activity with some more triangles. We arrive at another rule for congruence.
-
-Theorem  7.4  (SSS congruence rule)  :  If three sides of one triangle are equal to the three sides of another triangle, then the two triangles are congruent.
-This theorem can be proved using a suitable construction.
-You have already seen that in the SAS congruence rule, the pair of equal angles has to be the included angle between the pairs of corresponding pair of equal sides and if this is not so, the two triangles may not be congruent.
-Perform this activity:
-Construct two right angled triangles with hypotenuse equal to  5 ~cm  and one side equal to  4 ~cm  each (see Fig. 7.36).
-2020-21 Fig.  7.36 
-Cut them out and place one triangle over the other with equal side placed on each other. Turn the triangles, if necessary. What do you observe?
-
-The two triangles cover each other completely and so they are congruent. Repeat this activity with other pairs of right triangles. What do you observe?
-
-You will find that two right triangles are congruent if one pair of sides and the hypotenuse are equal. You have verified this in earlier classes.
-Note that, the right angle is not the included angle in this case.
-So, you arrive at the following congruence rule:
-Theorem  7.5  (RHS congruence rule) : If in two right triangles the hypotenuse and one side of one triangle are equal to the hypotenuse and one side of the other triangle, then the two triangles are congruent.
-Note that RHS stands for Right angle - Hypotenuse - Side.
-Let us now take some examples.
-Example  7: AB  is a line-segment.  P  and  Q  are points on opposite sides of  A B  such that each of them is equidistant from the points A and B (see Fig. 7.37). Show that the line  PQ  is the perpendicular bisector of AB
-
-Solution : You are given that  PA=PB  and  QA=QB  and you are to show that  PQ AB  and  PQ  bisects  AB . Let  PQ  intersect  AB  at  C .
-Can you think of two congruent triangles in this figure?
-Let us take   triangle  PAQ  and   triangle  PBQ . Fig. 7.37
-In these triangles,
-2020-21 that   triangle  PAC  congruent to   triangle  PBC  even though  AP=BP   Given  ) 
-and sides in
-It is because these results give us which is not always valid or true for congruence of triangles. Also the angle is not included between the equal pairs of sides.
-Let us take some more examples
-Example 8 :  P  is a point equidistant from two lines  l  and  m  intersecting at point  A  (see Fig. 7.38). Show that the line AP bisects the angle between them. ad  m  Solution : You are given that lines  l  and  m  intersect each other at  A . Let  P B ,  PC . It is given that  PB=PC .
-You are to show that   angle  PAB= angle  PAC .
-2020-21 128
-Let us consider   triangle  PAB  and   triangle  PAC . In these triangles,
+ 2020-21  POLYNOMIALS
+So, the value of  p(x)=2 x to the power 2-8 x+6  is zero when  x-1=0  or  x-3=0 , i.e., when  x=1  or  x=3 . So, the zeroes of  2 x to the power 2-8 x+6  are 1 and 3 . Observe that :
 new row
-PB=PC
+ Sum of its zeroes =1+3=4=-(-8) by 2=-( Coefficient of  x) by  Coefficient of  x to the power 2
 
-  angle  PBA= angle  PCA=90 to the power    Given  ) 
- PA=PA 
-(Common)
-So,   triangle  PAB  congruent to   triangle  PAC  (RHS rule)   Fig.  7.38 
-So,   angle  PAB= angle  PAC }) 
-Note that this result is the converse of the result proved in Q.5 of Exercise 7.1.
-EXERCISE  7.3 
-1.   triangle  ABC  and   angle  DBC  are two isosceles triangles on the same base  BC  and vertices  A  and  D  are on the same side of BC (see Fig. 7.39). If AD is extended
-(ii)   triangle  ABP  congruent to   triangle  ACP 
-(i)   triangle  ABD  congruent to   triangle  ACD 
-to intersect  B C  at  P , show that
-(iii) AP bisects   angle   A as well as   angle  D .
-(iv) AP is the perpendicular bisector of BC. Fig. 7.39
-2.  AD  is an altitude of an isosceles triangle  ABC  in which  AB=AC . Show that
-(i) AD bisects BC
-(ii) AD bisects   angle  A .
-3. Two sides  AB  and  BC  and median AM of one triangle  ABC  are respectively equal to sides PQ and QR and median
-(i)   triangle  ABM  congruent to   triangle  PQN 
-PN of   triangle   PQR (see Fig. 7.40). Show that:
-(ii)   triangle  ABC  congruent to   triangle  PQR  Fig.  7.40 
-4.  BE  and  CF  are two equal altitudes of a triangle  ABC . Using  RHS  congruence rule, prove that the triangle  ABC  is isosceles.
-5.  ABC  is an isosceles triangle with  AB=AC . Draw  AP BC  to show that   angle  B= angle  C . 
-2020-21 TRIANGLES
-Now, which of the triangles given below are congruent to triangle  ABC  in Fig. 7.4 (i)?
-
-Cut out each of these triangles from Fig.  7.4  (ii) to  (v)  and turn them around and try to cover   angle  ABC . Observe that triangles in Fig.  7.4  (ii), (iii) and (iv) are congruent to   angle  ABC  while   triangle  TSU  of Fig  7.4(v)  is not congruent to   angle  ABC .
-If   triangle  PQR  is congruent to   triangle  ABC , we write   triangle  PQR  congruent to   triangle  ABC .
-Notice that when   triangle  PQR  congruent to   triangle  ABC , then sides of   triangle  PQR  fall on corresponding equal sides of   triangle  ABC  and so is the case for the angles.
-
-That is, PQ covers AB, QR covers BC and RP covers CA;   angle   P covers   angle   A.   angle  Q  covers   angle  B  and   angle  R  covers   angle  C . Also, there is a one-one correspondence between the vertices. That is,  P  corresponds to  A, Q  to  B, R  to  C  and so on which is written as
- P rightarrow A, Q rightarrow B, R rightarrow C 
-Note that under this correspondence,   triangle  PQR  congruent to   triangle  ABC ;  but it will not be correct to write   triangle  QRP  congruent to   triangle  ABC .
-Similarly, for Fig.  7.4  (iii),
-2020-2 TRIANGLES
-7.6 Inequalities in a Triangle
-So far, you have been mainly studying the equality of sides and angles of a triangle or triangles. Sometimes, we do come across unequal objects, we need to compare them. For example, line-segment  AB  is greater in length as compared to line segment  CD  in Fig.  7.41  (i) and   angle  A  is greater than   angle  B  in Fig  7.41  (ii).
-
-Let us now examine whether there is any relation between unequal sides and unequal angles of a triangle. For this, let us perform the following activity:
-
-Activity : Fix two pins on a drawing board say at B and  C  and tie a thread to mark a side BC of a triangle.
-Fix one end of another thread at  C  and tie a pencil the other (free) end. Mark a point A with the pencil and draw   triangle  ABC  (see Fig 7.42). Now, shift the pencil and mark another point  A to the power   on  CA  beyond (new position of it)
-
-So,   (Comparing the lengths)
-Join  A to the power   to  B  and complete the triangle  A to the power  B C . What can you say about   angle  A to the power  BC  and   angle  ABC  ?
-Compare them. What do you observe?   Fig.  7.42  Clearly,   angle  A to the power  BC> angle  ABC 
-Continue to mark more points on CA (extended) and draw the triangles with the side  BC  and the points marked.
-
-You will observe that as the length of the side  AC  is increased (by taking different positions of A), the angle opposite to it, that is,   angle  B  also increases.
-Let us now perform another activity :
-2020-21 130
-Activity : Construct a scalene triangle (that is a triangle in which all sides are of different lengths). Measure the lengths of the sides.
-Now, measure the angles. What do you observe?
-
-In   triangle  ABC  of Fig  7.43, BC  is the longest side and AC is the shortest side.
-
-Also,   angle   A is the largest and   angle  B  is the smallest.
-Repeat this activity with some other triangles. Fig.  7.43 
-We arrive at a very important result of inequalities in a triangle. It is stated in the form of a theorem as shown below:
-
-Theorem  7.6:  If two sides of a triangle are unequal, the angle opposite to the longer side is larger (or greater).
-You may prove this theorem by taking a point  P  on  BC  such that  CA=CP  in Fig.  7.43 .
-Now, let us perform another activity :
-Activity : Draw a line-segment  AB . With A as centre and some radius, draw an arc and mark different points say P, Q, R, S, T on it. Fig.  7.44 
-Join each of these points with A as well as with B (see Fig. 7.44). Observe that as we move from  P  to  T,  angle  A  is becoming larger and larger. What is happening to the length of the side opposite to it? Observe that the length of the side is also increasing; that is   angle  TAB> angle  SAB> angle  RAB> angle  QAB> angle  PAB  and  TB>SB>RB>QB>PB 
-Now, draw any triangle with all angles unequal to each other. Measure the lengths of the sides (see Fig. 7.45).
-
-Observe that the side opposite to the largest angle is the longest. In Fig.  7.45,  angle  B  is the largest angle and AC is the longest side.
-
-Repeat this activity for some more triangles and we see that the converse of Theorem  7.6  is also true.   Fig.  7.45  In this way, we arrive at the following theorem:
-2020-21 TRIANGLES
-Theorem  7.7:  In any triangle, the side opposite to the larger (greater) angle is longer.
-This theorem can be proved by the method of contradiction.
-Now take a triangle  ABC  and in it, find  AB+BC, BC+AC  and  AC+AB . What do you observe?
-You will observe that  AB+BC>AC ,
- BC+AC>AB  and  AC+AB>BC 
-Repeat this activity with other triangles and with this you can arrive at the following theorem :
-Theorem  7.8  : The sum of any two sides of a triangle is greater than the third side.
-In Fig. 7.46, observe that the side BA of   angle  ABC  has been produced to a point  D  such that  AD=AC . Can you show that   angle  BCD> angle  BDC  and  BA+AC>BC ?  Have
-you arrived at the proof of the above theorem.
-Let us now take some examples based on these results. Fig.  7.46 
-Example  9: D  is a point on side  BC  of   triangle  ABC  such that  AD=AC  (see Fig. 7.47). Show that  AB>AD .
-Solution : In   triangle   DAC,
-(Given)
-So,   angle  ADC= angle  ACD 
-(Angles opposite to equal sides)
-Now,   angle  ADC  is an exterior angle for   angle  ABD .
-So,   angle  ADC> angle  ABD 
-or,   angle  ACD> angle  ABD 
-or,   angle  ACB> angle  ABC 
-Fig.  7.47 
-So,  AB>AC  (Side opposite to larger angle in   triangle  ABC  )
-or,  AB>AD(AD=AC) 
- 2020-21  3
-EXERCISE  7 . 
-1. Show that in a right angled triangle, the hypotenuse is the longest side.
-2. In Fig. 7.48, sides  AB  and  AC  of   angle  ABC  are extended to points  P  and  Q  respectively. Also.   angle  PBC< angle  QCB . Show that  AC>AB 
-Fig. 7.48
-3. In Fig.  7.49,  angle  B< angle  A  and   angle  C< angle  D . Show that
- AD<BC 
-Fig.  7.49 
-4.  AB  and  CD  are respectively the smallest and longest sides of a quadrilateral  ABCD  (see Fig. 7.50). Show that   angle  C  and
-  angle  B> angle  D 
-Fig.  7.50 
-5. In Fig 7.51,  PR>PQ  and PS bisects   angle  QPR . Prove that   angle  PSR> 
-2020-21 TRIANGLES 133
-6. Show that of all line segments drawn from a given point not on it, the perpendicular line segment is the shortest.
-EXERCISE  7.5  (Optional)*
-1.  ABC  is a triangle. Locate a point in the interior of   triangle  ABC  which is equidistant from all the vertices of   triangle  ABC .
-2. In a triangle locate a point in its interior which is equidistant from all the sides of the triangle.
-3. In a huge park, people are concentrated at three points (see Fig. 7.52):
-A: where there are different slides and swings for children,
-B: near which a man-made lake is situated,
-C: which is near to a large parking and exit.
-Where should an icecream parlour be set up so that maximum number of persons can approach it?
-(Hint : The parlour should be equidistant from A, B and C)
-4. Complete the hexagonal and star shaped Rangolies [see Fig.  7.53  (i) and (ii)] by filling them with as many equilateral triangles of side  1 ~cm  as you can. Count the number of triangles in each case. Which has more triangles?
-(i)
-Fig.  7.53 
-"These exercises are not from examination point of view.
- 2020-21  134
-MATHEMATICS
-7.7 Summary
-In this chapter, you have studied the following points :
-1. Two figures are congruent, if they are of the same shape and of the same size.
-2. Two circles of the same radii are congruent.
-3. Two squares of the same sides are congruent.
-4. If two triangles  ABC  and  PQR  are congruent under the correspondence  A rightarrow P ,  B rightarrow Q  and  C rightarrow R , then symbolically, it is expressed as   triangle  ABC  congruent to   triangle  PQR 
-5. If two sides and the included angle of one triangle are equal to two sides and the included angle of the other triangle, then the two triangles are congruent (SAS Congruence Rule).
-6. If two angles and the included side of one triangle are equal to two angles and the included side of the other triangle, then the two triangles are congruent (ASA Congruence Rule).
-7. If two angles and one side of one triangle are equal to two angles and the corresponding side of the other triangle, then the two triangles are congruent (AAS Congruence Rule).
-8. Angles opposite to equal sides of a triangle are equal.
-9. Sides opposite to equal angles of a triangle are equal.
-10. Each angle of an equilateral triangle is of  60 to the power  .
-11. If three sides of one triangle are equal to three sides of the other triangle, then the two triangles are congruent (SSS Congruence Rule).
-12. If in two right triangles, hypotenuse and one side of a triangle are equal to the hypotenuse and one side of other triangle, then the two triangles are congruent (RHS Congruence Rule).
-13. In a triangle, angle opposite to the longer side is larger (greater).
-14. In a triangle, side opposite to the larger (greater) angle is longer.
-15. Sum of any two sides of a triangle is greater than the third side.
- 2020-21  12
- FD rightarrow AB, DE rightarrow BC  and  EF rightarrow CA 
-and  F rightarrow A, D rightarrow B  and  E rightarrow C 
-So,   triangle  FDE  congruent to   triangle  ABC  but writing   triangle  DEF  congruent to   triangle  ABC  is not correct.
-Give the correspondence between the triangle in Fig.  7.4  (iv) and   triangle  ABC .
-So, it is necessary to write the correspondence of vertices correctly for writing of congruence of triangles in symbolic form.
-
-Note that in congruent triangles corresponding parts are equal and we write in short 'CPCT' for corresponding parts of congruent triangles.
-7.3 Criteria for Congruence of Triangles
-In earlier classes, you have learnt four criteria for congruence of triangles. Let us recall them.
-
-Draw two triangles with one side  3 ~cm . Are these triangles congruent? Observe that they are not congruent (see Fig. 7.5).
-(ii)
-Fig.  7.5 
-Now, draw two triangles with one side  4 ~cm  and one angle  50 to the power   (see Fig. 7.6). Are they congruent?
-Fig. 7.6
-2020-21 TRIANGLES
-See that these two triangles are not congruent.
-Repeat this activity with some more pairs of triangles.
-So, equality of one pair of sides or one pair of sides and one pair of angles is not sufficient to give us congruent triangles.
-
-What would happen if the other pair of arms (sides) of the equal angles are also equal?
-In Fig  7.7, BC=QR,  angle  B= angle  Q  and also,  AB=PQ . Now, what can you say
-about congruence of   angle  ABC  and   triangle  PQR  ?
-Recall from your earlier classes that, in this case, the two triangles are congruent. Verify this for   triangle  ABC  and   angle  PQR  in Fig.  7.7 .
-
-Repeat this activity with other pairs of triangles. Do you observe that the equality of two sides and the included angle is enough for the congruence of triangles? Yes, it is enough.
-This is the first criterion for congruence of triangles.
-Axiom  7.1  (SAS congruence rule) : Two triangles are congruent if two sides and the included angle of one triangle are equal to the two sides and the included angle of the other triangle.
-
-This result cannot be proved with the help of previously known results and so it is accepted true as an axiom (see Appendix 1).
-Let us now take some examples.
-Example 1 : In Fig.  7.8, OA=OB  and  OD=OC .
-(i)   triangle  AOD  congruent to   triangle  BOC  and
-(ii) AD II
-Solution: (i) You may observe that in   triangle  AOD  and
-(Given)
-2020-21 114
-table begins first row  table ended 
-Also, since   angle  AOD  and   angle  BOC  form a pair of vertically opposite angles, we have
-  angle  AOD= angle  BOC . 
-So,   triangle  AOD  congruent to   triangle  BOC  (by the SAS congruence rule)
-(ii) In congruent triangles  A O D  and  B O C , the other corresponding parts are also equal.
-
-So,   angle  OAD= angle  OBC  and these form a pair of alternate angles for line segments  AD  and  BC .
-Therefore,  AD  ॥ BC.
-Example  2: AB  is a line segment and line  l  is its perpendicular bisector. If a point  P  lies on  l , show that  P  is equidistant from  A  and  B .
-Solution : Line  l AB  and passes through  C  which is the mid-point of AB (see Fig. 7.9). You have show that  PA=PB . Consider   triangle  PCA  and   angle  PCB .
-We have  C  is the mid-point of  A B) 
-  angle  PCA= angle  PCB=90 to the power    Given  ) 
- PC=PC   (Common)
-So,   triangle  PCA  congruent to   triangle  PCB  (SAS rule)
-and so,  PA=PB , as they are corresponding sides congruent triangles.   Fig.  7.9 
-Now, let us construct two triangles, whose sides are  4 ~cm  and  5 ~cm  and one of the angles is  50 to the power   and this angle is not included in between the equal sides (see Fig. 7.10). Are the two triangles congruent?
-Fig.
-2020-21 TRIANGLE
-Notice that the two triangles are not congruent.
-Repeat this activity with more pairs of triangles. You will observe that for triangles to be congruent, it is very important that the equal angles are included between the pairs of equal sides.
-So, SAS congruence rule holds but not ASS or SSA rule.
-Next, try to construct the two triangles in which two angles are  60 to the power   and  45 to the power   and the side included between these angles is  4 ~cm  (see Fig. 7.11).
-
-Cut out these triangles and place one triangle on the other. What do you observe? See that one triangle covers the other completely; that is, the two triangles are congruent. Repeat this activity with more pairs of triangles. You will observe that equality of two angles and the included side is sufficient for congruence of triangles.
-
-This result is the Angle-Side-Angle criterion for congruence and is written as ASA criterion. You have verified this criterion in earlier classes, but let us state and prove this result.
-
-Since this result can be proved, it is called a theorem and to prove it, we use the SAS axiom for congruence.
-
-Theorem  7.1  (ASA congruence rule) : Two triangles are congruent if two angles and the included side of one triangle are equal to two angles and the included side of other triangle.
-Proof : We are given two triangles ABC and DEF in which:
-  angle  B= angle  E,  angle  C= angle  F 
-and  BC=EF 
-We need to prove that   triangle  ABC  congruent to   triangle  DEF 
-For proving the congruence of the two triangles see that three cases arise.
-2020-21 Case (i) : Let AB = DE (see Fig. 7.12).
-Now what do you observe? You may observe that
+Product of its zeroes  equation start =1  times  3=3=6 by 2= Constant term  by  Coefficient of  x to the power 2  equation end 
+Let us take one more quadratic polynomial, say,  p(x)=3 x to the power 2+5 x-2 . By the method of splitting the middle term,
 new row
-AB=DE
-
-(Assumed)
-new row
- angle  B  next column = angle  E BC  next column =EF ABC  next column   congruent to   triangle  DEF
-
-So, (B
-Case (ii): Let if possible  AB>DE . So, we can take a point  P  on  AB  such that  PB=DE . Now consider   triangle  PBC  and   triangle  DEF  (see Fig. 7.13).
-Fig. 7.18
-Observe that in   triangle  PBC  and   triangle  DEF 
- PB=DE 
-(By construction)
-  angle  B= angle  E 
- BC=EF  (Given)
-So, we can conclude that:
-  triangle  PBC  congruent to   triangle  DEF , by the SAS axiom for congruence.
-2020-2 TRIANGLES
-Since the triangles are congruent, their corresponding parts will be equal.
-So,   angle  PCB= angle  DFE 
-But, we are given that   angle  ACB= angle  DFE 
-So,   angle  ACB= angle  PCB 
-Is this possible?
-This is possible only if  P  coincides with  A .
-or,  BA=ED 
-So,   triangle  ABC  congruent to   triangle  DEF   (by SAS axiom)  
-Case (iii) : If AB < DE, we can choose a point  M  on DE such that  M E=A B  and repeating the arguments as given in Case (ii), we can conclude that  AB=DE  and so,   triangle  ABC  congruent to   triangle  DEF . 
-Suppose, now in two triangles two pairs of angles and one pair of corresponding sides are equal but the side is not included between the corresponding equal pairs of angles. Are the triangles still congruent? You will observe that they are congruent. Can you reason out why?
-
-You know that the sum of the three angles of a triangle is  180 to the power  . So if two pairs of angles are equal, the third pair is also equal  (180 to the power -.  equation end  sum of equal angles  ) .
-
-So, two triangles are congruent if any two pairs of angles and one pair of corresponding sides are equal. We may call it as the AAS Congruence Rule.
-Now let us perform the following activity:
-
-Draw triangles with angles  40 to the power , 50 to the power   and  90 to the power  . How many such triangles can you draw?
-
-In fact, you can draw as many triangles as you want with different lengths of sides (see Fig. 7.14).
-Fig. 7
- 2020-21  118
-МАТнЕМАт
-Observe that the triangles may or may not be congruent to each other.
-
-So, equality of three angles is not sufficient for congruence of triangles. Therefore, for congruence of triangles out of three equal parts, one has to be a side.
-Let us now take some more examples.
-Example 3 : Line-segment  AB  is parallel to another line-segment  CD .  O  is the mid-point of AD (see Fig. 7.15). Show that (i)   angle  AOB  congruent to   triangle  DOC 
-(ii)  O  is also the mid-point of BC.
-Solution : (i) Consider   triangle  AOB 
-  angle  AOB= angle  DOC 
-(Vertically opposite angles)
-OD   (Given Fig.  7.15 
-Therefore,   triangle  AOB  congruent to   triangle  DOC  (AAS rule)
-(ii)  OB=OC  (CPCT) 
-So,  O  is the mid-point of  BC .
-EXERCISE  7.1 
-1. In quadrilateral ACBD,
- A C=A D  and  A B  bisects   angle  A  (see Fig. 7.16). Show that   angle  ABC  congruent to   angle  ABD .
-What can you say about  B C  and BD?
-Fig.  7.16 
-2020-21 
