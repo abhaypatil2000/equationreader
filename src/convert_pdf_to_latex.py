@@ -80,4 +80,4 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
 
 # to avoid precious requests to mathpix
 # make make_request to False
-convert_pdf_to_latex("triangle.pdf", "triangle", True,100)
+#convert_pdf_to_latex("triangle.pdf", "triangle", True,100)
