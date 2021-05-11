@@ -68,6 +68,7 @@ def latex_parser(input_content):
     print("==============================###################################")
 
     content = input_content.replace("\\\\", "\\")
+    print(input_content)
     util(content)
 
     file1 = open('temp.txt', 'w')
@@ -261,7 +262,7 @@ def util(content):
 
                 i = i + 4
                 flag = 0
-            elif (content[i:i + 3] == "pm"):
+            elif (content[i:i + 2] == "pm"):
                 parsed_content = parsed_content + " plus or minus "
                 i = i + 2
                 flag = 0
@@ -277,12 +278,14 @@ def util(content):
                 parsed_content = parsed_content + "divided by"
                 i = i + 3
                 flag = 0
-            elif (content[i:i + 14] == "begin{aligned"):
-                i = i + 15
+            elif (content[i:i + 13] == "begin{aligned"):
+                i = i + 14
                 flag = 0
-            elif (content[i:i + 14] == "end{aligned"):
-                i = i + 13
+                print("at align",content[i])
+            elif (content[i:i + 11] == "end{aligned"):
+                i = i + 12
                 flag = 0
+                print("at end align",content[i])
 
             elif (content[i:i + 13] == "begin{tabular" or table == 1):
                 del_table = 0
@@ -445,4 +448,4 @@ def util(content):
 
 
 #if __name__ == "__main__":
-# print(latex_parser(content))
+latex_parser(content)

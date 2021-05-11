@@ -1,0 +1,8 @@
+1.2 Properties of Rational Numbers
+ 1 . 2 . 1   Closure  
+(i) Whole numbers
+Let us revisit the closure property for all the operations on whole numbers in brief.
+table begins first row  Operation  next column Numbers   next column Remarks   next row  Addition  next column   0+5=5,  a whole number  4+7= Is it a whole number? In general,  a+b  is a whole number for any two whole numbers  a  and  b .   next column  Whole numbers are closed under addition.  next row  Subtraction  next column   5-7=-2,  which is not a whole number.  next column  Whole numbers are not closed under subtraction.  next row  Multiplication  next column   0  times  3=0,  a whole number  3  times  7= Is it a whole number? In general, if  a  and  b  are any two whole numbers, their product ab is a whole number.  next column  Whole numbers are closed under multiplication.  next row  Division  next column   equation start 5 divided by 8=5 by 8,  equation end  which is not a whole number.  next column  Whole numbers are not closed under division.  table ended 
+Check for closure property under all the four operations for natural numbers.
+(ii) Integers
+Let us now recall the operations under which integers are closed. table begins first row  Operation  next column Numbers   next column Remarks   next row  Addition  next column   -6+5=-1,  an integer Is  -7+(-5)  an integer? Is  8+5  an integer?  next column  Integers are closed under addition.  a+b  is an integer for any two integers  a  and  b .   next column   next row  Subtraction  next column   7-5=2  an integer  next column  Integers are closed under  5-7  an integer?  next column  subtraction.  -6-8=-14,  an integer  next column   table ended 
