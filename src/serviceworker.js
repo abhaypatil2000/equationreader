@@ -9,7 +9,7 @@ event.waitUntil(
         "./templates/index.html",
         "./templates/upload.html",
         "./static/BlindRead/css/master.css",
-        "./images"
+        "./static/images"
 	]);
 	})
 );

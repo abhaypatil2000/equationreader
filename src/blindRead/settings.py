@@ -59,7 +59,7 @@ SECRET_KEY = '^$q9l$g-0!+ifmkh*0yn96%d_l@nia!nzg^nmw4nin^(sl%^3*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 AUTH_USER_MODEL = 'accounts.User'
-ALLOWED_HOSTS = ['blindread-309414.el.r.appspot.com', '127.0.0.1']
+ALLOWED_HOSTS = ['equationreader.herokuapp.com', '*', '127.0.0.1']
 
 
 # Application definition
@@ -78,6 +78,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -146,10 +147,15 @@ else:
     # }
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'heroku_5bd84cfbbbc757a',
+            'HOST': 'us-cdbr-east-03.cleardb.com',
+            # 'PORT': '3306',
+            'USER': 'b6068d79802a1d',
+            'PASSWORD': '124d2775',
         }
     }
+    # mysql: // b6068d79802a1d: 124d2775@us-cdbr-east-03.cleardb.com/heroku_5bd84cfbbbc757a?reconnect = true
 
 
 # Password validation
@@ -194,9 +200,14 @@ STATIC_URL = '/static/'
 #     ]
 # else:
 #     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
