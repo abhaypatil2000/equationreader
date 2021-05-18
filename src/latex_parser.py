@@ -68,6 +68,7 @@ def latex_parser(input_content):
     print("==============================###################################")
 
     content = input_content.replace("\\\\", "\\")
+    content = content.replace("\\\n", "")
     print(input_content)
     util(content)
 
@@ -107,7 +108,7 @@ def util(content):
                 i = i + 1
                 #print(out)
 
-            elif (content[i] == '\\'):  #flag when you see \
+            elif (content[i] == '\\' and content[i+1]!='\\'):  #flag when you see \
                 '''
                 if (content[i + 1] == "\\n"):
                     print("error here")
@@ -194,6 +195,10 @@ def util(content):
                 util(content[i + 1:j - 1])
                 i = j
                 flag = 0
+            elif(content[i:i+3]=="rho"):
+                i=i+3
+                flag=0
+                parsed_content+="Q"
 
             elif (content[i:i + 5] == "times"):
                 i = i + 5
