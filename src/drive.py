@@ -23,7 +23,7 @@ import pytz
 from send_email import send_email
 
 import os
-import glob
+import shutil
 
 
 class CustomError(Exception):
@@ -305,8 +305,8 @@ def the_function(file_path, file_name, receiver_address):
     body = f"here is the link to your file\n{drive_file_link}"
     send_email(receiver_address, body)
     curr_dir = os.path.dirname(file_path)
-    for to_remove_file in glob.glob(f"{curr_dir}/*"):
-        os.remove(to_remove_file)
+    shutil.rmtree(curr_dir)
+    os.mkdir(curr_dir)
 
 
 if __name__ == '__main__':
