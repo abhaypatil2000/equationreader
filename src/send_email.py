@@ -1,31 +1,38 @@
-# # import smtplib
-# # from email.mime.multipart import MIMEMultipart
-# # from email.mime.text import MIMEText
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
-# # mail_content = "this is the content of the email"
 
-# # #The mail addresses and password
-# # sender_address = "blindreader2000@gmail.com"
-# # sender_pass = "Djg3114klFOnSwlbLX"
-# # # the address of the receiver
-# # receiver_address = 'abhaypatil2000@gmail.com'
+def send_email(receiver_address, mail_content):
+    # mail_content = "this is the content of the email"
 
-# # #Setup the MIME
-# # message = MIMEMultipart()
-# # message['From'] = sender_address
-# # message['To'] = receiver_address
-# # message['Subject'] = 'Your requested book in audio is here'  #The subject line
+    #The mail addresses and password
+    sender_address = "blindreader2000@gmail.com"
+    sender_pass = "Djg3114klFOnSwlbLX"
+    # the address of the receiver
+    # receiver_address = 'abhaypatil2000@gmail.com'
 
-# # #The body and the attachments for the mail
-# # message.attach(MIMEText(mail_content, 'plain'))
-# # #Create SMTP session for sending the mail
-# # session = smtplib.SMTP('smtp.gmail.com', 587)  #use gmail with port
-# # session.starttls()  #enable security
-# # session.login(sender_address, sender_pass)  #login with mail_id and password
-# # text = message.as_string()
-# # session.sendmail(sender_address, receiver_address, text)
-# # session.quit()
-# # print('Mail Sent')
+    #Setup the MIME
+    message = MIMEMultipart()
+    message['From'] = sender_address
+    message['To'] = receiver_address
+    message['Subject'] = 'Your requested audio book is here'  #The subject line
+
+    #The body and the attachments for the mail
+    message.attach(MIMEText(mail_content, 'plain'))
+    #Create SMTP session for sending the mail
+    session = smtplib.SMTP('smtp.gmail.com', 587)  #use gmail with port
+    session.starttls()  #enable security
+    session.login(sender_address,
+                  sender_pass)  #login with mail_id and password
+    text = message.as_string()
+    session.sendmail(sender_address, receiver_address, text)
+    session.quit()
+    print('Mail Sent')
+
+
+if __name__ == "__main__":
+    send_email("sarveshvhawal6969@yopmail.com", "content of the email")
 
 # import smtplib
 # from email.mime.multipart import MIMEMultipart
@@ -73,72 +80,73 @@
 # from your Gmail account
 
 # libraries to be imported
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.base import MIMEBase
-from email import encoders
+# import smtplib
+# from email.mime.multipart import MIMEMultipart
+# from email.mime.text import MIMEText
+# from email.mime.base import MIMEBase
+# from email import encoders
 
-fromaddr = "blindreader2000@gmail.com"
-toaddr = "blindreader2000@gmail.com"
-password = "Djg3114klFOnSwlbLX"
+# def send_email(receiveraddr):
+#     senderaddr = "blindreader2000@gmail.com"
+#     password = "Djg3114klFOnSwlbLX"
+#     # receiveraddr = "sarveshvhawal6969@yopmail.com"
 
-# open the file to be sent
-filename = "hello.mp4"  # as seen in attachment
-attachment = open("/home/abhay/Downloads/SmartVillageVideo.mp4",
-                  "rb")  # on computer
+#     # open the file to be sent
+#     filename = "report.pdf"  # as seen in attachment
+#     attachment = open("/home/abhay/Downloads/Comparision Report.pdf",
+#                       "rb")  # on computer
 
-# instance of MIMEMultipart
-msg = MIMEMultipart()
+#     # instance of MIMEMultipart
+#     msg = MIMEMultipart()
 
-# storing the senders email address
-msg['From'] = fromaddr
+#     # storing the senders email address
+#     msg['From'] = senderaddr
 
-# storing the receivers email address
-msg['To'] = toaddr
+#     # storing the receivers email address
+#     msg['To'] = receiveraddr
 
-# storing the subject
-msg['Subject'] = "Subject of the Mail"
+#     # storing the subject
+#     msg['Subject'] = "Subject of the Mail"
 
-# string to store the body of the mail
-body = "Body_of_the_mail"
+#     # string to store the body of the mail
+#     body = "Body_of_the_mail"
 
-# attach the body with the msg instance
-msg.attach(MIMEText(body, 'plain'))
+#     # attach the body with the msg instance
+#     msg.attach(MIMEText(body, 'plain'))
 
-# instance of MIMEBase and named as p
-p = MIMEBase('application', 'octet-stream')
+#     # instance of MIMEBase and named as p
+#     p = MIMEBase('application', 'octet-stream')
 
-# To change the payload into encoded form
-p.set_payload((attachment).read())
+#     # To change the payload into encoded form
+#     p.set_payload((attachment).read())
 
-# encode into base64
-encoders.encode_base64(p)
+#     # encode into base64
+#     encoders.encode_base64(p)
 
-p.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+#     p.add_header('Content-Disposition', "attachment; filename= %s" % filename)
 
-# attach the instance 'p' to instance 'msg'
-msg.attach(p)
+#     # attach the instance 'p' to instance 'msg'
+#     msg.attach(p)
 
-# creates SMTP session
-s = smtplib.SMTP('smtp.gmail.com', 587)
+#     # creates SMTP session
+#     s = smtplib.SMTP('smtp.gmail.com', 587)
 
-# start TLS for security
-s.starttls()
+#     # start TLS for security
+#     s.starttls()
 
-print('now auth')
-# Authentication
-s.login(fromaddr, password)
+#     print('now auth')
+#     # Authentication
+#     s.login(senderaddr, password)
 
-# Converts the Multipart msg into a string
-text = msg.as_string()
+#     # Converts the Multipart msg into a string
+#     text = msg.as_string()
 
-print('sending')
-# sending the mail
-s.sendmail(fromaddr, toaddr, text)
-print('sent')
+#     print('sending')
+#     # sending the mail
+#     s.sendmail(senderaddr, receiveraddr, text)
+#     print('sent')
 
-# terminating the session
-s.quit()
+#     # terminating the session
+#     s.quit()
 
-print("now quit")
+#     print("now quit")
