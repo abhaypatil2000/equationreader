@@ -139,22 +139,22 @@ else:
     #     $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306
     #
     # See https://cloud.google.com/sql/docs/mysql-connect-proxy
-    # DATABASES = {
-    #     'default': {
-    #         'ENGINE': 'django.db.backends.sqlite3',
-    #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    #     }
-    # }
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'sarveshvhawal$equationreader',
-            'HOST': 'sarveshvhawal.mysql.pythonanywhere-services.com',
-            # 'PORT': '5432',
-            'USER': 'sarveshvhawal',
-            'PASSWORD': 'mysqlroot',
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+    # DATABASES = {
+    #     'default': {
+    #         'ENGINE': 'django.db.backends.mysql',
+    #         'NAME': 'sarveshvhawal$equationreader',
+    #         'HOST': 'sarveshvhawal.mysql.pythonanywhere-services.com',
+    #         # 'PORT': '5432',
+    #         'USER': 'sarveshvhawal',
+    #         'PASSWORD': 'mysqlroot',
+    #     }
+    # }
     # mysql: // b6068d79802a1d: 124d2775@us-cdbr-east-03.cleardb.com/heroku_5bd84cfbbbc757a?reconnect = true
 
 

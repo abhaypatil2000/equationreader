@@ -3,16 +3,21 @@
     <div class='container'>
             <div class='jumbotron bg-dark text-white'  style="opacity: 90%;">
             {% if user.is_authenticated %}
-                <h1>Hey, {{user.username}}</h1>
+                <h1>Hey, {{user.first_name}}</h1>
             {% endif %}
-            <h1>
             <h2>Math Reader for the Blind</h2>
             <h4>Convert PDF files containing  mathematical equations into Audio</h4>
+            {% if messages %}
+                {% for message in messages %}
+                    <h3 style="color:green" >{{ message }}</h3>
+                {% endfor %}
+            {% endif %}
             </div> 
+            
     </div>  
     <div class="container" style="align-items: center; align-content: center; justify-content: center; display: flex;">
         {% if user.is_authenticated %}
-        {% if counter > 0 %}
+        {% if not user.request_pending %}
         <form action="upload" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
                 <div class="jumbotron bg-dark text-white">
@@ -23,10 +28,10 @@
                 </div>
         </form>
         {% else %}
-        <div class="jumbotron bg-danger text-white" style="opacity:90%;">
+            <div class="jumbotron bg-danger text-white" style="opacity:90%;">
                 <div class="container" style="align-items: center;">
                     <h2> 
-                        You have run out of number of attempts. Please subscribe or try again tomorrow. 
+                        You have a request pending. Please try again later
                     </h2>
                 </div>
             </div>
@@ -39,7 +44,7 @@
                     </h2>
                 </div>
             </div>
-        {% endif %}    
+        {% endif %}  
     </div>
 {% endblock content %}
         

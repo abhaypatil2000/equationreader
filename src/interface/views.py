@@ -1,5 +1,5 @@
 from django.core.exceptions import ImproperlyConfigured
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views import generic
 from django.core.files.storage import FileSystemStorage
 import datetime
@@ -9,9 +9,11 @@ from convert_pdf_to_audio import convert_pdf_to_audio
 import os
 from gtts import gTTS
 from gtts import lang
-import datetime
 from accounts import models as acct_mdls
 from .models import CommonBooks
+import threading
+from drive import *
+from django.contrib import messages
 # Create your views here.
 
 
@@ -21,9 +23,9 @@ class HomePageView(generic.TemplateView):
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
             profile = acct_mdls.Profile.objects.get(user = request.user)
-            if not profile.last_use_date == datetime.date.today():
-                profile.counter = 5
-                profile.save()
+            # if not profile.last_use_date == datetime.date.today():
+            #     profile.counter = 5
+            #     profile.save()
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
@@ -45,6 +47,8 @@ def upload(request):
         profile = acct_mdls.Profile.objects.get(user = request.user)
         phone_number = profile.mobile
         uploaded_file = request.FILES['file_name']
+        request.user.request_pending = True
+        request.user.save()
         print(uploaded_file)
         # check if uploaded file in txt using some validation
 
@@ -61,12 +65,13 @@ def upload(request):
                 break
 
         pathlib.Path('./media/'+phone_number).mkdir(exist_ok=True)
-        processing_pages = convert_pdf_to_audio(uploaded_file.name, 'media/'+phone_number, profile.counter)
+
+        t = threading.Thread(target=helper, args=(uploaded_file, phone_number, profile))
+        t.setDaemon(True)
+        t.start()
         
-        profile.counter -= processing_pages
-        profile.last_use_date = datetime.date.today()
-        profile.save()
-        
+        messages.success(request, "The audio will be emailed to you after processing!")
+
         context = {
             "file_name": uploaded_file.name,
             "output_file": 'audio.mp3',
@@ -76,13 +81,30 @@ def upload(request):
         if request.user.is_authenticated:
             profile = acct_mdls.Profile.objects.get(user = request.user)
             context['counter'] = profile.counter
- 
 
-    return render(request, 'upload.html', context)
+
+    return redirect('home')
+
+def helper(uploaded_file, phone_number, profile):
+    
+    processing_pages = convert_pdf_to_audio(uploaded_file.name, 'media/'+phone_number, profile.counter)
+    # profile.counter -= processing_pages
+    # profile.last_use_date = datetime.date.today()
+    profile.save()
+    the_function('media/'+phone_number+'/audio.mp3', phone_number, profile.user.email)
+    profile.user.request_pending = False
+    profile.user.save()
 
 
 class CommonBooksView(generic.ListView):
     model = CommonBooks
     paginate_by = 10
 
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        profile = None
+        if self.request.user.is_authenticated:
+            profile = acct_mdls.Profile.objects.get(user = self.request.user)
+        if profile:    
+            context["counter"] = profile.counter
+        return context

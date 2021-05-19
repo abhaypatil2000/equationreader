@@ -13,5 +13,6 @@ class Profile(models.Model):
     mobile = models.CharField(max_length=20)
     otp = models.CharField(max_length=6)
     last_use_date = models.DateField(default=datetime.now)
-    counter = models.PositiveIntegerField(default=5)
+    counter = models.PositiveIntegerField(default=1000)
+    request_pending = models.BooleanField(default=False)
     

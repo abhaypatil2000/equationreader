@@ -2,3 +2,4 @@ new row
 
 x to the power 3-3 x to the power 2-x+3  next column =(x-1)(x to the power 2-2 x-3)  next column =(x-1)(x+1)(x-3)
 
+ ,, page0 missing ,,  
