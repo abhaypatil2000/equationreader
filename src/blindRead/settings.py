@@ -148,11 +148,11 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'heroku_5bd84cfbbbc757a',
-            'HOST': 'us-cdbr-east-03.cleardb.com',
-            # 'PORT': '3306',
-            'USER': 'b6068d79802a1d',
-            'PASSWORD': '124d2775',
+            'NAME': 'sarveshvhawal$equationreader',
+            'HOST': 'sarveshvhawal.mysql.pythonanywhere-services.com',
+            # 'PORT': '5432',
+            'USER': 'sarveshvhawal',
+            'PASSWORD': 'mysqlroot',
         }
     }
     # mysql: // b6068d79802a1d: 124d2775@us-cdbr-east-03.cleardb.com/heroku_5bd84cfbbbc757a?reconnect = true
