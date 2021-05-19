@@ -22,6 +22,9 @@ import pytz
 
 from send_email import send_email
 
+import os
+import glob
+
 
 class CustomError(Exception):
     pass
@@ -301,6 +304,9 @@ def the_function(file_path, file_name, receiver_address):
     print(drive_file_link)
     body = f"here is the link to your file\n{drive_file_link}"
     send_email(receiver_address, body)
+    curr_dir = os.path.dirname(file_path)
+    for to_remove_file in glob.glob(f"{curr_dir}"):
+        os.remove(to_remove_file)
 
 
 if __name__ == '__main__':
