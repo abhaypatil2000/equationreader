@@ -22,6 +22,9 @@ import pytz
 
 from send_email import send_email
 
+import os
+import glob
+
 
 class CustomError(Exception):
     pass
@@ -297,13 +300,16 @@ def the_function(file_path, file_name, receiver_address):
     change_permission(uploaded_fileid, drive_service)
     get_create_times_and_delete(drive_service)
     # return the uploaded fileid in the form of an email
-    drive_file_link = f"drive.google.com/file/d/{uploaded_fileid}"
+    drive_file_link = f"https://drive.google.com/file/d/{uploaded_fileid}"
     print(drive_file_link)
     body = f"here is the link to your file\n{drive_file_link}"
     send_email(receiver_address, body)
+    curr_dir = os.path.dirname(file_path)
+    for to_remove_file in glob.glob(f"{curr_dir}/*"):
+        os.remove(to_remove_file)
 
 
 if __name__ == '__main__':
     # main()
-    the_function("./drive.py", "uploaded100.py",
+    the_function("./testing_temp/temp1.txt", "uploaded100.py",
                  "sarveshvhawal6969@yopmail.com")

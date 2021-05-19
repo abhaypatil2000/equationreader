@@ -69,7 +69,7 @@ def latex_parser(input_content):
 
     content = input_content.replace("\\\\", "\\")
     content = content.replace("\\\n", "")
-    print(input_content)
+    #print(input_content)
     util(content)
 
     file1 = open('temp.txt', 'w')
@@ -87,8 +87,8 @@ def util(content):
     is_array = 0
     len_parsed = 0
     ignore_eqn_end = 0
-    print("n is ", n)
-    if n < 50: print(content)
+    #print("n is ", n)
+    #if n < 50: print(content)
     if (n == 0): return 0
 
     i = 0
@@ -115,7 +115,7 @@ def util(content):
                     i = i + 1
                 else:
                     '''
-                print("at \\", content[i + 1:i + 5])
+                ## print("at \\", content[i + 1:i + 5])
                 flag = 1
                 i = i + 1
                 if (i == n):
@@ -123,7 +123,7 @@ def util(content):
 
             elif (content[i:i + 16] == "& \multicolumn{1"):
                 #print("ok tested")
-                parsed_content += " next column "
+                parsed_content += " next column, "
                 i += 24
                 li = ['{']
                 j = i
@@ -140,7 +140,7 @@ def util(content):
             elif (content[i] == '&' and is_array == 0):
                 i = i + 1
 
-                parsed_content += " next column "
+                parsed_content += " next column, "
             elif (content[i] == '&' and is_array == 1):
                 i = i + 1
 
@@ -163,6 +163,7 @@ def util(content):
                     temp = temp + 1
                 # if (temp > 5): file.write("(")  # TODO:decide
                 util(content[i + 1:j - 1])
+                parsed_content += ","
                 # if (temp > 5): file.write(')')  #TODO:decide
                 i = j
 
@@ -208,7 +209,7 @@ def util(content):
                 i = i + 5
                 flag = 0
                 parsed_content += "alpha"
-                print("alpha", content[i])
+                #print("alpha", content[i])
             elif (content[i:i + 4] == "beta"):
                 i = i + 4
                 flag = 0
@@ -233,6 +234,7 @@ def util(content):
                     if (content[j] == '}'): li.pop()
                     j = j + 1
                 util(content[i + 5:j - 1])
+                parsed_content+=","
                 i = j
                 flag = 0
 
@@ -269,7 +271,7 @@ def util(content):
                 else:
                     if (ret[1]):
                         ignore_eqn_end = 0
-                        parsed_content = parsed_content + " equation start"
+                        parsed_content = parsed_content + " equation start,"
                     else:
                         ignore_eqn_end = 1
                     util(content[i:j - 2])
@@ -278,7 +280,7 @@ def util(content):
             elif (content[i] == ')' and ignore_eqn_end == 0):
                 i = i + 1
 
-                parsed_content = parsed_content + " equation end "
+                parsed_content = parsed_content + " equation end, "
 
                 flag = 0
             elif (content[i] == ')' and ignore_eqn_end == 1):
@@ -287,7 +289,7 @@ def util(content):
                 flag = 0
             elif (content[i] == '['):
                 i = i + 1
-                parsed_content = parsed_content + "new row"
+                parsed_content = parsed_content + "new row, "
                 flag = 0
             elif (content[i] == ']'):
                 i = i + 1
@@ -309,17 +311,17 @@ def util(content):
                 i = i + 3
                 flag = 0
             elif (content[i:i + 3] == "div"):
-                parsed_content = parsed_content + "divided by"
+                parsed_content = parsed_content + "divided by, "
                 i = i + 3
                 flag = 0
             elif (content[i:i + 13] == "begin{aligned"):
                 i = i + 14
                 flag = 0
-                print("at align", content[i])
+               ## print("at align", content[i])
             elif (content[i:i + 11] == "end{aligned"):
                 i = i + 12
                 flag = 0
-                print("at end align", content[i])
+              #  print("at end align", content[i])
 
             elif (content[i:i + 13] == "begin{tabular" or table == 1):
                 del_table = 0
@@ -329,7 +331,7 @@ def util(content):
                     while (content[temp:temp + 11] != "end{tabular"):
                         if (content[temp:temp + 7] == "longdiv"): del_table = 1
                         temp += 1
-                    print(del_table, "delte table")
+                    #print(del_table, "delte table")
                     if (del_table == 1):
                         i = temp + 11
                         flag = 0
@@ -337,8 +339,8 @@ def util(content):
 
                     if table == 0:
                         table = 1
-                        parsed_content = parsed_content + "table begins"
-                        parsed_content = parsed_content + " first row "
+                        parsed_content = parsed_content + "table begins,"
+                        parsed_content = parsed_content + " first row, "
                         #print(1)
                         i = i + 14
                         li = ['{']
@@ -360,7 +362,7 @@ def util(content):
                         if (is_firstrow == 1):
                             is_firstrow = 0
                         else:
-                            parsed_content += " next row "
+                            parsed_content += " next row, "
                         i += 5
                         j = i
                         while (content[j:j + 5] != "hline"):
@@ -369,7 +371,7 @@ def util(content):
                         util(content[i:j - 3])
                         i = j
                     elif (content[i:i + 11] == "end{tabular"):
-                        parsed_content += " table ended "
+                        parsed_content += " table ended. "
                         table = 0
                         flag = 0
                         i += 12
@@ -381,7 +383,7 @@ def util(content):
                 #str_remove = " equation start"
                 #parsed_content = parsed_content[:-(len(str_remove))]
                 is_array = 1
-                print("array begin", content[i + 13])
+                #print("array begin", content[i + 13])
                 i = i + 13
                 while (content[i] != '}'):
                     i = i + 1

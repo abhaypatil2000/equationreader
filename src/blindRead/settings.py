@@ -157,6 +157,16 @@ else:
     # }
     # mysql: // b6068d79802a1d: 124d2775@us-cdbr-east-03.cleardb.com/heroku_5bd84cfbbbc757a?reconnect = true
 
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroku_09b39933877c5ec',
+        'HOST': 'us-cdbr-east-03.cleardb.com',
+        # 'PORT': '3306',
+        'USER': 'bfa5f03ba94bab',
+        'PASSWORD': '5f643077',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
