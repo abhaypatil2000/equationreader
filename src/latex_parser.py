@@ -1,8 +1,6 @@
 import json
 
 parsed_content = ""
-content = open('output.txt', 'r').read()
-#content = '-x^{3}+x^{2}-x '
 
 
 def text_checking(inp):
@@ -108,7 +106,8 @@ def util(content):
                 i = i + 1
                 #print(out)
 
-            elif (content[i] == '\\' and content[i+1]!='\\'):  #flag when you see \
+            elif (content[i] == '\\'
+                  and content[i + 1] != '\\'):  #flag when you see \
                 '''
                 if (content[i + 1] == "\\n"):
                     print("error here")
@@ -196,10 +195,10 @@ def util(content):
                 util(content[i + 1:j - 1])
                 i = j
                 flag = 0
-            elif(content[i:i+3]=="rho"):
-                i=i+3
-                flag=0
-                parsed_content+="Q"
+            elif (content[i:i + 3] == "rho"):
+                i = i + 3
+                flag = 0
+                parsed_content += "Q"
 
             elif (content[i:i + 5] == "times"):
                 i = i + 5
@@ -234,7 +233,7 @@ def util(content):
                     if (content[j] == '}'): li.pop()
                     j = j + 1
                 util(content[i + 5:j - 1])
-                parsed_content+=","
+                parsed_content += ","
                 i = j
                 flag = 0
 
@@ -317,11 +316,11 @@ def util(content):
             elif (content[i:i + 13] == "begin{aligned"):
                 i = i + 14
                 flag = 0
-               ## print("at align", content[i])
+            ## print("at align", content[i])
             elif (content[i:i + 11] == "end{aligned"):
                 i = i + 12
                 flag = 0
-              #  print("at end align", content[i])
+            #  print("at end align", content[i])
 
             elif (content[i:i + 13] == "begin{tabular" or table == 1):
                 del_table = 0
@@ -481,7 +480,3 @@ def util(content):
             else:
                 i = i + 1
     return 0
-
-
-#if __name__ == "__main__":
-latex_parser(content)
