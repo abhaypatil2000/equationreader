@@ -94,7 +94,7 @@ def register(request):
             return render(request,'accounts/register.html' , context)
         
         # print(email, name, password)
-        user = User(email = email , first_name = name, password = password)
+        user = User(email = email , first_name = name, password = password, username = mobile)
         # user = User(email = email , first_name = name)
         user.save()
         otp = str(random.randint(1000 , 9999))
