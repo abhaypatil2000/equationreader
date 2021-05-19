@@ -134,4 +134,5 @@ Files
 seshat
 boost_*
 
-token.json
+
+src/token.json
