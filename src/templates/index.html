@@ -17,7 +17,7 @@
     </div>  
     <div class="container" style="align-items: center; align-content: center; justify-content: center; display: flex;">
         {% if user.is_authenticated %}
-        {% if not user.request_pending %}
+        {% if not request_pending %}
         <form action="upload" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
                 <div class="jumbotron bg-dark text-white">

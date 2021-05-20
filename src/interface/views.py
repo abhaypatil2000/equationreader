@@ -23,6 +23,8 @@ class HomePageView(generic.TemplateView):
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
             profile = acct_mdls.Profile.objects.get(user = request.user)
+            
+
             # if not profile.last_use_date == datetime.date.today():
             #     profile.counter = 5
             #     profile.save()
@@ -33,8 +35,9 @@ class HomePageView(generic.TemplateView):
         profile = None
         if self.request.user.is_authenticated:
             profile = acct_mdls.Profile.objects.get(user = self.request.user)
-        if profile:    
-            context["counter"] = profile.counter
+            if profile:    
+                context["counter"] = profile.counter
+                context["request_pending"] = profile.request_pending
         return context
     
 
@@ -47,8 +50,9 @@ def upload(request):
         profile = acct_mdls.Profile.objects.get(user = request.user)
         phone_number = profile.mobile
         uploaded_file = request.FILES['file_name']
-        request.user.request_pending = True
-        request.user.save()
+        profile.request_pending = True
+        profile.save()
+        print("Request Pending is set to " + str(profile.request_pending))
         print(uploaded_file)
         # check if uploaded file in txt using some validation
 
@@ -92,8 +96,9 @@ def helper(uploaded_file, phone_number, profile):
     # profile.last_use_date = datetime.date.today()
     profile.save()
     the_function('media/'+phone_number+'/audio.mp3', phone_number+".mp3", profile.user.email)
-    profile.user.request_pending = False
-    profile.user.save()
+    profile.request_pending = False
+    profile.save()
+    print("Request Pending is set to " + str(profile.request_pending))
 
 
 class CommonBooksView(generic.ListView):
