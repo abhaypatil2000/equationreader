@@ -91,7 +91,7 @@ def helper(uploaded_file, phone_number, profile):
     # profile.counter -= processing_pages
     # profile.last_use_date = datetime.date.today()
     profile.save()
-    the_function('media/'+phone_number+'/audio.mp3', phone_number, profile.user.email)
+    the_function('media/'+phone_number+'/audio.mp3', phone_number+".mp3", profile.user.email)
     profile.user.request_pending = False
     profile.user.save()
 

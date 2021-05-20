@@ -139,12 +139,12 @@ else:
     #     $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306
     #
     # See https://cloud.google.com/sql/docs/mysql-connect-proxy
-    # DATABASES = {
-    #     'default': {
-    #         'ENGINE': 'django.db.backends.sqlite3',
-    #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    #     }
-    # }
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
     # DATABASES = {
     #     'default': {
     #         'ENGINE': 'django.db.backends.mysql',
@@ -157,16 +157,16 @@ else:
     # }
     # mysql: // b6068d79802a1d: 124d2775@us-cdbr-east-03.cleardb.com/heroku_5bd84cfbbbc757a?reconnect = true
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'heroku_4a945c6206ede7c',
-            'HOST': 'us-cdbr-east-03.cleardb.com',
-            # 'PORT': '3306',
-            'USER': 'b247f541d2b9b7',
-            'PASSWORD': '0e6cf4a3',
-        }
-    }
+    # DATABASES = {
+    #     'default': {
+    #         'ENGINE': 'django.db.backends.mysql',
+    #         'NAME': 'heroku_4a945c6206ede7c',
+    #         'HOST': 'us-cdbr-east-03.cleardb.com',
+    #         # 'PORT': '3306',
+    #         'USER': 'b247f541d2b9b7',
+    #         'PASSWORD': '0e6cf4a3',
+    #     }
+    # }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
