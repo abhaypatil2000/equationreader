@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "xyz.appmaker.lnfikb",
+      "sha256_cert_fingerprints": ["F1:F3:33:D0:56:0F:43:BD:9C:B7:C8:C4:7F:19:0B:99:8A:40:8B:70:FE:4A:94:B1:9D:F2:C9:95:F8:5C:F5:4A"]
+    }
+  }
+]

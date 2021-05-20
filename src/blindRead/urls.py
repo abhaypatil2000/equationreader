@@ -25,13 +25,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.HomePageView.as_view(), name='home'),
     path('', include('pwa.urls')),
-    path('upload',views.upload, name='upload'),
+    path('upload', views.upload, name='upload'),
     path('accounts/', include('accounts.urls')),
-    path('interface/', include('interface.urls'))
+    path('interface/', include('interface.urls')),
+    path('.well-known/', views.well_konwn, name='well_known')
 ]
-
 
 
 urlpatterns += staticfiles_urlpatterns()
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

@@ -22,8 +22,7 @@ class HomePageView(generic.TemplateView):
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            profile = acct_mdls.Profile.objects.get(user = request.user)
-            
+            profile = acct_mdls.Profile.objects.get(user=request.user)
 
             # if not profile.last_use_date == datetime.date.today():
             #     profile.counter = 5
@@ -34,12 +33,11 @@ class HomePageView(generic.TemplateView):
         context = super().get_context_data(**kwargs)
         profile = None
         if self.request.user.is_authenticated:
-            profile = acct_mdls.Profile.objects.get(user = self.request.user)
-            if profile:    
+            profile = acct_mdls.Profile.objects.get(user=self.request.user)
+            if profile:
                 context["counter"] = profile.counter
                 context["request_pending"] = profile.request_pending
         return context
-    
 
 
 def upload(request):
@@ -47,7 +45,7 @@ def upload(request):
         if not 'file_name' in request.FILES.keys():
             return render(request, 'index.html')
 
-        profile = acct_mdls.Profile.objects.get(user = request.user)
+        profile = acct_mdls.Profile.objects.get(user=request.user)
         phone_number = profile.mobile
         uploaded_file = request.FILES['file_name']
         profile.request_pending = True
@@ -70,11 +68,13 @@ def upload(request):
 
         pathlib.Path('./media/'+phone_number).mkdir(exist_ok=True)
 
-        t = threading.Thread(target=helper, args=(uploaded_file, phone_number, profile))
+        t = threading.Thread(target=helper, args=(
+            uploaded_file, phone_number, profile))
         t.setDaemon(True)
         t.start()
-        
-        messages.success(request, "The audio will be emailed to you after processing!")
+
+        messages.success(
+            request, "The audio will be emailed to you after processing!")
 
         context = {
             "file_name": uploaded_file.name,
@@ -83,19 +83,21 @@ def upload(request):
             "url2": fs.url(phone_number+'/audio.mp3')
         }
         if request.user.is_authenticated:
-            profile = acct_mdls.Profile.objects.get(user = request.user)
+            profile = acct_mdls.Profile.objects.get(user=request.user)
             context['counter'] = profile.counter
-
 
     return redirect('home')
 
+
 def helper(uploaded_file, phone_number, profile):
-    
-    processing_pages = convert_pdf_to_audio(uploaded_file.name, 'media/'+phone_number, profile.counter)
+
+    processing_pages = convert_pdf_to_audio(
+        uploaded_file.name, 'media/'+phone_number, profile.counter)
     # profile.counter -= processing_pages
     # profile.last_use_date = datetime.date.today()
     profile.save()
-    the_function('media/'+phone_number+'/audio.mp3', phone_number+".mp3", profile.user.email)
+    the_function('media/'+phone_number+'/audio.mp3',
+                 phone_number+".mp3", profile.user.email)
     profile.request_pending = False
     profile.save()
     print("Request Pending is set to " + str(profile.request_pending))
@@ -109,7 +111,11 @@ class CommonBooksView(generic.ListView):
         context = super().get_context_data(**kwargs)
         profile = None
         if self.request.user.is_authenticated:
-            profile = acct_mdls.Profile.objects.get(user = self.request.user)
-        if profile:    
+            profile = acct_mdls.Profile.objects.get(user=self.request.user)
+        if profile:
             context["counter"] = profile.counter
         return context
+
+
+def well_konwn(request):
+    return render(request, 'assetlinks.json')
