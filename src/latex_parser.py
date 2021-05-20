@@ -55,7 +55,7 @@ def text_checking(inp):
 
     if left_counter_1 != right_counter_1 or left_counter_2 != right_counter_2 or left_counter_3 != right_counter_3:
         first = False
-    #print("returning",(first,second))
+    # print("returning",(first,second))
     return (first, second)
 
 
@@ -67,7 +67,7 @@ def latex_parser(input_content):
 
     content = input_content.replace("\\\\", "\\")
     content = content.replace("\\\n", "")
-    #print(input_content)
+    # print(input_content)
     util(content)
 
     file1 = open('temp.txt', 'w')
@@ -87,27 +87,28 @@ def util(content):
     ignore_eqn_end = 0
     #print("n is ", n)
     #if n < 50: print(content)
-    if (n == 0): return 0
+    if (n == 0):
+        return 0
 
     i = 0
     while i < n:
-        #i=i+1
-        #print(i)
+        # i=i+1
+        # print(i)
         # if(flag):
         #   print(content[i],"at flag")
         # print("flag is ", flag)
-        #flag=0 implies no special functions like frac and sqrt
+        # flag=0 implies no special functions like frac and sqrt
         if (flag == 0):
             if (content[i] != '\\' and content[i] != '^'
-                    and content[i] != '&'):  #write all chars except \ and ^
+                    and content[i] != '&'):  # write all chars except \ and ^
 
                 parsed_content = parsed_content + content[i]
 
                 i = i + 1
-                #print(out)
+                # print(out)
 
             elif (content[i] == '\\'
-                  and content[i + 1] != '\\'):  #flag when you see \
+                  and content[i + 1] != '\\'):  # flag when you see \
                 '''
                 if (content[i + 1] == "\\n"):
                     print("error here")
@@ -126,12 +127,14 @@ def util(content):
                 i += 24
                 li = ['{']
                 j = i
-                #getting contents inside {} to call the function recursively
+                # getting contents inside {} to call the function recursively
                 while (len(li) > 0):
                     if (j >= n):
                         return 0
-                    if (content[j] == '{'): li.append('{')
-                    if (content[j] == '}'): li.pop()
+                    if (content[j] == '{'):
+                        li.append('{')
+                    if (content[j] == '}'):
+                        li.pop()
                     j = j + 1
                 util(content[i + 1:j - 1])
                 i = j
@@ -143,7 +146,7 @@ def util(content):
             elif (content[i] == '&' and is_array == 1):
                 i = i + 1
 
-            elif (content[i] == '^'):  #write to the power of instead of ^{}
+            elif (content[i] == '^'):  # write to the power of instead of ^{}
 
                 #global out
                 parsed_content = parsed_content + " to the power "
@@ -152,12 +155,14 @@ def util(content):
                 j = i + 1
                 temp = 0
                 li = ['{']
-                #getting contents inside {} to call the function recursively
+                # getting contents inside {} to call the function recursively
                 while (len(li) > 0):
                     if (j >= n):
                         return 0
-                    if (content[j] == '{'): li.append('{')
-                    if (content[j] == '}'): li.pop()
+                    if (content[j] == '{'):
+                        li.append('{')
+                    if (content[j] == '}'):
+                        li.pop()
                     j = j + 1
                     temp = temp + 1
                 # if (temp > 5): file.write("(")  # TODO:decide
@@ -174,8 +179,10 @@ def util(content):
                 while (li):
                     if (j >= n):
                         return 0
-                    if (content[j] == '{'): li.append('{')
-                    if (content[j] == '}'): li.pop()
+                    if (content[j] == '{'):
+                        li.append('{')
+                    if (content[j] == '}'):
+                        li.pop()
                     j = j + 1
             # print("i is ",j)
                 util(content[i + 5:j - 1])
@@ -189,8 +196,10 @@ def util(content):
                 while (li):
                     if (j >= n):
                         return 0
-                    if (content[j] == '{'): li.append('{')
-                    if (content[j] == '}'): li.pop()
+                    if (content[j] == '{'):
+                        li.append('{')
+                    if (content[j] == '}'):
+                        li.pop()
                     j = j + 1
                 util(content[i + 1:j - 1])
                 i = j
@@ -229,8 +238,10 @@ def util(content):
                 while (li):
                     if (j >= n):
                         return 0
-                    if (content[j] == '{'): li.append('{')
-                    if (content[j] == '}'): li.pop()
+                    if (content[j] == '{'):
+                        li.append('{')
+                    if (content[j] == '}'):
+                        li.pop()
                     j = j + 1
                 util(content[i + 5:j - 1])
                 parsed_content += ","
@@ -328,7 +339,8 @@ def util(content):
                     temp = i
 
                     while (content[temp:temp + 11] != "end{tabular"):
-                        if (content[temp:temp + 7] == "longdiv"): del_table = 1
+                        if (content[temp:temp + 7] == "longdiv"):
+                            del_table = 1
                         temp += 1
                     #print(del_table, "delte table")
                     if (del_table == 1):
@@ -340,7 +352,7 @@ def util(content):
                         table = 1
                         parsed_content = parsed_content + "table begins,"
                         parsed_content = parsed_content + " first row, "
-                        #print(1)
+                        # print(1)
                         i = i + 14
                         li = ['{']
                         columns = 0
@@ -349,8 +361,10 @@ def util(content):
                             if (j >= n):
                                 return 0
                             #if (content[j] == '{'): li.append('{')
-                            if (content[j] == '}'): li.pop()
-                            if (content[j] == 'l'): columns += 1
+                            if (content[j] == '}'):
+                                li.pop()
+                            if (content[j] == 'l'):
+                                columns += 1
                             j = j + 1
                         i = j
                         is_firstrow = 1
@@ -406,8 +420,10 @@ def util(content):
                     if (j >= n):
                         return 0
                     #if (content[j] == '{'): li.append('{')
-                    if (content[j] == '}'): li.pop()
-                    if (content[j] == 'l'): columns += 1
+                    if (content[j] == '}'):
+                        li.pop()
+                    if (content[j] == 'l'):
+                        columns += 1
                     j = j + 1
                 util(content[i:j - 1])
                 i = j
@@ -421,8 +437,10 @@ def util(content):
                     if (j >= n):
                         return 0
                     #if (content[j] == '{'): li.append('{')
-                    if (content[j] == '}'): li.pop()
-                    if (content[j] == 'l'): columns += 1
+                    if (content[j] == '}'):
+                        li.pop()
+                    if (content[j] == 'l'):
+                        columns += 1
                     j = j + 1
                 util(content[i:j - 1])
                 i = j
@@ -442,7 +460,7 @@ def util(content):
                 i = i + 9
                 parsed_content += " left arrow "
             elif (content[i:i + 10] == "rightarrow"
-                  or content[i:i + 9] == "Rightarrow"):
+                  or content[i:i + 10] == "Rightarrow"):
                 flag = 0
                 i = i + 10
                 parsed_content += " right arrow "
@@ -462,8 +480,10 @@ def util(content):
                 while (li):
                     if (j >= n):
                         return 0
-                    if (content[j] == '{'): li.append('{')
-                    if (content[j] == '}'): li.pop()
+                    if (content[j] == '{'):
+                        li.append('{')
+                    if (content[j] == '}'):
+                        li.pop()
 
                     j = j + 1
                 util(content[i:j - 1])
