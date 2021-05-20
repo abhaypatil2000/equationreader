@@ -48,6 +48,7 @@ PWA_APP_SPLASH_SCREEN = [
 # PWA_SPLASH_PAGES='null'
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')
 
 
 # Quick-start development settings - unsuitable for production
