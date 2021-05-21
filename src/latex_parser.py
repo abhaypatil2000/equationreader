@@ -227,6 +227,7 @@ def util(content):
                         li.pop()
                     j = j + 1
                 util(content[i + 1:j - 1])
+                parsed_content += ","
                 i = j
                 flag = 0
             elif (content[i:i + 3] == "rho"):
@@ -525,3 +526,8 @@ def util(content):
             else:
                 i = i + 1
     return 0
+
+
+if __name__ == "__main__":
+    inp = open("inp.txt", "r").read()
+    latex_parser(inp)
