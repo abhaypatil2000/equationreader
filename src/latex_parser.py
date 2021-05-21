@@ -99,8 +99,8 @@ def util(content):
         # print("flag is ", flag)
         # flag=0 implies no special functions like frac and sqrt
         if (flag == 0):
-            if (content[i] != '\\' and content[i] != '^'
-                    and content[i] != '&'):  # write all chars except \ and ^
+            if (content[i] != '\\' and content[i] != '^' and content[i] != '&'
+                    and content[i] != '_'):  # write all chars except \ and ^
 
                 parsed_content = parsed_content + content[i]
 
@@ -150,6 +150,31 @@ def util(content):
 
                 #global out
                 parsed_content = parsed_content + " to the power "
+                i = i + 1
+
+                j = i + 1
+                temp = 0
+                li = ['{']
+                # getting contents inside {} to call the function recursively
+                while (len(li) > 0):
+                    if (j >= n):
+                        return 0
+                    if (content[j] == '{'):
+                        li.append('{')
+                    if (content[j] == '}'):
+                        li.pop()
+                    j = j + 1
+                    temp = temp + 1
+                # if (temp > 5): file.write("(")  # TODO:decide
+                util(content[i + 1:j - 1])
+                parsed_content += ","
+                # if (temp > 5): file.write(')')  #TODO:decide
+                i = j
+
+            elif (content[i] == '_'):  # write to the power of instead of ^{}
+
+                #global out
+                parsed_content = parsed_content + " subscript "
                 i = i + 1
 
                 j = i + 1
