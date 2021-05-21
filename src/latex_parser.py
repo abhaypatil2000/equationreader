@@ -213,7 +213,7 @@ def util(content):
                 util(content[i + 5:j - 1])
                 #file.write(" divided by ")
                 #global out
-                parsed_content = parsed_content + " by "
+                parsed_content = parsed_content + " ,by "
                 #print("i is ",i)
                 i = j
                 j = i + 1
