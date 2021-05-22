@@ -1,20 +1,26 @@
-Hôar Equations in CHAPTER
-One Variable
-5
-2.1 Introduction  
-In the earlier classes, you have come across several algebraic expressions and equations.
-Some examples of expressions we have so far worked with are
-new row, 
-5 x, 2 x-3,3 x+y, 2 x y+5, x y z+x+y+z, x to the power 2,+1, y+y to the power 2,
+ 248  MATHEMATICS
+  right arrow (x-3)(x-2)=0  (replacing an expression by an equal/equivalent expression)   right arrow  x-3=0  or  x-2=0  (from the established theorem  a b=0  right arrow   either  a=0  or  b=0 , for  a, b  in 
+  right arrow  x-3+3=0+3  or  x-2+2=0+2  (adding equal quantities on either side of the equation does not alter the nature of the equation)
+  right arrow  x+0=3  or  x+0=2  (using the identity property of integers under addition)
+  right arrow  x=3  or  x=2  (using the identity property of integers under addition)
+Hence,  x to the power 2,-5 x+6=0  implies  x=3  or  x=2 
+Explanation Let  p  be the given statement "  x to the power 2,-5 x+6=0  " and  q  be the conclusion statement "  x=3  or  x=2 " 
 
-Some examples of equations are:  equation start, 5 x=25,2 x-3=9,2 y+5 by 2=37 by 2, 6 z+10=-2  equation end, 
-You would remember that equations use the equality (=) sign; it is missing in expressions
-Of these given expressions, many have more than one variable. For example,  2 x y+5  has two variables. We however, restrict to expressions with only one variable when we form equations. Moreover, the expressions we use to formequations are linear. This means that the highest power of the variable appearing in the expression is 1 . These are linear expressions:
-new row, 
-2 x, 2 x+1,3 y-7,12-5 z, 5 by 4(x-4)+10
-
-These are not linear expressions:
- x to the power 2,+1, y+y to the power 2,, 1+z+z to the power 2,+z to the power 3,  (since highest power of variable  >1  )
-Here we will deal with equations with linearexpressions in one variable only. Such equations are known as linear equations in one variable. The simple equations which you studied in the earlier classes were all of this type
-Let us briefly revise what we know:
-table begins, first row, 
+From the statement  p , we deduced the statement  r: to the power ,(x-3)(x-2)=0 " to the power , by  replacing the expression  x to the power 2,-5 x+6  in the statement  p  by another expression  (x-3)   (x-2)  which is equal to  x to the power 2,-5 x+6 
+There arise two questions
+(i) How does the expression  (x-3)(x-2)  is equal to the expression  x to the power 2,-5 x+6 ? 
+(ii) How can we replace an expression with another expression which is equal to the former?
+The first one is proved in earlier classes by factorization, i.e.  x to the power 2,-5 x+6=x to the power 2,-3 x-2 x+6=x(x-3)-2(x-3)=(x-3)(x-2) 
+The second one is by valid form of argumentation (rules of logic)
+Next this statement  r  becomes premises or given and deduce the statement  s   x-3=0  or  x-2=0  " and the reasons are given in the brackets. This process continues till we reach the conclusion.
+The symbolic equivalent of the argument is to prove by deduction that  p  right arrow  q 
+is true.
+Starting with  p , we deduce  p  right arrow  r  right arrow  s  right arrow   right arrow  q .  This implies that "  p  right arrow  q  ' is true.
+Example 2 Prove that the function  f: R arrow R 
+defined by  f(x)=2 x+5  is one-one.
+Solution Note that a function  f  is one-one if
+ f(x_{1})=f(x_{2})  right arrow  x_{1}=x_{2}  (definition of one-one function)
+Now, given that  (x_{1})=f(x_{2}) , i.e.,  2 x_{1}+5=2 x_{2}+5 
+  right arrow  
+ 2 x_{1}+5-5=2 x_{2}+5-5  (adding the same quantity on both sides)
+ 2019-20  

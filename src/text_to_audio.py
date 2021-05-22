@@ -12,11 +12,11 @@ def text_to_audio(parsed_content, folder_name):
     while ("  " in parsed_content):
         parsed_content = parsed_content.replace("  ", " ")
 
-    # tts = gTTS(parsed_content)
-    # tts.save(f'./{folder_name}/audio.mp3')
+    tts = gTTS(parsed_content)
+    tts.save(f'./{folder_name}/audio.mp3')
 
-    print("running tts")
-    engine = pyttsx3.init()
-    # engine.say(parsed_content)
-    engine.save_to_file(parsed_content, './{}/audio.mp3'.format(folder_name))
-    engine.runAndWait()
+    # print("running tts")
+    # engine = pyttsx3.init()
+    # # engine.say(parsed_content)
+    # engine.save_to_file(parsed_content, './{}/audio.mp3'.format(folder_name))
+    # engine.runAndWait()

@@ -82,7 +82,8 @@ def register(request):
         password2 = request.POST.get('password2')
         
         if password1 and password2 and password1 != password2:
-            raise ValidationError("Passwords don't match")
+            context = {'message' : 'Passwords don\'t match' , 'class' : 'danger' }
+            return render(request,'accounts/register.html' , context)
         else:
             password = password2
         
@@ -130,7 +131,7 @@ def forgot_password(request):
         # context = {'mobile': mobile}
         profile = Profile.objects.filter(mobile=mobile).first()
         if profile == None:
-            raise ValidationError("Mobile number not found")
+            return render(request, 'accounts/forgot_password.html', context={'message': 'Wrong mobile number','class' : 'danger'})
         otp = str(random.randint(1000 , 9999))
         profile.otp = otp
         profile.save()
@@ -149,7 +150,7 @@ def confirm_new_password(request):
         password2 = request.POST.get('password2')
         
         if password1 and password2 and password1 != password2:
-            raise ValidationError("Passwords don't match")
+            return render(request, 'accounts/new_password.html', context = {'message' : 'Passwords do not match' , 'class' : 'danger' })
         else:
             password = password2
 
@@ -159,7 +160,7 @@ def confirm_new_password(request):
             user.password = password
             user.save()
         else:
-            raise ValidationError("OTP doesn't match")
+            return render(request, 'accounts/new_password.html', context = {'message' : 'Wrong OTP' , 'class' : 'danger' })
 
         return redirect('home')
     return render(request, 'accounts/new_password.html', )
