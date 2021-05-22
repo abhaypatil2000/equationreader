@@ -1,7 +1,7 @@
 
 from django.contrib import auth
 from django.shortcuts import render , redirect
-
+from django.core.validators import EmailValidator, validate_email
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -80,6 +80,23 @@ def register(request):
         mobile = request.POST.get('mobile')
         password1 = request.POST.get('password1')
         password2 = request.POST.get('password2')
+
+        
+        try:
+            validate_email(email)
+        except:
+            context = {'message' : 'Enter a valid email' , 'class' : 'danger' }
+            return render(request,'accounts/register.html' , context)
+
+        try:
+            print("Mobile number is " + mobile)
+            print("Length: " + str(len(mobile)))
+            print("Is Decimal? " + str(mobile.isdecimal()))
+            if not (len(mobile) == 10 and mobile.isdecimal()):
+                raise ValidationError("Invalid mobile number")
+        except:
+            context = {'message' : 'Enter a valid mobile number' , 'class' : 'danger' }
+            return render(request,'accounts/register.html' , context)
         
         if password1 and password2 and password1 != password2:
             context = {'message' : 'Passwords don\'t match' , 'class' : 'danger' }
