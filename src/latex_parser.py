@@ -436,6 +436,9 @@ def util(content):
                 # print("array end")
                 i = i + 10
                 flag = 0
+            elif (content[i:i + 4] == 'quad'):
+                i = i + 4
+                flag = 0
             elif (content[i:i + 4] == 'text'):
                 # print("text")
                 i = i + 6
@@ -475,8 +478,11 @@ def util(content):
                 flag = 0
                 i = i + 2
                 parsed_content += " pi "
-            elif (content[i:i + 14] == "leftrightarrow"
-                  or content[i:i + 14] == "Leftrightarrow"):
+            elif (content[i:i + 14] == "Leftrightarrow"):
+                flag = 0
+                i = i + 14
+                parsed_content += " if and only if "
+            elif (content[i:i + 14] == "leftrightarrow"):
                 flag = 0
                 i = i + 14
                 parsed_content += " if and only if "
@@ -485,8 +491,11 @@ def util(content):
                 flag = 0
                 i = i + 9
                 parsed_content += " left arrow "
-            elif (content[i:i + 10] == "rightarrow"
-                  or content[i:i + 10] == "Rightarrow"):
+            elif (content[i:i + 10] == "Rightarrow"):
+                flag = 0
+                i = i + 10
+                parsed_content += " implies "
+            elif (content[i:i + 10] == "rightarrow"):
                 flag = 0
                 i = i + 10
                 parsed_content += " right arrow "

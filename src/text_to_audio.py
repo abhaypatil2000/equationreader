@@ -1,5 +1,5 @@
 from gtts import gTTS
-import pyttsx3
+
 
 def text_to_audio(parsed_content, folder_name):
     parsed_content = parsed_content.replace("(", " open bracket ")
@@ -14,9 +14,3 @@ def text_to_audio(parsed_content, folder_name):
 
     tts = gTTS(parsed_content)
     tts.save(f'./{folder_name}/audio.mp3')
-
-    # print("running tts")
-    # engine = pyttsx3.init()
-    # # engine.say(parsed_content)
-    # engine.save_to_file(parsed_content, './{}/audio.mp3'.format(folder_name))
-    # engine.runAndWait()

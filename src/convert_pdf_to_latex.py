@@ -68,7 +68,9 @@ def convert_pdf_to_latex(input_pdf, folder_name, make_request, page_count):
                                                    sort_keys=True)
                         parsed_output = json.loads(parsed_output)["text"]
                     output = parsed_output
-            except:
+            except Exception as ex:
+
+                print("API request failed", ex)
                 pass
             # danger passed
             print(f"{page_id} done API request")

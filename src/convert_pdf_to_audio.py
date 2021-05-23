@@ -39,3 +39,7 @@ def convert_pdf_to_audio(input_pdf, folder_name, page_limit):
     #     print("File not accessible")
 
     return processed_pages
+
+
+if __name__ == "__main__":
+    convert_pdf_to_audio("temp1.pdf", "test2", 1000)
